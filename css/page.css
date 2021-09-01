@@ -1,0 +1,9 @@
+
+.introArea{min-width: 1900px; height: 100vh; position: relative;}
+
+.introArea .textBox{height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1;}
+.introArea .textBox p{font-size: 130px;  font-weight: 600; color: white; letter-spacing: 70px; text-shadow: 5px 5px 15px rgb(0 0 0 / 50%);}
+.introArea .textBox p:not(:last-of-type){margin-bottom: 30px;}
+
+.introArea .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+.introArea .videoBox video{width: 100%;}
