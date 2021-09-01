@@ -2,6 +2,8 @@
 .mainArea{min-width: 1900px; height: 100vh; position: relative;}
 [class$='Page'] > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
 
+.btn{font-size: 24px; font-weight: 600;/*  color: white; */ /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: flex; align-items: center; z-index: 2;}
+.btn span{font-size: 35px; padding-left: 30px;}
 .mainArea .textBox{height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1;}
 .mainArea .textBox p{font-size: 130px;  font-weight: 600; color: white; letter-spacing: 70px; text-shadow: 5px 5px 15px rgb(0 0 0 / 50%);}
 .mainArea .textBox p:not(:last-of-type){margin-bottom: 30px;}
@@ -9,27 +11,53 @@
 .mainArea .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
 .mainArea .videoBox video{width: 100%;}
 
+[class ^= icon]{display: flex; align-items: center;}
+[class ^= icon]::before{content: ''; width: 28px; height: 29px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 20px;}
+.icon_insta::before{background-image: url('../images/icon_insta.png');}
+.icon_blog::before{background-image: url('../images/icon_blog.png');}
+.icon_chat::before{background-image: url('../images/icon_chat.png');}
+.icon_shop::before{background-image: url('../images/icon_shop.png');}
+
 
 .whoIsArea{position: relative; overflow: hidden; }
-.whoIsArea *{color: white;}
+.whoIsArea * , .introArea *{color: white;}
 .whoIsArea section{position: absolute; top: 0; width: 100%;}
 .whoIsArea section:nth-of-type(2){left: 0;}
 .whoIsArea section:nth-of-type(1){left: 100%;}
-.whoIsArea .monyArea{background: rgb(138,143,204);
+.whoIsArea .monyArea , .introArea.monyArea{background: rgb(138,143,204);
     background: radial-gradient(circle, rgba(138,143,204,1) 0%, rgba(110,108,195,1) 59%, rgba(97,91,191,1) 100%);
 }
-.whoIsArea .onnyArea{background: rgb(124,195,199);
+.whoIsArea .onnyArea , .introArea.onnyArea{background: rgb(124,195,199);
     background: radial-gradient(circle, rgba(124,195,199,1) 0%, rgba(81,178,183,1) 100%);}
 .whoIsArea > section{ height: 100%; display: flex; justify-content: center; align-items: center;}
 .whoIsArea > section > div{width: 100%; display: flex; justify-content: center; }
 .whoIsArea > section > div > div{width: 78%; position: relative;}
 .whoIsArea > section > div > div h2{width: 100%; font-size: 367px; font-weight: 700; /* color: white; */ display: flex; justify-content: space-between; letter-spacing: 10px;}
 .whoIsArea > section > div > div h2 span:nth-child(2){position: relative; z-index: 1;}
-.whoIsArea > section > div > div a{font-size: 24px; font-weight: 600;/*  color: white; */ position: absolute; left: 0; line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: flex; align-items: center; z-index: 2;}
-.whoIsArea > section > div > div a span{font-size: 35px; padding-left: 30px;}
+.whoIsArea > section > div > div a{left: 0; z-index: 2;}
+/* .whoIsArea > section > div > div a{font-size: 24px; font-weight: 600; position: absolute; left: 0; line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: flex; align-items: center; z-index: 2;} */
+/* .whoIsArea > section > div > div a span{font-size: 35px; padding-left: 30px;} */
 .whoIsArea > section img{position: absolute; bottom: 0; width: 840px; z-index: 0;}
 .whoIsArea .selectArea{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none;}
 .whoIsArea .selectArea div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center;}
 .whoIsArea .selectArea div button{pointer-events: all; font-size: 23px; font-weight: 700; /*  color: white; */ letter-spacing: 10px;}
 .whoIsArea .selectArea div button span{display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
 .whoIsArea .selectArea div button span::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
+
+
+
+.introArea > div{height: 100%; display: flex; flex-direction: column; justify-content: center; position: relative;}
+.introArea > div > div h2{font-size: 170px; font-weight: 700; }
+.introArea > div > div span{font-size: 42px; font-weight: 700; display: block; margin-bottom: 55px;}
+.introArea > div > div ul{font-size: 22px;}
+.introArea > div > div ul:not([title]){margin-bottom: 50px;}
+.introArea > div > div ul:not([title]) li{display: flex;}
+.introArea > div > div ul:not([title]) li:not(:last-child){margin-bottom: 25px;}
+.introArea > div > div ul:not([title]) li strong{margin-right: 20px;}
+.introArea > div > div ul[title]::before{content: attr(title); font-weight: 700; display: block; margin-bottom: 15px;}
+.introArea > div > div ul[title] li:not(:last-child){margin-bottom: 15px;}
+.introArea > div > div ul[title] li a{position: relative;}
+.introArea > div > div ul[title] li a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: white;}
+.introArea > div > img{position: absolute; right: 270px; bottom: 0; width: 90.7407vh; max-width: 980px;}
+.introArea > div > p{position: absolute; left: 0; bottom: 60px; font-size: 40px; font-weight: 700; letter-spacing: 2px;}
+.introArea > div > button{position: absolute; right: 0; top: 195px;}
