@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코메디 AI</title>
+    <title>Who is</title>
     <!-- splitting css -->
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
@@ -14,33 +14,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/import.css">
-    <script> 
-    $(document).ready(function(){
-        Splitting(); 
-
-        var startAniDuration = 1;
-        var startAniDelay = 1;
-
-        // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
-        $('[data-startAni="top"]').css({'top': function(){
-                return -$(this).height();
-            }
-        });
-        $('[data-startAni="top"]').delay(startAniDelay * 1000).animate({top:0},startAniDuration * 1000);
-
-        $('[data-startAni="opacity"]').css({'opacity':'0'});
-        $('[data-startAni="opacity"]').delay(startAniDelay * 1000).animate({opacity:1},startAniDuration * 1000);
-
-        $('[data-animate="blur"] span.char').css({'animation-delay' : function(){
-                console.log($(this).css('animation-delay'));
-                return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
-            }
-        });
-    })
-    </script>
 </head>
 <body>
-    <div class="mainPage">
+    <div class="subPage">
         <header data-startAni="top">
             <div class="width1800">
                 <h1><a href="#"><img src="images/logo.png" alt="meditat logo"></a></h1>
@@ -67,13 +43,29 @@
             </div>
         </header>
 
-        <div class="mainArea">
-            <div class="textBox" data-startAni="opacity">
-                <p data-splitting>Beautiful</p>
-                <p data-splitting data-animate="blur" class="test">Inspiration</p>
-            </div>
-            <div class="videoBox">
-                <video src="../video/video01.mp4" autoplay muted loop></video>
+        <div class="whoIsArea">
+            <section class="monyArea">
+                <div class="width1800">
+                    <div>
+                        <h2><span>Mo</span><span>ny</span></h2>
+                        <a href="#">Who is Mony?</a>
+                    </div>
+                </div>
+                <img src="images/mony.png" alt="mony">
+            </section>
+            <section class="onnyArea">
+                <div class="width1800">
+                    <div>
+                        <h2><span>On</span><span>ny</span></h2>
+                        <a href="#">Who is Onny?</a>
+                    </div>
+                </div>
+                <img src="images/mony.png" alt="mony">
+            </section>
+            <div class="selectArea">
+                <div class="width1800">
+                    <button>Onny</button>
+                </div>
             </div>
         </div>
 
