@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mony</title>
+    <!-- splitting css -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <!-- splitting js -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <!-- jQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/common.js"></script>
+    <script src="https://unpkg.com/typeit@8.0.2/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+    <script>
+        $(document).ready(function(){
+            new TypeIt("li.active strong", {
+                speed: 75,
+            }).go();
+        });
+    </script>
+</head>
+<body>
+    <div class="subPage">
+        <header data-startAni="top">
+            <div class="width1800">
+                <h1><a href="#"><img src="images/logo.png" alt="meditat logo"></a></h1>
+                <button class="menuBtn">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <div>
+                        <div>
+                            <a href="#" class="active">EN</a>
+                            <a href="#">MN</a>
+                            <a href="#">CN</a>
+                        </div>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Digital Human</a></li>
+                            <li><a href="#">Our Service</a></li>
+                            <li><a href="#">Press & Media</a></li>
+                            <li><a href="#">Contact US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="talkArea monyArea">
+            <div class="textBox width1800">
+                <div>
+                    <ol>
+                        <li class="active">
+                            <strong>How are you today?</strong>
+                            <p>I’m Good.</p>
+                        </li>
+                        <li>
+                            <strong>
+                                I’m a beauty creator<br/>
+                                from meditat
+                            </strong>
+                            <p>Yes, Exactly</p>
+                        </li>
+                        <li>
+                            <strong>
+                                Here’s why I want to<br/>
+                                help YOU.
+                            </strong>
+                            <p>Wow, it’s amazing.</p>
+                        </li>
+                        <li>
+                            <strong>Don’t worry!</strong>
+                            <p>I’m so excited.</p>
+                        </li>
+                        <li>
+                            <strong>
+                                If you’ve ever felt invisible,<br/>
+                                underconfident or overlooked
+                            </strong>
+                            <a href="#"></a>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <div class="videoBox">
+                <video src="../video/video02.mp4" autoplay muted loop></video>
+            </div>
+        </div>
+
+        <footer>
+            <div class="width1800">
+                <h2><img src="images/footer_logo.png" alt="meditat logo"></h2>
+                <div>
+                    <ul>
+                        <li><a href="#">meditalk blog</a></li>
+                        <li><a href="#">Mony Beauty Studi</a></li>
+                    </ul>
+                    <ul class="snsArea">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    <address>
+                        <p>Korea medical AI Inc, 509 Nonhyeon-ro, Gangnam-gu, Seoul, South Korea </p>
+                        <p>E-mail : <a href="#">info@meditat.net</a></p>
+                    </address>
+                    <p>Copyright© Korea Medical AI Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

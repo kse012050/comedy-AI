@@ -4,12 +4,7 @@
 
 .btn{font-size: 24px; font-weight: 600;/*  color: white; */ /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: flex; align-items: center; z-index: 2;}
 .btn span{font-size: 35px; padding-left: 30px;}
-.mainArea .textBox{height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1;}
-.mainArea .textBox p{font-size: 130px;  font-weight: 600; color: white; letter-spacing: 70px; text-shadow: 5px 5px 15px rgb(0 0 0 / 50%);}
-.mainArea .textBox p:not(:last-of-type){margin-bottom: 30px;}
 
-.mainArea .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
-.mainArea .videoBox video{width: 100%;}
 
 [class ^= icon]{display: flex; align-items: center;}
 [class ^= icon]::before{content: ''; width: 28px; height: 29px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 20px;}
@@ -18,7 +13,19 @@
 .icon_chat::before{background-image: url('../images/icon_chat.png');}
 .icon_shop::before{background-image: url('../images/icon_shop.png');}
 
+.videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+.videoBox video{width: 100%;}
 
+/* 메인페이지 */
+.mainArea .textBox{height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1;}
+.mainArea .textBox p{font-size: 130px;  font-weight: 600; color: white; letter-spacing: 70px; text-shadow: 5px 5px 15px rgb(0 0 0 / 50%);}
+.mainArea .textBox p:not(:last-of-type){margin-bottom: 30px;}
+
+.mainArea .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
+.mainArea .videoBox video{width: 100%;}
+
+
+/* whoIs 페이지 */
 .whoIsArea{position: relative; overflow: hidden; }
 .whoIsArea * , .introArea *{color: white;}
 .whoIsArea section{position: absolute; top: 0; width: 100%;}
@@ -45,7 +52,7 @@
 .whoIsArea .selectArea div button span::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
 
 
-
+/* 소개 페이지 */
 .introArea > div{height: 100%; display: flex; flex-direction: column; justify-content: center; position: relative;}
 .introArea > div > div h2{font-size: 170px; font-weight: 700; }
 .introArea > div > div span{font-size: 42px; font-weight: 700; display: block; margin-bottom: 55px;}
@@ -61,3 +68,11 @@
 .introArea > div > img{position: absolute; right: 270px; bottom: 0; width: 90.7407vh; max-width: 980px;}
 .introArea > div > p{position: absolute; left: 0; bottom: 60px; font-size: 40px; font-weight: 700; letter-spacing: 2px;}
 .introArea > div > button{position: absolute; right: 0; top: 195px;}
+
+/* 토크 페이지 */
+.talkArea .textBox{height: 100%; display: flex; justify-content: flex-end; align-items: center; position: relative; z-index: 1;}
+.talkArea .textBox ol li{display: none; text-align: right;}
+.talkArea .textBox ol li.active{display: block;}
+.talkArea .textBox ol li strong{display: block; font-size: 48px; font-weight: 700; line-height: 51px; color: white; margin-bottom: 20px;}
+.talkArea .textBox ol li p{font-size: 26px; font-weight: 500; color: #605abf; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px; position: relative;}
+.talkArea .textBox ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
