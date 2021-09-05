@@ -5,7 +5,7 @@
 .mainPage > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
 .subPage.case01 > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
 
-.btn{font-size: 24px; font-weight: 600;/*  color: white; */ /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2;}
+.btn{font-size: 24px; font-weight: 600; color: white; /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2;}
 .btn span{font-size: 35px; padding-left: 30px;}
 .btn01{font-size: 20px; font-weight: 600; color: white; line-height: 54px; padding: 0 37px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2;}
 .btn01 span{font-size: 30px; padding-left: 15px;}
@@ -89,8 +89,11 @@
 .subPage{}
 .subPage main > h2{font-size: 70px; font-weight: 700; margin-bottom: 60px;}
 .subPage main > h2 span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
+.titleDot{font-size: 70px; font-weight: 700; }
 .titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
+.titleDot::after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
 .subPage main > h2 + p{font-size: 40px; line-height: 69px; font-weight: 600;}
+.subPage main h2 ~ p{font-size: 40px; line-height: 69px; font-weight: 600;}
 
 
 /*서브 페이지 - about */
@@ -200,7 +203,7 @@
 /* press */
 .pressArea{background-color: black; padding-bottom: 60px; box-sizing: border-box; display: flex; align-items: flex-end;}
 .pressArea > div{display: flex; position: relative;}
-.pressArea > div h2{font-size: 70px; font-weight: 700; line-height: 80px; max-width: 300px; margin-right: 230px;}
+.pressArea > div h2{line-height: 80px; max-width: 300px; margin-right: 230px;}
 .pressArea > div ul li{display: flex; align-items: flex-end;}
 .pressArea > div ul li:not(:last-child){margin-bottom: 65px;}
 .pressArea > div ul li img{max-width: 620px; margin-right: 50px;}
@@ -219,3 +222,13 @@
 .pressArea > div .pagerBox ol li{}
 .pressArea > div .pagerBox ol li a{display: block; width: 30px; line-height: 30px; border-radius: 100%; text-align: center;}
 .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
+
+
+/* contactUs */
+.contactUsArea{background-color: black; padding-bottom: 60px; box-sizing: border-box; display: flex; align-items: flex-end;}
+.contactUsArea > div{position: relative;}
+.contactUsArea > div h2{margin-bottom: 20px;}
+.contactUsArea > div mark{font-size: 30px; font-weight: 800; margin-bottom: 440px;}
+.contactUsArea > div button{position: absolute; right: 0; bottom: 0;}
+/* .contactUsArea > div p{font-size: 40px; font-weight: 600; line-height: 69px;} */
+.contactUsArea > div p.heartEmoticon::after{content: '';display: inline-block; width: 40px; height: 40px; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
