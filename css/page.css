@@ -1,8 +1,9 @@
 
 .mainArea{min-width: 1900px; height: 100vh; position: relative;}
-[class$='Page'] > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
+/* [class$='Page'] > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;} */
+.mainPage > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
 
-.btn{font-size: 24px; font-weight: 600;/*  color: white; */ /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: flex; align-items: center; z-index: 2;}
+.btn{font-size: 24px; font-weight: 600;/*  color: white; */ /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2;}
 .btn span{font-size: 35px; padding-left: 30px;}
 
 
@@ -75,4 +76,76 @@
 .talkArea .textBox ol li.active{display: block;}
 .talkArea .textBox ol li strong{display: block; font-size: 48px; font-weight: 700; line-height: 51px; color: white; margin-bottom: 20px;}
 .talkArea .textBox ol li p{font-size: 26px; font-weight: 500; color: #605abf; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px; position: relative;}
+.talkArea .textBox ol li p{opacity: 0; position: relative; top: 50px;}
 .talkArea .textBox ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
+
+
+
+/* 서브 페이지 */
+.subPage{}
+.subPage main > h2{font-size: 70px; font-weight: 700; margin-bottom: 60px;}
+.subPage main > h2 span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
+.subPage main > h2 + p{font-size: 40px; line-height: 69px; font-weight: 600;}
+
+
+/*서브 페이지 - about */
+.aboutArea mark{font-weight: 700;}
+
+.aboutArea > p{margin-bottom: 215px;}
+.aboutArea .meditatArea{background-color: #605abf; margin-bottom: 190px;}
+.aboutArea .meditatArea > div::after{content: ''; display: block; clear: both;}
+.aboutArea .meditatArea > div{padding-top: 765px; padding-bottom: 110px; margin-left: auto; position: relative; margin-left: calc((100% - 1800px) / 2);}
+.aboutArea .meditatArea > div > div{position: absolute; left: 0; top: -130px; width: 100%; height: 790px; background: url('../images/about_titleBG.png') no-repeat center / cover; }
+.aboutArea .meditatArea > div > div h3{font-size: 160px; font-weight: 600; text-align: center; width: 1800px; height: 100%; display: flex; justify-content: center; align-items: center;}
+
+.aboutArea .meditatArea > div strong{float: left; width: 260px; font-size: 60px; font-weight: 700; margin-right: 90px;}
+.aboutArea .meditatArea > div p{float: left; font-size: 22px; line-height: 40px;}
+
+
+.aboutArea .thinkArea{display: flex; flex-wrap: wrap; margin-bottom: 210px;}
+.aboutArea .thinkArea p{flex: 1; font-size: 90px; font-weight: 700; line-height: 120px; margin-bottom: 150px;}
+.aboutArea .thinkArea mark{width: 100%; font-size: 60px; text-align: center;}
+
+.aboutArea .WKDAArea{margin-bottom: 360px;}
+.aboutArea .WKDAArea::before{content: ''; display: block; height: 270px; background: url('../images/about_WKDA.png') no-repeat center top / cover; margin-bottom: 20px;}
+.aboutArea .WKDAArea ul::after{content: ''; display: block; clear: both;}
+.aboutArea .WKDAArea ul li{float: left;}
+.aboutArea .WKDAArea ul li:nth-child(1){width: 230px; margin-right: 210px;}
+.aboutArea .WKDAArea ul li:nth-child(2){width: 220px; margin-right: 160px;}
+.aboutArea .WKDAArea ul li:nth-child(3){width: 285px; margin-right: 95px;}
+.aboutArea .WKDAArea ul li:nth-child(4){width: 220px;}
+/* .aboutArea .WKDAArea ul li:not(:last-child){margin-right: 100px;} */
+.aboutArea .WKDAArea ul li mark{font-size: 40px; line-height: 47px; margin-bottom: 30px;}
+.aboutArea .WKDAArea ul li p{font-size: 22px; line-height: 32px;}
+
+.aboutArea .imgArea{width: 950px; height: 950px; margin: 0 auto; background-color: #605abf; position: relative; margin-bottom: 260px;}
+.aboutArea .imgArea img{position: absolute;}
+.aboutArea .imgArea img:nth-child(1){top: -175px; left: -125px;}
+.aboutArea .imgArea img:nth-child(2){bottom: 120px; right: -120px;}
+
+.aboutArea .companyArea{position: relative; margin-bottom: 60px;}
+.aboutArea .companyArea::after{content: ''; position: absolute; top: 0; right: 0; width: calc(670px + ((100% - 1420px) / 2) ); height: 585px; background:url('../images/about_BG01.png') no-repeat center / cover;}
+.aboutArea .companyArea ul li:not(:last-child){margin-bottom: 60px;}
+.aboutArea .companyArea ul li mark{font-size: 41px; margin-bottom: 20px; letter-spacing: 5px;}
+.aboutArea .companyArea ul li p{font-size: 22px; line-height: 40px;}
+
+.aboutArea .membersArea{margin-bottom: 155px;}
+.aboutArea .membersArea h3{font-size: 41px; margin-bottom: 30px;}
+.aboutArea .membersArea ul{display: flex; flex-wrap: wrap; justify-content: space-between;}
+.aboutArea .membersArea ul li{width: 310px;}
+.aboutArea .membersArea ul li:not(:nth-child(3n)){margin-right: 245px;}
+.aboutArea .membersArea ul li:not(:nth-child(-n + 3)){margin-top: 80px;}
+.aboutArea .membersArea ul li img{width: 100%; margin-bottom: 5px;}
+.aboutArea .membersArea ul li h4{font-size: 22px; margin-bottom: 20px;}
+.aboutArea .membersArea ul li mark{font-size: 26px;}
+
+.aboutArea .historyArea h3{font-size: 40px; margin-bottom: 85px;}
+.aboutArea .historyArea > ol > li{display: flex;}
+.aboutArea .historyArea > ol > li mark{width: 170px; font-size: 46px;}
+.aboutArea .historyArea > ol > li > div{flex: 1; padding-left: 60px; position: relative;}
+.aboutArea .historyArea > ol > li:first-child > div:first-of-type{margin-top: 10px;}
+.aboutArea .historyArea > ol > li:last-child > div:first-of-type{padding-bottom: 100px;}
+.aboutArea .historyArea > ol > li > div::before{content: ''; position: absolute; top: 0; left: -11.5px; width: 23px; height: 23px; background-color: #605abf; border-radius: 100%;}
+.aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
+.aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
+.aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}

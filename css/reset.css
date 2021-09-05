@@ -49,3 +49,4 @@ table {
 
 a{text-decoration: none;}
 button{background-color: transparent; border: none; padding: 0; cursor: pointer;}
+mark{background-color: transparent; color: #756fdd; display: inline-block;}
