@@ -34,17 +34,17 @@
 .whoIsArea{position: relative; overflow: hidden; }
 .whoIsArea * , .introArea *{color: white;}
 .whoIsArea section{position: absolute; top: 0; width: 100%;}
-.whoIsArea section:nth-of-type(2){left: 0;}
-.whoIsArea section:nth-of-type(1){left: 100%;}
+.whoIsArea section:nth-of-type(1){left: 0;}
+.whoIsArea section:nth-of-type(2){left: 100%;}
 .whoIsArea .monyArea , .introArea.monyArea{background: rgb(138,143,204);
     background: radial-gradient(circle, rgba(138,143,204,1) 0%, rgba(110,108,195,1) 59%, rgba(97,91,191,1) 100%);
 }
 .whoIsArea .onnyArea , .introArea.onnyArea{background: rgb(124,195,199);
     background: radial-gradient(circle, rgba(124,195,199,1) 0%, rgba(81,178,183,1) 100%);}
 .whoIsArea > section{ height: 100%; display: flex; justify-content: center; align-items: center;}
-.whoIsArea > section > div{width: 100%; display: flex; justify-content: center; }
-.whoIsArea > section > div > div{width: 78%; position: relative;}
-.whoIsArea > section > div > div h2{width: 100%; font-size: 367px; font-weight: 700; /* color: white; */ display: flex; justify-content: space-between; letter-spacing: 10px;}
+.whoIsArea > section > div{width: 100%;  display: flex; justify-content: center; }
+.whoIsArea > section > div > div{/* width: 78%; */ width: 1400px; position: relative;}
+.whoIsArea > section > div > div h2{width: 100%;  font-size: 367px; font-weight: 700; /* color: white; */ display: flex; justify-content: space-between; letter-spacing: 10px;}
 .whoIsArea > section > div > div h2 span:nth-child(2){position: relative; z-index: 1;}
 .whoIsArea > section > div > div a{left: 0; z-index: 2;}
 /* .whoIsArea > section > div > div a{font-size: 24px; font-weight: 600; position: absolute; left: 0; line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: flex; align-items: center; z-index: 2;} */
