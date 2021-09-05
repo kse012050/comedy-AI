@@ -149,3 +149,44 @@
 .aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
 .aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
 .aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}
+
+
+
+/* our service */
+.serviceArea{padding-bottom: 200px;}
+.serviceArea h4{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
+.serviceArea h4 + p{font-size: 40px; font-weight: 600; margin-bottom: 50px;}
+.serviceArea .serviceList{font-size: 26px; font-weight: 600;}
+.serviceArea .serviceList li{display: flex; align-items: center;}
+.serviceArea .serviceList li:not(:last-child){margin-bottom: 15px;}
+.serviceArea .serviceList li::before{content: ''; width: 6px; height: 6px; background-color: white; border-radius: 100%; margin: 0 10px 0 3px;}
+.serviceArea .imgBox{background-repeat: no-repeat; background-position: center; background-size: cover; text-indent: -9999px;}
+
+.serviceArea > p{margin-bottom: 100px;}
+
+.serviceArea .digitalArea{background-color: #605abf; padding: 130px 0 365px; position: relative; margin-bottom: 100px;}
+.serviceArea .digitalArea div h3{font-size: 160px; font-weight: 800; margin-bottom: 30px;}
+.serviceArea .digitalArea div p{font-size: 60px; font-weight: 700; line-height: 75px; margin-bottom: 20px;}
+.serviceArea .digitalArea > img{position: absolute; right: 0; bottom: 0;}
+
+.serviceArea .imgArea{position: relative;}
+.serviceArea .imgArea img:first-child{position: absolute; left: 0; bottom: 170px;}
+.serviceArea .imgArea img:nth-child(2){max-width: 790px; display: block; margin-left: auto;}
+
+.serviceArea .virtualArea{margin-bottom: 190px;}
+.serviceArea .virtualArea .serviceList{margin-bottom: 60px;}
+.serviceArea .virtualArea .imgBox{height: 670px; background-image: url('../images/service_BG01.png');}
+
+.serviceArea .ARArea{text-align: center; margin-bottom: 250px;}
+.serviceArea .ARArea .serviceList{margin-bottom: 60px;}
+.serviceArea .ARArea .serviceList li{justify-content: center;}
+.serviceArea .ARArea .imgBox{height: 1080px; background-image: url('../images/service_BG02.png');}
+
+.serviceArea .designArea{text-align: right;}
+.serviceArea .designArea ul{height: 1045px; position: relative; text-align: center;}
+.serviceArea .designArea ul li{width: 682px; height: 682px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: absolute; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.serviceArea .designArea ul li:nth-child(1){background-image: url('../images/service_BG03.png'); top: -245px; left: 20px; z-index: 3;}
+.serviceArea .designArea ul li:nth-child(2){background-image: url('../images/service_BG04.png'); top: 0; right: 13px; z-index: 2;}
+.serviceArea .designArea ul li:nth-child(3){background-image: url('../images/service_BG05.png'); bottom: 0; left: 150px; z-index: 1;}
+.serviceArea .designArea ul li strong{font-size: 60px; line-height: 75px; font-weight: 700; margin-bottom: 25px;}
+.serviceArea .designArea ul li p{font-size: 26px; line-height: 40px; font-weight: 600;}
