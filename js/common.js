@@ -7,4 +7,11 @@ $(document).ready(function(){
         $(this).toggleClass('active');
         $('nav').stop().fadeToggle();
     })
+
+    var scrollSelecter;
+
+    $('body').on('mousewheel',function(){
+        scrollSelecter = $('main , footer');
+        console.log(scrollSelecter);
+    })
 });

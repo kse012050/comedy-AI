@@ -32,7 +32,7 @@
         $('[data-startAni="opacity"]').delay(startAniDelay * 1000).animate({opacity:1},startAniDuration * 1000);
 
         $('[data-animate="blur"] span.char').css({'animation-delay' : function(){
-                console.log($(this).css('animation-delay'));
+                // console.log($(this).css('animation-delay'));
                 return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
             }
         });

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/typeit@8.0.2/dist/index.umd.js"></script>
+    <style>
+        div{text-align: right;}
+    </style>
+</head>
+<body>
+    <div id="element">
+        Lorem, ipsum dolor sit amet consectetur<br/> adipisicing elit. Totam placeat autem ipsam qui officia velit deserunt consequuntur! Architecto aliquam accusamus, voluptatum quas, asperiores aspernatur, tempora accusantium reprehenderit similique molestias nemo.
+    </div>
+    <script>
+        new TypeIt("#element", {
+            strings: "This is my string!",
+            speed: 75,
+            loop: true,
+        }).go();
+    </script>
+</body>
+</html>
