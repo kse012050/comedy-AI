@@ -7,9 +7,9 @@
 .width1420{width: 1420px; margin: 0 auto;}
 .width1280{width: 1280px; margin: 0 auto;}
 
-[data-animate="blur"] span.char{filter: blur(100px); animation: blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));}
+[data-animate="blur"] .char{filter: blur(100px); animation: blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));}
 @keyframes blurAni {
-    0%{filter: blur(100px);}
+    0%{filter: blur(2em);}
     100%{filter: blur(0px);}
 }
 

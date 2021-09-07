@@ -18,9 +18,65 @@
     <link rel="stylesheet" href="css/import.css">
     <script>
         $(document).ready(function(){
-            $('.test').hover(function(){
-                
+            var whoIsContentW;
+            var characterVale;
+            var cheracterSelector;
+            var whoIsBoolean = true;
+            var whoIsDuration = 500;
+
+            $('.nextBtn').hover(function(){
+                if(whoIsBoolean){
+                    init();
+                    var leftValue = (whoIsContentW - $('.whoIsArea > section > div > div').width()) / 2
+                    var moveValue = 'calc((((100% - '+ whoIsContentW +'px) / 2)) + ('+ -leftValue +'px + '+ whoIsContentW +'px))';
+                    cheracterSelector.css({
+                        'transition-duration' : whoIsDuration + 'ms',
+                        'left' : moveValue
+                    })
+                }
+            },function(){
+                if(whoIsBoolean){
+                    init();
+                    cheracterSelector.css('left',100 + '%');
+                }
             })
+
+            $('.nextBtn').on('click',function(){
+                if(whoIsBoolean){
+                    init();
+                    whoIsBoolean = false;
+                    cheracterSelector.css({
+                        'left' : '0%',
+                        'transition-duration' : whoIsDuration + 'ms',
+                    });
+                    if($('.nextBtn').attr('data-whoIs') == 'onny'){
+                        $('.nextBtn').attr('data-whoIs','mony');
+                    }else{
+                        $('.nextBtn').attr('data-whoIs','onny');
+                    }
+                    $('.nextBtn span[data-whoIs]').hide();
+                    $('.nextBtn span[data-whoIs="' +$('.nextBtn').attr('data-whoIs')+ '"]').fadeIn();
+                    setTimeout(function(){
+                        $('.whoIsArea > section').not('.' + $('.nextBtn').attr('data-whoIs') + 'Box').css({
+                            'z-index' : 1,
+                            'left' : 0,
+                        })
+                        $('.' + $('.nextBtn').attr('data-whoIs') + 'Box').css({
+                            'z-index' : 2,
+                            'left' : '100%',
+                            'transition-duration' : '0s',
+                        })
+                        whoIsBoolean = true;
+                    },whoIsDuration )
+                }
+            })
+
+
+            function init(){
+                whoIsContentW = $('.whoIsArea > section > div').width();
+                characterVale = $('.nextBtn').attr('data-whoIs');
+                cheracterSelector = $('.whoIsArea .'+ characterVale +'Box');
+            }
         });
     </script>
 </head>
@@ -52,28 +108,35 @@
             </div>
         </header>
 
-        <div class="whoIsArea">
-            <section class="monyArea">
+        <div class="whoIsArea" data-animate="blur">
+            <section class="monyBox">
                 <div class="width1800">
                     <div>
-                        <h2><span>Mo</span><span>ny</span></h2>
-                        <a href="#" class="btn">Who is Mony?</a>
+                        <h2><span class="char">Mo</span><span class="char">ny</span></h2>
+                        <a href="intro_mony.html" class="btn char">Who is Mony?</a>
                     </div>
                 </div>
-                <img src="images/mony.png" alt="mony">
+                <img src="images/mony.png" alt="mony" >
             </section>
-            <section class="onnyArea">
+            <section class="onnyBox">
                 <div class="width1800">
                     <div>
                         <h2><span>On</span><span>ny</span></h2>
-                        <a href="#" class="btn">Who is Onny?</a>
+                        <a href="intro_onny.html" class="btn">Who is Onny?</a>
                     </div>
                 </div>
                 <img src="images/onny.png" alt="onny">
             </section>
-            <div class="selectArea">
+            <div class="selectArea char">
                 <div class="width1800">
-                    <button class="test"><span></span>Onny</button>
+                    <button class="nextBtn" data-whoIs="onny"><span></span>
+                        <span data-whoIs="onny">
+                            Onny
+                        </span>
+                        <span data-whoIs="mony">
+                            Mony
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>

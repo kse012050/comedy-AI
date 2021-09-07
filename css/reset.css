@@ -47,6 +47,6 @@ table {
 	border-spacing: 0;
 }
 
-a{text-decoration: none;}
-button{background-color: transparent; border: none; padding: 0; cursor: pointer;}
+a{text-decoration: none; color: white;}
+button{background-color: transparent; border: none; padding: 0; cursor: pointer; color: white;}
 mark{background-color: transparent; color: #756fdd; display: inline-block;}
