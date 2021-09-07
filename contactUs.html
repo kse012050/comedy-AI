@@ -63,6 +63,7 @@
 
             $('.replayBtn').click(function(){
                 $('.contactUsArea .textBox ol li.active p').remove();
+                $('.sendBox input[type="text"]').removeAttr('style');
                 $('.sendBox input[type="text"]').focus();
                 $(this).hide();
             })

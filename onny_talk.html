@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mony</title>
+    <title>onny</title>
     <!-- splitting css -->
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
@@ -15,7 +15,40 @@
     <!-- material icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/common.js"></script>
+    <script src="https://unpkg.com/typeit@8.0.2/dist/index.umd.js"></script>
     <link rel="stylesheet" href="css/import.css">
+    <script>
+        $(document).ready(function(){
+            var textSelector = $('.textBox ol li strong');
+            var textArray = [];
+            for(var i = 0; i < textSelector.length; i++){
+                textArray[i] = textSelector.eq(i).html().replace(/ /g,"").replace(/\n/g,"");
+            }
+            
+            console.log(textSelector.eq(0));
+            console.log(
+                textArray
+            );
+            setTimeout(() => {
+                $('.textBox ol li').eq(0).addClass('active');
+                setTimeout(() => {
+                    $('.textBox ol li.active p').addClass('active');
+                }, 1000);
+    
+                var test = setInterval(() => {
+                    if(!$('.textBox ol li:last-child').hasClass('active')){
+                        $('.textBox ol li.active').next().addClass('active').siblings().removeClass('active');
+                        setTimeout(() => {
+                            $('.textBox ol li.active strong + *').addClass('active');
+                        }, 1000);
+                    }else{
+                        clearInterval(test);
+                    }
+                }, 3000);
+
+            }, 1000);
+        });
+    </script>
 </head>
 <body class="scrollArea">
     <div class="mainPage">
@@ -45,43 +78,40 @@
             </div>
         </header>
 
-        <div class="introArea onnyArea">
-            <div class="width1800">
+        <div class="talkArea onnyArea">
+            <div class="textBox width1800">
                 <div>
-                    <h2>Onny</h2>
-                    <span>@onny</span>
-                    <ul>
+                    <ol>
                         <li>
-                            <strong>Job.</strong>
-                            <p>Healthcare Manager</p>
+                            <strong>Hello, there!</strong>
+                            <p>Hi, Onny</p>
                         </li>
                         <li>
-                            <strong>Interests.</strong>
-                            <p>Wellness, World-Travelers,</p>
+                            <strong>
+                                I’m a Healthcare<br/>
+                                Manager from meditat.
+                            </strong>
+                            <p>Thanks!</p>
                         </li>
                         <li>
-                            <strong>From.</strong>
-                            <p>Meditat city</p>
+                            <strong>
+                                We’ve all got worried for<br/>
+                                medical tourism.
+                            </strong>
+                            <p>Absolutely!</p>
                         </li>
                         <li>
-                            <strong>First Appearance.</strong>
-                            <p>September 2021 on Earth </p>
+                            <strong>
+                                But, You don’t worry.<br/>
+                                I will accompany you every moment.
+                            </strong>
+                            <p>Feel much better</p>
                         </li>
-                        <li>
-                            <strong>Date of Birth.</strong>
-                            <p>10.10.1998</p>
-                        </li>
-                    </ul>
-                    <ul title="Want to know MONY more?">
-                        <li class="icon_insta"><a href="#"><b>Instagram</b> @mony.glam.</a></li>
-                        <li class="icon_blog"><a href="#"><b>Blog</b> mediTalk.live</a></li>
-                        <li class="icon_chat"><a href="#"><b>Chat</b> onny messenger</a></li>
-                    </ul>
+                    </ol>
                 </div>
-                <img src="images/onny.png" alt="mony">
-                <p>Mony is the first virtual model in Meditat. She emphasize “Beautiful is healthy”</p>
-                <!-- <button class="btn">Meet Mony</button> -->
-                <a href="onny_talk.html" class="btn">Meet Mony</a>
+            </div>
+            <div class="videoBox">
+                <video src="../video/video03.mp4" autoplay muted loop></video>
             </div>
         </div>
 
