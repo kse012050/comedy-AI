@@ -1,3 +1,4 @@
+body.scrollArea{overflow: hidden;}
 [class |= "material"]{font-family: 'Material Icons';}
 
 
