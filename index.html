@@ -20,6 +20,7 @@
 
         var startAniDuration = 1;
         var startAniDelay = 1;
+        var textIdx = 0;
 
         // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
         $('[data-startAni="top"]').css({'top': function(){
@@ -31,11 +32,34 @@
         $('[data-startAni="opacity"]').css({'opacity':'0'});
         $('[data-startAni="opacity"]').delay(startAniDelay * 1000).animate({opacity:1},startAniDuration * 1000);
 
-        $('[data-animate="blur"] span.char').css({'animation-delay' : function(){
+        $('[data-startAni="opacity01"]').css({'opacity':'0'});
+        $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
+
+        $('.textBox.active [data-animate="blur"] span.char').find().css({'animation-delay' : function(){
                 // console.log($(this).css('animation-delay'));
-                return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
+                // console.log($(this).index());
+                textIdx = $(this).index();
+                console.log($(this).parent().parent().parent().index('.textBox'));
+                // console.log($(this).parent().parent().index('.textBox'));
+                // return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
+                return (textIdx * 1) + startAniDelay + startAniDuration + 's';
             }
         });
+        // console.log((textIdx * 0.3) + startAniDelay + startAniDuration + 's');
+        // setInterval(() => {
+           /*  setInterval(function(){
+                if($('.textBox.active').next().hasClass('textBox')){
+                    $('.textBox.active').next().addClass('active').siblings().removeClass('active');
+                }
+            },((textIdx * 0.3) + startAniDelay + startAniDuration + startAniDuration) * 1000) */
+        // }, interval);
+
+        
+        /* setTimeout(function(){
+            location.href = 'whoIs.html'
+
+        },3000) */
+
     })
     </script>
 </head>
@@ -68,12 +92,25 @@
         </header>
 
         <div class="mainArea">
-            <div class="textBox" data-startAni="opacity">
+            <div class="textBox active" data-startAni="opacity">
                 <p data-splitting>Beautiful</p>
                 <p data-splitting data-animate="blur">Inspiration</p>
             </div>
-            <div class="videoBox">
+            <div class="textBox" data-startAni="opacity">
+                <p data-splitting>It’s time to</p>
+                <p data-splitting data-animate="blur">Meet Meditat</p>
+            </div>
+            <div class="textBox" data-startAni="opacity">
+                <p data-splitting>Are you readyto</p>
+                <p data-splitting data-animate="blur">to explore?</p>
+            </div>
+            <!-- <div class="videoBox">
                 <video src="../video/video01.mp4" autoplay muted loop></video>
+            </div> -->
+            <div class="imgBox">
+                <div class="width1800">
+                    <img src="images/mony.png" alt="mony" data-startAni="opacity01">
+                </div>
             </div>
         </div>
 
