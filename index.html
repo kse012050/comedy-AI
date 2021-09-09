@@ -20,6 +20,7 @@
 
         var startAniDuration = 1;
         var startAniDelay = 1;
+        var textBoxIdx = 0;
         var textIdx = 0;
 
         // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
@@ -35,16 +36,27 @@
         $('[data-startAni="opacity01"]').css({'opacity':'0'});
         $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
 
-        $('.textBox.active [data-animate="blur"] span.char').find().css({'animation-delay' : function(){
-                // console.log($(this).css('animation-delay'));
-                // console.log($(this).index());
-                textIdx = $(this).index();
-                console.log($(this).parent().parent().parent().index('.textBox'));
-                // console.log($(this).parent().parent().index('.textBox'));
-                // return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
-                return (textIdx * 1) + startAniDelay + startAniDuration + 's';
-            }
-        });
+        $('.textBox').each(function(){
+            textBoxIdx = $(this).index();
+            console.log(textBoxIdx);
+            setTimeout(() => {
+                $('.textBox.active [data-animate="blur"] span.char').css({'animation-delay' : function(idx){
+                        // console.log($(this).css('animation-delay'));
+                        // console.log($(this).index());
+                        textIdx = $(this).index();
+                        // console.log($(this).parent().parent().index('.textBox'));
+                        // return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
+                        return (textIdx * 0.3) + startAniDelay + startAniDuration + 's';
+                    }
+                });
+                console.log(textBoxIdx);
+                // console.log((textIdx * 0.3));
+                // console.log(startAniDelay);
+                // console.log(startAniDuration);
+                console.log(textBoxIdx * ((textIdx * 0.3) + startAniDelay + startAniDuration) * 1000);
+                // $('.textBox.active').next().addClass('active').siblings().removeClass('active');
+            }, /* textBoxIdx * ((textIdx * 0.3) + startAniDelay + startAniDuration) * */ 1000);
+        })
         // console.log((textIdx * 0.3) + startAniDelay + startAniDuration + 's');
         // setInterval(() => {
            /*  setInterval(function(){
