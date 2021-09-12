@@ -18,6 +18,9 @@
     $(document).ready(function(){
         Splitting(); 
 
+      
+        
+
         var startAniDuration = 1;
         var startAniDelay = 1000;
         var textBoxAniDuration = 0;
@@ -36,6 +39,12 @@
         $('[data-startAni="opacity01"]').css({'opacity':'0'});
         $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
 
+        for(var i = 0 ; i < $('.textBox > div').length; i++){
+            $('.pageBox').append('<span></<span>')
+        }
+
+        $('.pageBox span').first().addClass('active');
+
         $('.textBox > div').each(function(){
             $(this).css({'animation-duration': startAniDuration * 1000 + 'ms'})
             // setTimeout(() => {
@@ -49,10 +58,13 @@
                 console.log(textBoxAniDuration);
                 setTimeout(() => {
                     $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
+                    $('.pageBox span.active').next().addClass('active').siblings().removeClass('active');
                 }, textBoxAniDuration);
             // }, 0);
             
-        })
+        });
+        
+        
     })
     </script>
 </head>
@@ -102,13 +114,19 @@
             <!-- <div class="videoBox">
                 <video src="../video/video01.mp4" autoplay muted loop></video>
             </div> -->
-            <div class="imgBox">
+            <div class="mainPosition">
                 <div class="width1800">
                     <img src="images/mony.png" alt="mony" data-startAni="opacity01">
+                    <div class="pageBox" data-startAni="opacity">
+        
+                    </div>
+                    <div class="newBox" data-startAni="opacity">
+                        <strong>NEWS</strong>
+                        <p>Mony’s Beauty Suite is lanched</p>
+                    </div>
                 </div>
             </div>
         </div>
-
         <footer>
             <div class="width1800">
                 <h2><img src="images/footer_logo.png" alt="meditat logo"></h2>

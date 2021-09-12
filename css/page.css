@@ -39,9 +39,17 @@
 .mainArea .textBox > div:not(:last-child){letter-spacing: 70px;}
 .mainArea .textBox > div:last-child p{letter-spacing: 30px;}
 
-.mainArea .imgBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;}
-.mainArea .imgBox div{height: 100%; display: flex; justify-content: center; align-items: flex-end;}
-.mainArea .imgBox div img{pointer-events: all; width: 50%; margin-right: 90px;}
+.mainArea .mainPosition{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;}
+.mainArea .mainPosition > div{height: 100%; display: flex; justify-content: center; align-items: flex-end; position: relative;}
+.mainArea .mainPosition > div img{pointer-events: all; width: 50%; margin-right: 90px;}
+
+.mainArea .mainPosition .pageBox{position: absolute; right: 0; bottom: 50px; display: flex;}
+.mainArea .mainPosition .pageBox span{width: 12px; height: 12px; background-color: rgba(255, 255, 255, 0.3); border-radius:100px; transition-duration: 0.5s; transition-property: width, background-color;}
+.mainArea .mainPosition .pageBox span:not(:last-child){margin-right: 20px;}
+.mainArea .mainPosition .pageBox span.active{width: 43px; background-color: white; border-radius: 100px;}
+
+.newBox{position: absolute; left: 0; bottom: 50px; display: flex; font-size: 18px;}
+.newBox strong{margin-right: 35px;}
 
 /* .mainArea .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
 .mainArea .videoBox video{width: 100%;} */
@@ -53,25 +61,25 @@
 .whoIsArea section{position: absolute; top: 0; width: 100%;}
 .whoIsArea section:nth-of-type(1){left: 0; z-index: 5;}
 .whoIsArea section:nth-of-type(2){left: 100%; z-index: 6;}
-.whoIsArea .monyBox , .introArea.monyArea, .mainArea{background: rgb(138,143,204);
+.introArea.monyArea, .mainArea{background: rgb(138,143,204);
     background: radial-gradient(circle, rgba(138,143,204,1) 0%, rgba(110,108,195,1) 59%, rgba(97,91,191,1) 100%);
 }
 .whoIsArea .onnyBox , .introArea.onnyArea{background: rgb(124,195,199);
     background: radial-gradient(circle, rgba(124,195,199,1) 0%, rgba(81,178,183,1) 100%);}
 .whoIsArea > section{ height: 100%; display: flex; justify-content: center; align-items: center;}
-.whoIsArea > section > div{ display: flex; justify-content: center; }
-.whoIsArea > section > div > div{ width: 1400px; position: relative;}
-.whoIsArea > section > div > div h2{width: 100%;  font-size: 367px; font-weight: 700;  display: flex; justify-content: space-between; letter-spacing: 10px;}
-.whoIsArea > section > div > div h2 span:nth-child(2){position: relative; z-index: 1;}
-.whoIsArea > section > div > div a{left: 0; z-index: 2;}
+.whoIsArea > section > .textBox{ display: flex; justify-content: center; }
+.whoIsArea > section > .textBox > div{ width: 1400px; position: relative;}
+.whoIsArea > section > .textBox > div h2{width: 100%;  font-size: 367px; font-weight: 700;  display: flex; justify-content: space-between; letter-spacing: 10px;}
+.whoIsArea > section > .textBox > div h2 span{position: relative; z-index: 1;}
+.whoIsArea > section > .textBox > div a{left: 0; z-index: 2;}
 .whoIsArea > section img{position: absolute; bottom: 0; width: 840px; z-index: 0; pointer-events: none;}
 .whoIsArea .selectArea{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
-.whoIsArea .selectArea div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center;}
-.whoIsArea .selectArea div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
-.whoIsArea .selectArea div button:hover{letter-spacing: 15px;}
-.whoIsArea .selectArea div button span:not([data-whoIs]){display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
-.whoIsArea .selectArea div button span:not([data-whoIs])::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
-.whoIsArea .selectArea div button span[data-whoIs="mony"]{display: none;}
+.whoIsArea .selectArea > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; position: relative;}
+.whoIsArea .selectArea > div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
+.whoIsArea .selectArea > div button:hover{letter-spacing: 15px;}
+.whoIsArea .selectArea > div button span:not([data-whoIs]){display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
+.whoIsArea .selectArea > div button span:not([data-whoIs])::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
+.whoIsArea .selectArea > div button span[data-whoIs="mony"]{display: none;}
 
 
 /* 소개 페이지 */
