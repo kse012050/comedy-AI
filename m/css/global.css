@@ -27,14 +27,14 @@ header > div .menuBtn span:not(:last-child){margin-bottom: 15px;}
 header > div .menuBtn.active span:nth-child(1){transform: translateY(9px) rotate(225deg);}
 header > div .menuBtn.active span:nth-child(2){transform: translateY(-9px) rotate(-225deg);}
 
-header > div nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: black; z-index: 0; display: none;}
+header > div nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; padding: 100px 0 18vh; box-sizing: border-box; background-color: black; z-index: 0; display: none; }
 header > div nav > div{height: 100%; display: flex; flex-direction: column; align-items: center;}
-header > div nav > div div{height: 130px; display: flex; align-items: center;}
-header > div nav > div div a{font-size: 22px; font-weight: 700; color: white; line-height: 45px; padding: 0 35px; border-radius: 100px;}
+header > div nav > div div{height: 130px; display: flex; align-items: center; }
+header > div nav > div div a{font-size: 20px; font-weight: 700; color: white; line-height: 50px; padding: 0 40px; border-radius: 100px;}
 header > div nav > div div a.active , header > div nav div a:hover{background-color: white; color: black;}
-header > div nav > div ul{flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;}
-header > div nav > div ul li{padding: 3.5vh 0;}
-header > div nav > div ul li a{font-size: 70px; font-weight: 700; color: white; text-transform: uppercase;}
+header > div nav > div ul{flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 3.125vh 0;}
+header > div nav > div ul li{padding: 3.125vh 0;}
+header > div nav > div ul li a{font-size: 50px; font-weight: 700; color: white; text-transform: uppercase;}
 
 
 /* .imainPage header{top: -100%;} */
