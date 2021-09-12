@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who is</title>
+    <!-- splitting css -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <!-- splitting js -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <!-- jQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+    <script>
+        $(document).ready(function(){
+            var whoIsContentW;
+            var characterVale;
+            var cheracterSelector;
+            var whoIsBoolean = true;
+            var whoIsDuration = 500;
+
+            $('.nextBtn').hover(function(){
+                if(whoIsBoolean){
+                    init();
+                    var leftValue = (whoIsContentW - $('.whoIsArea > section > div > div').width()) / 2
+                    var moveValue = 'calc((((100% - '+ whoIsContentW +'px) / 2)) + ('+ -leftValue +'px + '+ whoIsContentW +'px))';
+                    cheracterSelector.css({
+                        'transition-duration' : whoIsDuration + 'ms',
+                        'left' : moveValue
+                    })
+                }
+            },function(){
+                if(whoIsBoolean){
+                    init();
+                    cheracterSelector.css('left',100 + '%');
+                }
+            })
+
+            $('.nextBtn').on('click',function(){
+                if(whoIsBoolean){
+                    init();
+                    whoIsBoolean = false;
+                    cheracterSelector.css({
+                        'left' : '0%',
+                        'transition-duration' : whoIsDuration + 'ms',
+                    });
+                    if($('.nextBtn').attr('data-whoIs') == 'onny'){
+                        $('.nextBtn').attr('data-whoIs','mony');
+                    }else{
+                        $('.nextBtn').attr('data-whoIs','onny');
+                    }
+                    $('.nextBtn span[data-whoIs]').hide();
+                    $('.nextBtn span[data-whoIs="' +$('.nextBtn').attr('data-whoIs')+ '"]').fadeIn();
+                    setTimeout(function(){
+                        $('.whoIsArea > section').not('.' + $('.nextBtn').attr('data-whoIs') + 'Box').css({
+                            'z-index' : 1,
+                            'left' : 0,
+                        })
+                        $('.' + $('.nextBtn').attr('data-whoIs') + 'Box').css({
+                            'z-index' : 2,
+                            'left' : '100%',
+                            'transition-duration' : '0s',
+                        })
+                        whoIsBoolean = true;
+                    },whoIsDuration )
+                }
+            })
+
+
+            function init(){
+                whoIsContentW = $('.whoIsArea > section > div').width();
+                characterVale = $('.nextBtn').attr('data-whoIs');
+                cheracterSelector = $('.whoIsArea .'+ characterVale +'Box');
+            }
+        });
+    </script>
+</head>
+<body class="scrollArea">
+    <div class="mainPage">
+        <header data-startAni="top">
+            <div class="width1800">
+                <h1><a href="index.html"><img src="images/logo.png" alt="meditat logo"></a></h1>
+                <button class="menuBtn">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <div>
+                        <div>
+                            <a href="#" class="active">EN</a>
+                            <a href="#">MN</a>
+                            <a href="#">CN</a>
+                        </div>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="whoIs.html">Digital Human</a></li>
+                            <li><a href="service.html">Our Service</a></li>
+                            <li><a href="press.html">Press & Media</a></li>
+                            <li><a href="contactUs.html">Contact US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="whoIsArea" data-animate="blur">
+            <section class="monyBox">
+                <div class="width1800">
+                    <div>
+                        <h2><span class="char">Mo</span><span class="char">ny</span></h2>
+                        <a href="intro_mony.html" class="btn char">Who is Mony?</a>
+                    </div>
+                </div>
+                <img src="images/mony.png" alt="mony" >
+            </section>
+            <section class="onnyBox">
+                <div class="width1800">
+                    <div>
+                        <h2><span>On</span><span>ny</span></h2>
+                        <a href="intro_onny.html" class="btn">Who is Onny?</a>
+                    </div>
+                </div>
+                <img src="images/onny.png" alt="onny">
+            </section>
+            <div class="selectArea char">
+                <div class="width1800">
+                    <button class="nextBtn" data-whoIs="onny"><span></span>
+                        <span data-whoIs="onny">
+                            Onny
+                        </span>
+                        <span data-whoIs="mony">
+                            Mony
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="width1800">
+                <h2><img src="images/footer_logo.png" alt="meditat logo"></h2>
+                <div>
+                    <ul>
+                        <li><a href="#">meditalk blog</a></li>
+                        <li><a href="#">Mony Beauty Studi</a></li>
+                    </ul>
+                    <ul class="snsArea">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    <address>
+                        <p>Korea medical AI Inc, 509 Nonhyeon-ro, Gangnam-gu, Seoul, South Korea </p>
+                        <p>E-mail : <a href="#">info@meditat.net</a></p>
+                    </address>
+                    <p>Copyright© Korea Medical AI Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

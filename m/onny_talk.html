@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코메디 AI</title>
+    <title>onny</title>
     <!-- splitting css -->
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
@@ -12,48 +12,42 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <!-- jQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/common.js"></script>
+    <script src="https://unpkg.com/typeit@8.0.2/dist/index.umd.js"></script>
     <link rel="stylesheet" href="css/import.css">
-    <script> 
-    $(document).ready(function(){
-        Splitting(); 
-
-        var startAniDuration = 1;
-        var startAniDelay = 1000;
-        var textBoxAniDuration = 0;
-        var textAniDuration = 0;
-
-        // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
-        $('[data-startAni="top"]').css({'top': function(){
-                return -$(this).height();
+    <script>
+        $(document).ready(function(){
+            var textSelector = $('.textBox ol li strong');
+            var textArray = [];
+            for(var i = 0; i < textSelector.length; i++){
+                textArray[i] = textSelector.eq(i).html().replace(/ /g,"").replace(/\n/g,"");
             }
-        });
-        $('[data-startAni="top"]').delay(startAniDelay).animate({top:0},startAniDuration * 1000);
-
-        $('[data-startAni="opacity"]').css({'opacity':'0'});
-        $('[data-startAni="opacity"]').delay(startAniDelay).animate({opacity:1},startAniDuration * 1000);
-
-        $('[data-startAni="opacity01"]').css({'opacity':'0'});
-        $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
-
-        $('.textBox > div').each(function(){
-            $(this).css({'animation-duration': startAniDuration * 1000 + 'ms'})
-            // setTimeout(() => {
-                $(this).find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
-                        textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
-                        return textAniDuration + 'ms';
-                    }
-                });
-                // console.log(textAniDuration);
-                textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration + 1000;
-                console.log(textBoxAniDuration);
-                setTimeout(() => {
-                    $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
-                }, textBoxAniDuration);
-            // }, 0);
             
-        })
-    })
+            console.log(textSelector.eq(0));
+            console.log(
+                textArray
+            );
+            setTimeout(() => {
+                $('.textBox ol li').eq(0).addClass('active');
+                setTimeout(() => {
+                    $('.textBox ol li.active p').addClass('active');
+                }, 1000);
+    
+                var test = setInterval(() => {
+                    if(!$('.textBox ol li:last-child').hasClass('active')){
+                        $('.textBox ol li.active').next().addClass('active').siblings().removeClass('active');
+                        setTimeout(() => {
+                            $('.textBox ol li.active strong + *').addClass('active');
+                        }, 1000);
+                    }else{
+                        clearInterval(test);
+                    }
+                }, 3000);
+
+            }, 1000);
+        });
     </script>
 </head>
 <body class="scrollArea">
@@ -84,28 +78,40 @@
             </div>
         </header>
 
-        <div class="mainArea">
-            <div class="textBox" data-startAni="opacity">
-                <div class="active" >
-                    <p data-splitting>Beautiful</p>
-                    <p data-splitting data-animate="blur">Inspiration</p>
-                </div>
+        <div class="talkArea onnyArea">
+            <div class="textBox width1800">
                 <div>
-                    <p data-splitting>It’s time to</p>
-                    <p data-splitting data-animate="blur">Meet Meditat</p>
-                </div>
-                <div>
-                    <p data-splitting>Are you readyto</p>
-                    <p data-splitting data-animate="blur">to explore?</p>
+                    <ol>
+                        <li>
+                            <strong>Hello, there!</strong>
+                            <p>Hi, Onny</p>
+                        </li>
+                        <li>
+                            <strong>
+                                I’m a Healthcare<br/>
+                                Manager from meditat.
+                            </strong>
+                            <p>Thanks!</p>
+                        </li>
+                        <li>
+                            <strong>
+                                We’ve all got worried for<br/>
+                                medical tourism.
+                            </strong>
+                            <p>Absolutely!</p>
+                        </li>
+                        <li>
+                            <strong>
+                                But, You don’t worry.<br/>
+                                I will accompany you every moment.
+                            </strong>
+                            <p>Feel much better</p>
+                        </li>
+                    </ol>
                 </div>
             </div>
-            <!-- <div class="videoBox">
-                <video src="../video/video01.mp4" autoplay muted loop></video>
-            </div> -->
-            <div class="imgBox">
-                <div class="width1800">
-                    <img src="images/mony.png" alt="mony" data-startAni="opacity01">
-                </div>
+            <div class="videoBox">
+                <video src="../video/video03.mp4" autoplay muted loop></video>
             </div>
         </div>
 

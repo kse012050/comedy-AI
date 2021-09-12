@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코메디 AI</title>
+    <title>press</title>
     <!-- splitting css -->
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
@@ -12,52 +12,13 @@
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <!-- jQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/import.css">
-    <script> 
-    $(document).ready(function(){
-        Splitting(); 
-
-        var startAniDuration = 1;
-        var startAniDelay = 1000;
-        var textBoxAniDuration = 0;
-        var textAniDuration = 0;
-
-        // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
-        $('[data-startAni="top"]').css({'top': function(){
-                return -$(this).height();
-            }
-        });
-        $('[data-startAni="top"]').delay(startAniDelay).animate({top:0},startAniDuration * 1000);
-
-        $('[data-startAni="opacity"]').css({'opacity':'0'});
-        $('[data-startAni="opacity"]').delay(startAniDelay).animate({opacity:1},startAniDuration * 1000);
-
-        $('[data-startAni="opacity01"]').css({'opacity':'0'});
-        $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
-
-        $('.textBox > div').each(function(){
-            $(this).css({'animation-duration': startAniDuration * 1000 + 'ms'})
-            // setTimeout(() => {
-                $(this).find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
-                        textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
-                        return textAniDuration + 'ms';
-                    }
-                });
-                // console.log(textAniDuration);
-                textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration + 1000;
-                console.log(textBoxAniDuration);
-                setTimeout(() => {
-                    $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
-                }, textBoxAniDuration);
-            // }, 0);
-            
-        })
-    })
-    </script>
 </head>
 <body class="scrollArea">
-    <div class="mainPage">
+    <div class="subPage case01">
         <header data-startAni="top">
             <div class="width1800">
                 <h1><a href="index.html"><img src="images/logo.png" alt="meditat logo"></a></h1>
@@ -84,30 +45,63 @@
             </div>
         </header>
 
-        <div class="mainArea">
-            <div class="textBox" data-startAni="opacity">
-                <div class="active" >
-                    <p data-splitting>Beautiful</p>
-                    <p data-splitting data-animate="blur">Inspiration</p>
-                </div>
-                <div>
-                    <p data-splitting>It’s time to</p>
-                    <p data-splitting data-animate="blur">Meet Meditat</p>
-                </div>
-                <div>
-                    <p data-splitting>Are you readyto</p>
-                    <p data-splitting data-animate="blur">to explore?</p>
+        <main class="pressArea">
+            <div class="width1800">
+                <h2 class="titleDot">
+                    Press&<br/>
+                    Media
+                </h2>
+                <ul>
+                    <li>
+                        <img src="images/press_img01.png" alt="press img">
+                        <div>
+                            <strong>
+                                <mark>
+                                    Mony’s Beauty Suite is <br/>
+                                    launched in Mongilia
+                                </mark>
+                            </strong>
+                            <time><mark>JUN.25.2021</mark></time>
+                            <p>
+                                Meditat is beauty-tech brand rooted in authenticity <br/>
+                                based in Seoul. We pursue mixed reality...
+                            </p>
+                            <a href="#" class="btn01">Read More</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="images/press_img02.png" alt="press img">
+                        <div>
+                            <strong>
+                                <mark>
+                                    Mony’s Beauty Suite is <br/>
+                                    launched in Mongilia
+                                </mark>
+                            </strong>
+                            <time><mark>JUN.25.2021</mark></time>
+                            <p>
+                                Meditat is beauty-tech brand rooted in authenticity <br/>
+                                based in Seoul. We pursue mixed reality...
+                            </p>
+                            <a href="#" class="btn01">Read More</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pagerBox">
+                    <a href="#"><span class="material-icons-outlined">chevron_left</span>prev</a>
+                    <ol>
+                        <li class="active"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                    </ol>
+                    <a href="#">next <span class="material-icons-outlined">chevron_right</span></a>
                 </div>
             </div>
-            <!-- <div class="videoBox">
-                <video src="../video/video01.mp4" autoplay muted loop></video>
-            </div> -->
-            <div class="imgBox">
-                <div class="width1800">
-                    <img src="images/mony.png" alt="mony" data-startAni="opacity01">
-                </div>
-            </div>
-        </div>
+        </main>
 
         <footer>
             <div class="width1800">

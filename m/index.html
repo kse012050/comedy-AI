@@ -19,40 +19,67 @@
         Splitting(); 
 
         var startAniDuration = 1;
-        var startAniDelay = 1000;
-        var textBoxAniDuration = 0;
-        var textAniDuration = 0;
+        var startAniDelay = 1;
+        var textBoxIdx = 0;
+        var textIdx = 0;
+        var animateDuration = 0;
 
         // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
         $('[data-startAni="top"]').css({'top': function(){
                 return -$(this).height();
             }
         });
-        $('[data-startAni="top"]').delay(startAniDelay).animate({top:0},startAniDuration * 1000);
+        $('[data-startAni="top"]').delay(startAniDelay * 1000).animate({top:0},startAniDuration * 1000);
 
         $('[data-startAni="opacity"]').css({'opacity':'0'});
-        $('[data-startAni="opacity"]').delay(startAniDelay).animate({opacity:1},startAniDuration * 1000);
+        $('[data-startAni="opacity"]').delay(startAniDelay * 1000).animate({opacity:1},startAniDuration * 1000);
 
         $('[data-startAni="opacity01"]').css({'opacity':'0'});
         $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
 
-        $('.textBox > div').each(function(){
-            $(this).css({'animation-duration': startAniDuration * 1000 + 'ms'})
-            // setTimeout(() => {
-                $(this).find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
-                        textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
-                        return textAniDuration + 'ms';
+        $('.textBox').each(function(){
+            textBoxIdx = $(this).index();
+            // console.log(textBoxIdx);
+            setTimeout(() => {
+                $('.textBox.active [data-animate="blur"] span.char').css({'animation-delay' : function(idx){
+                        // console.log($(this).css('animation-delay'));
+                        // console.log($(this).index());
+                        // textIdx = $(this).index();
+                        animateDuration = ((idx * 0.3) + startAniDelay + startAniDuration) * 1000
+                        textIdx = textIdx + animateDuration;
+                        console.log(textIdx);
+                        // console.log($(this).parent().parent().index('.textBox'));
+                        // return parseFloat($(this).css('animation-delay')) + startAniDelay + startAniDuration + 's';
+                        return animateDuration + 'ms';
                     }
                 });
-                // console.log(textAniDuration);
-                textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration + 1000;
-                console.log(textBoxAniDuration);
                 setTimeout(() => {
-                    $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
-                }, textBoxAniDuration);
-            // }, 0);
-            
+                    $('.textBox.active').next().addClass('active').siblings().removeClass('active');
+                    console.log(1);
+                }, textIdx);
+                // console.log(textBoxIdx);
+                // console.log((textIdx * 0.3));
+                // console.log(startAniDelay);
+                // console.log(startAniDuration);
+                // console.log(textBoxIdx * ((textIdx * 0.3) + startAniDelay + startAniDuration) * 1000);
+                // $('.textBox.active').next().addClass('active').siblings().removeClass('active');
+            }, textBoxIdx * ((textIdx * 0.3) + startAniDelay + startAniDuration) * 1000);
         })
+        // console.log((textIdx * 0.3) + startAniDelay + startAniDuration + 's');
+        // setInterval(() => {
+           /*  setInterval(function(){
+                if($('.textBox.active').next().hasClass('textBox')){
+                    $('.textBox.active').next().addClass('active').siblings().removeClass('active');
+                }
+            },((textIdx * 0.3) + startAniDelay + startAniDuration + startAniDuration) * 1000) */
+        // }, interval);
+
+        
+        /* setTimeout(function(){
+            location.href = 'whoIs.html'
+
+        },3000) */
+
     })
     </script>
 </head>
@@ -85,19 +112,17 @@
         </header>
 
         <div class="mainArea">
+            <div class="textBox active" data-startAni="opacity">
+                <p data-splitting>Beautiful</p>
+                <p data-splitting data-animate="blur">Inspiration</p>
+            </div>
             <div class="textBox" data-startAni="opacity">
-                <div class="active" >
-                    <p data-splitting>Beautiful</p>
-                    <p data-splitting data-animate="blur">Inspiration</p>
-                </div>
-                <div>
-                    <p data-splitting>It’s time to</p>
-                    <p data-splitting data-animate="blur">Meet Meditat</p>
-                </div>
-                <div>
-                    <p data-splitting>Are you readyto</p>
-                    <p data-splitting data-animate="blur">to explore?</p>
-                </div>
+                <p data-splitting>It’s time to</p>
+                <p data-splitting data-animate="blur">Meet Meditat</p>
+            </div>
+            <div class="textBox" data-startAni="opacity">
+                <p data-splitting>Are you readyto</p>
+                <p data-splitting data-animate="blur">to explore?</p>
             </div>
             <!-- <div class="videoBox">
                 <video src="../video/video01.mp4" autoplay muted loop></video>
