@@ -3,7 +3,7 @@
 /* [class$='Page'] > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;} */
 .mainPage, .subPage{color: white;}
 .mainPage > [class$='Area']{padding-top: 200px;}
-.subPage.case01 > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
+.subPage.case01 > [class$='Area']{width: 100%; height: 100vh; position: relative;}
 
 .btn{font-size: 24px; font-weight: 600; color: white; /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: inline-flex; justify-content: center; align-items: center; z-index: 2; position: relative; overflow: hidden;}
 .btn::before{content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: white; mix-blend-mode: difference; transition: 0.5s width; }
@@ -241,16 +241,18 @@
 
 
 /* contactUs */
-.contactUsArea{background-color: black; padding-bottom: 60px; box-sizing: border-box; display: flex; align-items: flex-end; position: relative; overflow: hidden;}
+.contactUsArea{background-color: black; padding-bottom: 100px; box-sizing: border-box; display: flex; align-items: flex-end; position: relative; overflow: hidden;}
 .contactUsArea > div{position: relative;}
-.contactUsArea > div h2{margin-bottom: 20px;}
-.contactUsArea > div mark{font-size: 30px; font-weight: 800; margin-bottom: 440px;}
-.contactUsArea > div button{position: absolute; right: 0; bottom: 0;}
-/* .contactUsArea > div p{font-size: 40px; font-weight: 600; line-height: 69px;} */
-.contactUsArea > div p.heartEmoticon::after{content: '';display: inline-block; width: 40px; height: 40px; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
 
-.contactUsArea .contactUsBox{position: absolute; right: calc(-1 * (600px + ((100% - 1800px) / 2))); top: 0; width: calc(600px + ((100% - 1800px) / 2)); height: 100%; padding-left: 50px; box-sizing: border-box; background-color: #605abf; z-index: 5;}
-.contactUsArea .contactUsBox > div{width: 550px; height: 100%; position: relative; display: flex; align-items: center; }
+.contactUsArea > .contentsArea{height: 100%; display: flex; flex-direction: column; justify-content: space-between;}
+.contactUsArea > .contentsArea h2{margin-bottom: 20px;}
+.contactUsArea > .contentsArea mark{font-size: 30px; font-weight: 800; /* margin-bottom: 440px; */}
+.contactUsArea > .contentsArea p{font-size: 40px; font-weight: 600; line-height: 69px; margin-bottom: 50px;}
+.contactUsArea > .contentsArea p.heartEmoticon::after{content: '';display: inline-block; width: 40px; height: 40px; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
+/* .contactUsArea > div button{position: absolute; right: 0; bottom: 0;} */
+
+.contactUsArea .contactUsBox{position: absolute; right: -100%; top: 0; width: 100%; height: 100%; box-sizing: border-box; background-color: #605abf; z-index: 5;}
+.contactUsArea .contactUsBox > div{height: 100%; position: relative; display: flex; align-items: center; }
 
 .contactUsArea .contactUsBox > div .textBox{width: 100%; position: relative; z-index: 1; }
 .contactUsArea .contactUsBox > div .textBox ol{/* display: none; */}
@@ -279,4 +281,4 @@
 
 .contactUsArea .contactUsBox > div .sendBox{position: absolute; left: 0; bottom: 55px; width: 100%; z-index: 2;}
 .contactUsArea .contactUsBox > div .sendBox input[type="text"]{width: 100%; height: 70px; font-size: 21px; font-weight: 600; color: white; padding: 0 40px; box-sizing: border-box; background-color: transparent; border: 1px solid white; border-radius: 100px;}
-.contactUsArea .contactUsBox > div .sendBox button{position: absolute; right: 40px; top: 0; font-size: 27px; font-weight: 800;}
+.contactUsArea .contactUsBox > div .sendBox button{position: absolute; right: 40px; top: 0; font-size: 27px; font-weight: 800; line-height: 70px;}
