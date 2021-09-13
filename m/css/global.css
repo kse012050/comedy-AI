@@ -5,7 +5,7 @@ body.scrollArea{overflow: hidden;}
 /* 컨텐츠 크기 */
 .width1900{width: calc(100% - 100px);  max-width: 1900px; min-width: 1200px; margin: 0 auto;}
 .width1800{width: calc(100% - 100px);  max-width: 1800px; min-width: 1200px; margin: 0 auto;}
-.width1420{width: calc(100% - 100px);  max-width: 1420px; min-width: 1200px; margin: 0 auto;}
+.width1420{width: 1420px; margin: 0 auto;}
 .width1280{width: calc(100% - 100px);  max-width: 1280px; min-width: 1200px; margin: 0 auto;}
 .mobileWidth{width: calc(100% - 60px); margin: 0 auto;}
 
