@@ -228,14 +228,14 @@
 
 /* press */
 .pressArea{background-color: black; padding-bottom: 60px; box-sizing: border-box; display: flex; align-items: flex-end;}
-.pressArea > div{display: flex; position: relative;}
-.pressArea > div h2{line-height: 80px; max-width: 300px; margin-right: 230px;}
-.pressArea > div ul li{display: flex; align-items: flex-end;}
-.pressArea > div ul li:not(:last-child){margin-bottom: 65px;}
-.pressArea > div ul li img{max-width: 620px; margin-right: 50px;}
-.pressArea > div ul li div strong{font-size: 32px; font-weight: 700; line-height: 37px; display: block; margin-bottom: 20px;}
-.pressArea > div ul li div time{font-size: 18px; font-weight: 700; display: block; margin-bottom: 20px;}
-.pressArea > div ul li div p{font-size: 18px; line-height: 30px; margin-bottom: 55px;}
+.pressArea > div{position: relative;}
+.pressArea > div h2{line-height: 70px; max-width: 300px; margin-bottom: 90px;}
+.pressArea > div ul li{}
+.pressArea > div ul li:not(:last-child){margin-bottom: 120px;}
+.pressArea > div ul li img{width: 100%; margin-bottom: 70px;}
+.pressArea > div ul li div strong{font-size: 40px; font-weight: 700; line-height: 50px; display: block; margin-bottom: 25px;}
+.pressArea > div ul li div time{font-size: 20px; font-weight: 700; display: block; margin-bottom: 30px;}
+.pressArea > div ul li div p{font-size: 22px; line-height: 40px; margin-bottom: 70px;}
 
 .pressArea > div .pagerBox{position: absolute; left: 0; bottom: 0; display: flex; align-items: center;}
 .pressArea > div .pagerBox a{font-size: 15px; font-weight: 700; color: white;}
