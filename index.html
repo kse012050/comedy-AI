@@ -59,6 +59,9 @@
                 setTimeout(() => {
                     $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
                     $('.pageBox span.active').next().addClass('active').siblings().removeClass('active');
+                    if($(this).index() == 2){
+                        location.href = 'whoIs.html';
+                    }
                 }, textBoxAniDuration);
             // }, 0);
             
