@@ -52,12 +52,12 @@
                     return textAniDuration + 'ms';
                 }
             });
-            textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration + 1000;
+            textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration * 1000;
             console.log(textBoxAniDuration);
             setTimeout(() => {
                 $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
                 $('.pageBox span.active').next().addClass('active').siblings().removeClass('active');
-            }, textBoxAniDuration + 1000);
+            }, textBoxAniDuration);
         });
         
         
@@ -107,7 +107,7 @@
                     <div>
                         <p data-splitting>Are you readyto</p>
                         <p data-splitting data-animate="blur">to explore?</p>
-                        <a href="#" class="btn">Expore</a>
+                        <a href="whoIs.html" class="btn">Expore</a>
                     </div>
                 </div>
                 <!-- <div class="videoBox">
