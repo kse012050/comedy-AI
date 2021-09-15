@@ -43,24 +43,28 @@
             $('.pageBox').append('<span></<span>')
         }
 
-        $('.pageBox span').first().addClass('active');
+        $('.textBox')[0].addEventListener('animationend',function(){
+            mainTextAnimation()
+        });
 
-        $('.textBox > div').each(function(){
-            $(this).css({'animation-duration': startAniDuration * 1000 + 'ms'})
-            $(this).find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
+        function mainTextAnimation(){
+            $('.textBox > div.active').find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
                     textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
                     return textAniDuration + 'ms';
                 }
             });
-            textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration * 1000;
-            console.log(textBoxAniDuration);
-            setTimeout(() => {
-                $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
-                $('.pageBox span.active').next().addClass('active').siblings().removeClass('active');
-            }, textBoxAniDuration);
-        });
-        
-        
+
+            $('.textBox > div.active').find('[data-animate="blur"] span.char').css({'animation-name' :'blurAni'});
+            $('.textBox > div.active').find('[data-animate="blur"] span.char').last()[0].addEventListener('animationend',function(){
+                if($('.textBox > div.active').next().length){
+                    setTimeout(() => {
+                        $('.textBox > div.active').removeClass('active');
+                        $(this).parent().parent().parent().next().addClass('active');
+                        mainTextAnimation();
+                    }, 2000);
+                }
+            })
+        }
     })
     </script>
 </head>

@@ -19,34 +19,27 @@
     <link rel="stylesheet" href="css/import.css">
     <script>
         $(document).ready(function(){
-            var textSelector = $('.talkArea ol li strong');
-            var textArray = [];
-            for(var i = 0; i < textSelector.length; i++){
-                textArray[i] = textSelector.eq(i).html().replace(/ /g,"").replace(/\n/g,"");
-            }
-            
-            console.log(textSelector.eq(0));
-            console.log(
-                textArray
-            );
-            setTimeout(() => {
-                $('.talkArea ol li').eq(0).addClass('active');
+            $('.talkArea ol li').eq(0).addClass('active');
+            $('.talkArea ol li.active strong').eq(0).addClass('active');
+            talkAnimation();
+            function talkAnimation(){
+                $('.talkArea ol li.active strong.active')[0].addEventListener('animationend',function(){
+                    if($(this).next().prop('tagName') == 'STRONG'){
+                        $(this).fadeOut(function(){
+                            $(this).next().addClass('active');
+                        })
+                    }
+                })
                 setTimeout(() => {
                     $('.talkArea ol li.active p').addClass('active');
                 }, 1000);
-    
-                var test = setInterval(() => {
-                    if(!$('.talkArea ol li:last-child').hasClass('active')){
-                        $('.talkArea ol li.active').next().addClass('active').siblings().removeClass('active');
-                        setTimeout(() => {
-                            $('.talkArea ol li.active strong + *').addClass('active');
-                        }, 1000);
-                    }else{
-                        clearInterval(test);
-                    }
-                }, 3000);
+            }
 
-            }, 1000);
+            $('.talkArea ol li p').click(function(){
+                $(this).parent().removeClass('active').next().addClass('active');
+                $('.talkArea ol li.active strong').eq(0).addClass('active');
+                talkAnimation();
+            })
         });
     </script>
 </head>
