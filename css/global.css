@@ -3,7 +3,7 @@
 .width1900{max-width: 1900px; width: calc(100% - 60px); margin: 0 auto;}
 .width1200{max-width: 1200px; width: calc(100% - 60px); margin: 0 auto;}
 
-.height100{height: 100vh;}
+.height100{height: 1080px;}
 
 .contentArea{height: 100%;  display: flex; align-items: center; position: relative; z-index: 1;}
 
@@ -22,7 +22,7 @@
 .positionContents .newBox strong{margin-right: 35px;}
 .positionContents .textBox p{ font-size: 40px; font-weight: 700; letter-spacing: 2px; position: absolute; left: 0; bottom: 50px; width: 100%; text-align: center; pointer-events:all;}
 
-.monyBG{background-color: #615bbf;}
+.monyBG{background-color: #685cc5;}
 .onnyBG{background-color: #50b2b7;}
 
 .titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
@@ -39,6 +39,19 @@
     0%{filter: blur(10em); opacity: 0;}
     100%{filter: blur(0px); opacity: 1;}
 }
+
+/* subPage font */
+.subPage .fs01{font-size: 60px;}
+.subPage .fs02{font-size: 46px;}
+.subPage .fs03{font-size: 40px;}
+.subPage .fs04{font-size: 30px;}
+.subPage .fs05{font-size: 26px;}
+.subPage .fs06{font-size: 22px;}
+
+.subPage .lh01{line-height: 1.5;}
+.subPage .lh02{line-height: 40px}
+.subPage .lh03{line-height: 69px}
+.subPage .lh04{line-height: 32px}
 
 /* header */
 header{position: fixed; left: 0; top: 0; width: 100%; height: 130px; z-index: 100;}
