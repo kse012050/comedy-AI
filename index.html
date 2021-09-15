@@ -37,7 +37,7 @@
         $('[data-startAni="opacity"]').delay(startAniDelay).animate({opacity:1},startAniDuration * 1000);
 
         $('[data-startAni="opacity01"]').css({'opacity':'0'});
-        $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
+        $('[data-startAni="opacity01"]').delay(1500).animate({opacity:1},startAniDuration * 1000);
 
         for(var i = 0 ; i < $('.textBox > div').length; i++){
             $('.pageBox').append('<span></<span>')
@@ -102,7 +102,7 @@
                     </div>
                     <div>
                         <p data-splitting>It’s time to</p>
-                        <p data-splitting data-animate="blur">Meet Meditat</p>
+                        <p data-splitting data-animate="blur">Meet Unthink</p>
                     </div>
                     <div>
                         <p data-splitting>Are you readyto</p>
@@ -127,8 +127,8 @@
             </div>
         </div>
         <footer>
-            <div class="width1800">
-                <h2><img src="images/footer_logo.png" alt="meditat logo"></h2>
+            <div class="width1900">
+                <h2><img src="images/logo_w.png" alt="meditat logo"></h2>
                 <div>
                     <ul>
                         <li><a href="#">meditalk blog</a></li>
