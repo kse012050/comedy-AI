@@ -79,7 +79,7 @@
 
 
 /* sub 페이지 */
-.subPage main{padding-top: 130px; box-sizing: border-box;}
+.subPage main{padding: 130px 0; box-sizing: border-box;}
 .subPage main h2{font-size: 70px;}
 
 /* contactUs 페이지*/
@@ -184,3 +184,42 @@
 .aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
 .aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
 .aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}
+
+
+/* our service */
+.serviceArea{padding:80px 0 0;}
+.serviceArea h4{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
+.serviceArea h4 + p{font-size: 40px; font-weight: 600; margin-bottom: 50px;}
+.serviceArea .serviceList{font-size: 26px; font-weight: 600;}
+.serviceArea .serviceList li{display: flex; align-items: center;}
+.serviceArea .serviceList li:not(:last-child){margin-bottom: 15px;}
+.serviceArea .serviceList li::before{content: ''; width: 6px; height: 6px; background-color: white; border-radius: 100%; margin: 0 10px 0 3px;}
+
+.serviceArea .digitalArea{padding: 200px 0; margin-bottom: 100px;}
+.serviceArea .digitalArea > div:nth-child(1){position: relative; z-index: 10;}
+.serviceArea .digitalArea > div:nth-child(1) h3{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
+.serviceArea .digitalArea > div:nth-child(1) p{font-size: 40px; font-weight: 600; margin-bottom: 60px;}
+.serviceArea .digitalArea .serviceList{margin-bottom: 440px;}
+.serviceArea .digitalArea .imgList::after{content: ''; display: block; clear: both;}
+.serviceArea .digitalArea .imgList li{float: left; max-width: 300px;}
+.serviceArea .digitalArea .imgList li:not(:last-child){margin-right: 10px;}
+.serviceArea .digitalArea .imgList li img{width: 100%;}
+.serviceArea .digitalArea .imgArea{max-width: 1800px; margin: 0 auto; position: relative; z-index: 0;}
+.serviceArea .digitalArea .imgArea img{position: absolute; right: 0px; bottom: 115px;}
+
+.serviceArea .virtualArea{margin-bottom: 300px;}
+.serviceArea .virtualArea div p{margin-bottom: 200px;}
+.serviceArea .virtualArea .imgBox{height: 660px; text-indent: -9999px; display: flex; justify-content: space-between;}
+.serviceArea .virtualArea .imgBox::after , .serviceArea .virtualArea .imgBox::before{
+    content: ''; display: block; width: calc((100% - 10px) / 2); height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;
+}
+.serviceArea .virtualArea .imgBox::after{background-image: url('../images/service_virtual01.png');}
+.serviceArea .virtualArea .imgBox::before{background-image: url('../images/service_virtual02.png');}
+
+.serviceArea .ARArea{margin-bottom: 250px;}
+.serviceArea .ARArea .serviceList{margin-bottom: 90px;}
+.serviceArea .ARArea .imgArea{display: flex; justify-content: space-between;}
+.serviceArea .ARArea .imgArea img{width: calc((100% - 10px) / 2);}
+
+.serviceArea .designArea .imgBox img{width: 100%;}
+
