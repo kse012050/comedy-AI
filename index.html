@@ -26,6 +26,8 @@
         var textBoxAniDuration = 0;
         var textAniDuration = 0;
 
+        var mainAnimateIdx = 0;
+
         // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
         $('[data-startAni="top"]').css({'top': function(){
                 return -$(this).height();
@@ -45,9 +47,23 @@
 
         $('.textBox')[0].addEventListener('animationend',function(){
             mainTextAnimation()
+            
         });
 
+
+      
+
+
         function mainTextAnimation(){
+            // console.log($('.textBox > *')[0]);
+            $('.textBox > *').each(function(){
+                $(this)[0].addEventListener('animationend',function(e){
+                    e.stopPropagation();
+                });
+            })
+          
+            $('.pageBox span').removeClass('active');
+            $('.pageBox span').eq(mainAnimateIdx).addClass('active');
             $('.textBox > div.active').find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
                     textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
                     return textAniDuration + 'ms';
@@ -60,6 +76,7 @@
                     setTimeout(() => {
                         $('.textBox > div.active').removeClass('active');
                         $(this).parent().parent().parent().next().addClass('active');
+                        mainAnimateIdx++;
                         mainTextAnimation();
                     }, 2000);
                 }
