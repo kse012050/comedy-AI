@@ -4,66 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>코메디 AI</title>
+    <title>mony</title>
     <!-- splitting css -->
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
     <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
     <!-- splitting js -->
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-
     <!-- jQuery cdn -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- material icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="js/common.js"></script>
     <link rel="stylesheet" href="css/import.css">
-    <script> 
-    $(document).ready(function(){
-        Splitting(); 
-
-        var startAniDuration = 1;
-        var startAniDelay = 1000;
-        var textBoxAniDuration = 0;
-        var textAniDuration = 0;
-
-        // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
-        $('[data-startAni="top"]').css({'top': function(){
-                return -$(this).height();
-            }
-        });
-        $('[data-startAni="top"]').delay(startAniDelay).animate({top:0},startAniDuration * 1000);
-
-        $('[data-startAni="opacity"]').css({'opacity':'0'});
-        $('[data-startAni="opacity"]').delay(startAniDelay).animate({opacity:1},startAniDuration * 1000);
-
-        $('[data-startAni="opacity01"]').css({'opacity':'0'});
-        $('[data-startAni="opacity01"]').animate({opacity:1},startAniDuration * 1000);
-
-        for(var i = 0 ; i < $('.textBox > div').length; i++){
-            $('.pageBox').append('<span></<span>')
-        }
-
-        $('.pageBox span').first().addClass('active');
-
-        $('.textBox > div').each(function(){
-            $(this).css({'animation-duration': startAniDuration * 1000 + 'ms'})
-            $(this).find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
-                    textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
-                    return textAniDuration + 'ms';
-                }
-            });
-            textBoxAniDuration = textBoxAniDuration + textAniDuration + startAniDuration + 1000;
-            console.log(textBoxAniDuration);
-            setTimeout(() => {
-                $('.textBox > div.active').next().addClass('active').siblings().removeClass('active');
-                $('.pageBox span.active').next().addClass('active').siblings().removeClass('active');
-            }, textBoxAniDuration);
-            
-        });
-        
-        
-    })
-    </script>
 </head>
 <body>
     <div class="mainPage">
@@ -93,40 +45,52 @@
             </div>
         </header>
 
-        <div class="mainArea height100">
+        <div class="introArea onnyArea onnyBG height100">
             <div class="contentArea width1200">
-                <div class="textBox" data-startAni="opacity">
-                    <div class="active">
-                        <p data-splitting>Beautiful</p>
-                        <img src="images/mein_mony.png" alt="mony" data-startAni="opacity01">
-                        <p data-splitting data-animate="blur">Inspiration</p>
-                    </div>
-                    <div>
-                        <p data-splitting>It’s time to</p>
-                        <p data-splitting data-animate="blur">Meet Meditat</p>
-                    </div>
-                    <div>
-                        <p data-splitting>Are you readyto</p>
-                        <p data-splitting data-animate="blur">to explore?</p>
-                        <a href="#" class="btn">Expore</a>
-                    </div>
+                <div>
+                    <h2>Onny
+                        <span>@onny</span>
+                    </h2>
+                    <ul>
+                        <li>
+                            <strong>Job.</strong>
+                            <p>Healthcare Manager</p>
+                        </li>
+                        <li>
+                            <strong>Interests.</strong>
+                            <p>Wellness, World-Travelers,</p>
+                        </li>
+                        <li>
+                            <strong>From.</strong>
+                            <p>Meditat city</p>
+                        </li>
+                        <li>
+                            <strong>First Appearance.</strong>
+                            <p>September 2021 on Earth </p>
+                        </li>
+                        <li>
+                            <strong>Date of Birth.</strong>
+                            <p>10.10.1998</p>
+                        </li>
+                    </ul>
+                    <ul title="Want to know MONY more?">
+                        <li class="icon_insta"><a href="#"><b>Instagram</b> @mony.glam.</a></li>
+                        <li class="icon_blog"><a href="#"><b>Blog</b> mediTalk.live</a></li>
+                        <li class="icon_chat"><a href="#"><b>Chat</b> onny messenger</a></li>
+                    </ul>
+                    <a href="onny_talk.html" class="btn">Meet Onny</a>
                 </div>
-                <!-- <div class="videoBox">
-                    <video src="../video/video01.mp4" autoplay muted loop></video>
-                </div> -->
+                <img src="images/onny.png" alt="mony">
             </div>
             <div class="positionContents">
                 <div class="width1900">
-                    <div class="newBox" data-startAni="opacity">
-                        <strong>NEWS</strong>
-                        <p>Mony’s Beauty Suite is lanched</p>
-                    </div>
-                    <div class="pageBox" data-startAni="opacity">
-        
+                    <div class="textBox">
+                        <p>Onny emphasizes "Healthy is Beautiful"</p>
                     </div>
                 </div>
             </div>
         </div>
+
         <footer>
             <div class="width1800">
                 <h2><img src="images/footer_logo.png" alt="meditat logo"></h2>

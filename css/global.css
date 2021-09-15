@@ -1,17 +1,40 @@
-body.scrollArea{overflow: hidden;}
-[class |= "material"]{font-family: 'Material Icons';}
 
 
-/* 컨텐츠 크기 */
-.width1900{width: calc(100% - 100px);  max-width: 1900px; min-width: 1200px; margin: 0 auto;}
-.width1800{width: calc(100% - 100px);  max-width: 1800px; min-width: 1200px; margin: 0 auto;}
-.width1420{width: calc(100% - 100px);  max-width: 1420px; min-width: 1200px; margin: 0 auto;}
-.width1280{width: calc(100% - 100px);  max-width: 1280px; min-width: 1200px; margin: 0 auto;}
+.width1900{max-width: 1900px; width: calc(100% - 60px); margin: 0 auto;}
+.width1200{max-width: 1200px; width: calc(100% - 60px); margin: 0 auto;}
 
-[data-animate="blur"] .char{filter: blur(100px); animation: blurAni 1s forwards; /* animation-delay: calc(0.3s * var(--char-index)); */}
+.height100{height: 100vh;}
+
+.contentArea{height: 100%;  display: flex; align-items: center; position: relative; z-index: 1;}
+
+.btn{font-size: 24px; font-weight: 600; color: white; line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: inline-flex; justify-content: space-between; align-items: center; z-index: 2; position: relative; overflow: hidden;}
+.btn::before{content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: white; mix-blend-mode: difference; transition: 0.5s width; }
+.btn span{font-size: 35px; padding-left: 25px;}
+.btn:hover::before{width: 100%;}
+
+.positionContents{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 100;}
+.positionContents > div{height: 100%; position: relative;}
+.positionContents .pageBox{position: absolute; right: 0; bottom: 50px; display: flex; pointer-events:all;}
+.positionContents .pageBox span{width: 12px; height: 12px; background-color: rgba(255, 255, 255, 0.3); border-radius:100px; transition-duration: 0.5s; transition-property: width, background-color;}
+.positionContents .pageBox span:not(:last-child){margin-right: 20px;}
+.positionContents .pageBox span.active{width: 43px; background-color: white; border-radius: 100px;}
+.positionContents .newBox{position: absolute; left: 0; bottom: 50px; display: flex; font-size: 18px;}
+.positionContents .newBox strong{margin-right: 35px;}
+.positionContents .textBox p{ font-size: 40px; font-weight: 700; letter-spacing: 2px; position: absolute; left: 0; bottom: 50px; width: 100%; text-align: center; pointer-events:all;}
+
+.monyBG{background-color: #615bbf;}
+.onnyBG{background-color: #50b2b7;}
+
+/* main animation */
+.textBox > div{opacity: 0;  animation: opacityAni 1s forwards;}
+@keyframes opacityAni {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+[data-animate="blur"] .char{filter: blur(100px); opacity: 0; animation: blurAni 1s forwards; /* animation-delay: calc(0.3s * var(--char-index)); */}
 @keyframes blurAni {
-    0%{filter: blur(2em);}
-    100%{filter: blur(0px);}
+    0%{filter: blur(10em); opacity: 0;}
+    100%{filter: blur(0px); opacity: 1;}
 }
 
 /* header */

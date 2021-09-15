@@ -1,293 +1,80 @@
-
-.mainArea{min-width: 1200px; height: 100vh; position: relative;}
-/* [class$='Page'] > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;} */
-.mainPage, .subPage{color: white;}
-.mainPage > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
-.subPage.case01 > [class$='Area']{min-width: 1900px; height: 100vh; position: relative;}
-
-.btn{font-size: 24px; font-weight: 600; color: white; /* position: absolute; left: 0; */ line-height: 70px; padding: 0 45px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2; position: relative; overflow: hidden;}
-.btn::before{content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: white; mix-blend-mode: difference; transition: 0.5s width; }
-.btn span{font-size: 35px; padding-left: 30px;}
-.btn:hover::before{width: 100%;}
-
-.btn01{font-size: 20px; font-weight: 600; color: white; line-height: 54px; padding: 0 37px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2; position: relative; overflow: hidden;}
-.btn01::before{content: ''; position: absolute; left: 0; top: 0; width: 0; height: 100%; background-color: white; mix-blend-mode: difference; transition: 0.5s width; }
-.btn01 span{font-size: 30px; padding-left: 15px;}
-.btn01:hover::before{width: 100%;}
+.videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+.videoBox video{width: 1900px;}
 
 
-[class ^= icon]{display: flex; align-items: center;}
-[class ^= icon]::before{content: ''; width: 28px; height: 29px; background-repeat: no-repeat; background-position: center; background-size: cover; margin-right: 20px;}
-.icon_insta::before{background-image: url('../images/icon_insta.png');}
-.icon_blog::before{background-image: url('../images/icon_blog.png');}
-.icon_chat::before{background-image: url('../images/icon_chat.png');}
-.icon_shop::before{background-image: url('../images/icon_shop.png');}
-
-.videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
-.videoBox video{width: 100%;}
-
-/* 메인페이지 */
-.mainArea .textBox{height: 100%;}
-.mainArea .textBox > div{opacity: 0; height: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; position: relative; z-index: 1; animation: textAnimation forwards;}
-@keyframes textAnimation {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-.mainArea .textBox > div.active{display: flex;}
-.mainArea .textBox > div p{font-size: 130px;  font-weight: 600; color: white; text-shadow: 5px 5px 15px rgb(0 0 0 / 50%); text-align: center;}
-.mainArea .textBox > div p:not(:last-of-type){margin-bottom: 30px;}
-.mainArea .textBox > div:not(:last-child){letter-spacing: 70px;}
-.mainArea .textBox > div:last-child p{letter-spacing: 30px;}
-
-.mainArea .mainPosition{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 2;}
-.mainArea .mainPosition > div{height: 100%; display: flex; justify-content: center; align-items: flex-end; position: relative;}
-.mainArea .mainPosition > div img{pointer-events: all; width: 50%; margin-right: 90px;}
-
-.mainArea .mainPosition .pageBox{position: absolute; right: 0; bottom: 50px; display: flex;}
-.mainArea .mainPosition .pageBox span{width: 12px; height: 12px; background-color: rgba(255, 255, 255, 0.3); border-radius:100px; transition-duration: 0.5s; transition-property: width, background-color;}
-.mainArea .mainPosition .pageBox span:not(:last-child){margin-right: 20px;}
-.mainArea .mainPosition .pageBox span.active{width: 43px; background-color: white; border-radius: 100px;}
-
-.newBox{position: absolute; left: 0; bottom: 50px; display: flex; font-size: 18px;}
-.newBox strong{margin-right: 35px;}
-
-/* .mainArea .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; z-index: 0; overflow: hidden; }
-.mainArea .videoBox video{width: 100%;} */
+/* main 페이지*/
+.mainArea{background-color: #5f53c1;}
+.mainArea .contentArea{justify-content: space-between;} 
+.mainArea .contentArea .textBox div{display: none; text-align: center;}
+.mainArea .contentArea .textBox div.active{display: block;}
+.mainArea .contentArea .textBox div img{position: absolute; left: 0; bottom: 0; width: 100%;}
+.mainArea .contentArea .textBox div p{font-size: 120px; font-weight: 600; }
+.mainArea .contentArea .textBox div:nth-child(1) p{letter-spacing: 40px;}
+.mainArea .contentArea .textBox div:nth-child(2) p{letter-spacing: 15px;}
+.mainArea .contentArea .textBox div:nth-child(3) p{letter-spacing: 10px;}
+.mainArea .contentArea .textBox div:nth-child(3){position: relative;}
+.mainArea .contentArea .textBox .btn{min-width: 305px; box-sizing: border-box; position: absolute; bottom: -150px; left: calc(50% - 152.5px);}
 
 
 /* whoIs 페이지 */
 .whoIsArea{position: relative; overflow: hidden; }
-.whoIsArea, .introArea{color: white;}
 .whoIsArea section{position: absolute; top: 0; width: 100%;}
 .whoIsArea section:nth-of-type(1){left: 0; z-index: 5;}
 .whoIsArea section:nth-of-type(2){left: 100%; z-index: 6;}
-.introArea.monyArea, .mainArea{background: rgb(138,143,204);
-    background: radial-gradient(circle, rgba(138,143,204,1) 0%, rgba(110,108,195,1) 59%, rgba(97,91,191,1) 100%);
-}
-.whoIsArea .onnyBox , .introArea.onnyArea{background: rgb(124,195,199);
-    background: radial-gradient(circle, rgba(124,195,199,1) 0%, rgba(81,178,183,1) 100%);}
-.whoIsArea > section{ height: 100%; display: flex; justify-content: center; align-items: center;}
-.whoIsArea > section > .textBox{ display: flex; justify-content: center; }
-.whoIsArea > section > .textBox > div{ width: 1400px; position: relative;}
-.whoIsArea > section > .textBox > div h2{width: 100%;  font-size: 367px; font-weight: 700;  display: flex; justify-content: space-between; letter-spacing: 10px;}
-.whoIsArea > section > .textBox > div h2 span{position: relative; z-index: 1;}
-.whoIsArea > section > .textBox > div a{left: 0; z-index: 2;}
-.whoIsArea > section img{position: absolute; bottom: 0; width: 840px; z-index: 0; pointer-events: none;}
-.whoIsArea .selectArea{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
-.whoIsArea .selectArea > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; position: relative;}
-.whoIsArea .selectArea > div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
-.whoIsArea .selectArea > div button:hover{letter-spacing: 15px;}
-.whoIsArea .selectArea > div button span:not([data-whoIs]){display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
-.whoIsArea .selectArea > div button span:not([data-whoIs])::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
-.whoIsArea .selectArea > div button span[data-whoIs="mony"]{display: none;}
+.whoIsArea section div h2{width: 100%;  font-size: 200px; font-weight: 700;  display: flex; justify-content: space-between; letter-spacing: 10px;}
+.whoIsArea section div h2 span{position: relative; z-index: 1;}
+.whoIsArea section > div:first-child{max-width: 980px; margin: 0 auto; position: relative; z-index: 1;}
+.whoIsArea section .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
+.whoIsArea section .videoBox video{width: 1900px;}
+/* .whoIsArea section.mony .videoBox{background-color: #615bbf; background: url('../images/test.png') no-repeat center / cover;} */
+/* .whoIsArea section.mony .videoBox > div{position: relative;}
+.whoIsArea section.mony .videoBox > div::after, .whoIsArea section.mony .videoBox > div::before{content: ''; position: absolute; width: 3px; height: 100%; top: 0; background-color: #615bbf;}
+.whoIsArea section.mony .videoBox > div::before{left: 0;}
+.whoIsArea section.mony .videoBox > div::after{right: 0;} */
+/* .whoIsArea section.onny .videoBox{background-color: #50b2b7;} */
+.whoIsArea .positionContents{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
+.whoIsArea .positionContents > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; position: relative;}
+.whoIsArea .positionContents > div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
+.whoIsArea .positionContents > div button:hover{letter-spacing: 15px;}
+.whoIsArea .positionContents > div button span:not([data-whoIs]){display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
+.whoIsArea .positionContents > div button span:not([data-whoIs])::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
+.whoIsArea .positionContents > div button span[data-whoIs="mony"]{display: none;}
 
 
-/* 소개 페이지 */
-.introArea > div{height: 100%; display: flex; flex-direction: column; justify-content: center; position: relative;}
-.introArea > div > div h2{font-size: 170px; font-weight: 700; }
-.introArea > div > div span{font-size: 42px; font-weight: 700; display: block; margin-bottom: 55px;}
-.introArea > div > div ul{font-size: 22px;}
-.introArea > div > div ul:not([title]){margin-bottom: 50px;}
-.introArea > div > div ul:not([title]) li{display: flex;}
-.introArea > div > div ul:not([title]) li:not(:last-child){margin-bottom: 25px;}
-.introArea > div > div ul:not([title]) li strong{margin-right: 20px;}
-.introArea > div > div ul[title]::before{content: attr(title); font-weight: 700; display: block; margin-bottom: 15px;}
-.introArea > div > div ul[title] li:not(:last-child){margin-bottom: 15px;}
-.introArea > div > div ul[title] li a{position: relative;}
-.introArea > div > div ul[title] li a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: white;}
-.introArea > div > img{position: absolute; right: 270px; bottom: 0; width: 90.7407vh; max-width: 980px;}
-.introArea > div > p{position: absolute; left: 0; bottom: 60px; font-size: 40px; font-weight: 700; letter-spacing: 2px;}
-.introArea > div > button{position: absolute; right: 0; top: 195px;}
-.introArea > div > a{position: absolute; right: 0; top: 195px;}
+/* intro 페이지 */
+.introArea > .contentArea > div{position: relative; width: 100%;}
+.introArea > .contentArea > div h2{font-size: 170px; font-weight: 700; margin-bottom: 50px;}
+.introArea > .contentArea > div h2 span{font-size: 42px; font-weight: 700; display: block; }
+.introArea > .contentArea > div ul{font-size: 22px;}
+.introArea > .contentArea > div ul:not([title]){margin-bottom: 50px;}
+.introArea > .contentArea > div ul:not([title]) li{display: flex;}
+.introArea > .contentArea > div ul:not([title]) li:not(:last-child){margin-bottom: 25px;}
+.introArea > .contentArea > div ul:not([title]) li strong{margin-right: 20px;}
+.introArea > .contentArea > div ul[title]::before{content: attr(title); font-weight: 700; display: block; margin-bottom: 15px;}
+.introArea > .contentArea > div ul[title] li:not(:last-child){margin-bottom: 15px;}
+.introArea > .contentArea > div ul[title] li a{position: relative;}
+.introArea > .contentArea > div ul[title] li a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: white;}
+.introArea > .contentArea > img{position: absolute; right: 0; bottom: 0; width: 730px;}
+.introArea > .contentArea > p{position: absolute; left: 0; bottom: 60px;}
+.introArea > .contentArea > button{position: absolute; right: 0; top: 0;}
+.introArea > .contentArea > div a.btn{position: absolute; right: 0; top: 40px;}
 
 /* 토크 페이지 */
 .talkArea .textBox{height: 100%; display: flex; justify-content: flex-end; align-items: center; position: relative; z-index: 1;}
-.talkArea .textBox ol li{display: none; text-align: right;}
-.talkArea .textBox ol li.active{display: block; animation: talkBox 1s forwards;}
+.talkArea .contentArea{justify-content: flex-end;}
+.talkArea ol li{display: none; text-align: right;}
+.talkArea ol li.active{display: block; animation: talkBox 1s forwards;}
 @keyframes talkBox {
     0%{opacity: 0;}
     100%{opacity: 1;}
 }
-.talkArea .textBox ol li strong{display: block; font-size: 48px; font-weight: 700; line-height: 51px; color: white; margin-bottom: 20px;}
-.talkArea .textBox ol li p{font-size: 26px; font-weight: 500; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px; position: relative;}
-.talkArea.monyArea .textBox ol li p{color: #605abf;}
-.talkArea.onnyArea .textBox ol li p{color: #50b2b7;}
-.talkArea .textBox ol li p , .talkArea .textBox ol li a{opacity: 0; position: relative; top: 50px; transition: 0.5s;}
-.talkArea .textBox ol li p.active , .talkArea .textBox ol li a.active{opacity: 1; top: 0;}
-.talkArea .textBox ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
+.talkArea ol li strong{display: block; font-size: 48px; font-weight: 700; line-height: 60px; color: white; margin-bottom: 20px;}
+.talkArea ol li p{font-size: 26px; font-weight: 400; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px; position: relative;}
+.talkArea.monyArea ol li p{color: #605abf;}
+.talkArea.onnyArea ol li p{color: #50b2b7;}
+.talkArea ol li p , .talkArea .textBox ol li a{opacity: 0; position: relative; top: 50px; transition: 0.5s;}
+.talkArea ol li p.active , .talkArea ol li a.active{opacity: 1; top: 0;}
+.talkArea ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
 
 
 
-/* 서브 페이지 */
-.subPage{}
-.subPage main > h2{font-size: 70px; font-weight: 700; margin-bottom: 60px;}
-.subPage main > h2 span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
-.titleDot{font-size: 70px; font-weight: 700; }
-.titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
-.titleDot::after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
-.subPage main > h2 + p{font-size: 40px; line-height: 69px; font-weight: 600;}
-.subPage main h2 ~ p{font-size: 40px; line-height: 69px; font-weight: 600;}
-
-
-/*서브 페이지 - about */
-.aboutArea mark{font-weight: 700;}
-
-.aboutArea > p{margin-bottom: 215px;}
-.aboutArea .meditatArea{background-color: #605abf; margin-bottom: 190px;}
-.aboutArea .meditatArea > div::after{content: ''; display: block; clear: both;}
-.aboutArea .meditatArea > div{padding-top: 765px; padding-bottom: 110px; margin-left: auto; position: relative; margin-left: calc((100% - 1800px) / 2);}
-.aboutArea .meditatArea > div > div{position: absolute; left: 0; top: -130px; width: 100%; height: 790px; background: url('../images/about_titleBG.png') no-repeat center / cover; }
-.aboutArea .meditatArea > div > div h3{font-size: 160px; font-weight: 600; text-align: center; width: 1800px; height: 100%; display: flex; justify-content: center; align-items: center;}
-
-.aboutArea .meditatArea > div strong{float: left; width: 260px; font-size: 60px; font-weight: 700; margin-right: 90px;}
-.aboutArea .meditatArea > div p{float: left; font-size: 22px; line-height: 40px;}
-
-
-.aboutArea .thinkArea{display: flex; flex-wrap: wrap; margin-bottom: 210px;}
-.aboutArea .thinkArea p{flex: 1; font-size: 90px; font-weight: 700; line-height: 120px; margin-bottom: 150px;}
-.aboutArea .thinkArea mark{width: 100%; font-size: 60px; text-align: center;}
-
-.aboutArea .WKDAArea{margin-bottom: 360px;}
-.aboutArea .WKDAArea::before{content: ''; display: block; height: 270px; background: url('../images/about_WKDA.png') no-repeat center top / cover; margin-bottom: 20px;}
-.aboutArea .WKDAArea ul::after{content: ''; display: block; clear: both;}
-.aboutArea .WKDAArea ul li{float: left;}
-.aboutArea .WKDAArea ul li:nth-child(1){width: 230px; margin-right: 210px;}
-.aboutArea .WKDAArea ul li:nth-child(2){width: 220px; margin-right: 160px;}
-.aboutArea .WKDAArea ul li:nth-child(3){width: 285px; margin-right: 95px;}
-.aboutArea .WKDAArea ul li:nth-child(4){width: 220px;}
-/* .aboutArea .WKDAArea ul li:not(:last-child){margin-right: 100px;} */
-.aboutArea .WKDAArea ul li mark{font-size: 40px; line-height: 47px; margin-bottom: 30px;}
-.aboutArea .WKDAArea ul li p{font-size: 22px; line-height: 32px;}
-
-.aboutArea .imgArea{width: 950px; height: 950px; margin: 0 auto; background-color: #605abf; position: relative; margin-bottom: 260px;}
-.aboutArea .imgArea img{position: absolute;}
-.aboutArea .imgArea img:nth-child(1){top: -175px; left: -125px;}
-.aboutArea .imgArea img:nth-child(2){bottom: 120px; right: -120px;}
-
-.aboutArea .companyArea{position: relative; margin-bottom: 60px;}
-.aboutArea .companyArea::after{content: ''; position: absolute; top: 0; right: 0; width: calc(670px + ((100% - 1420px) / 2) ); height: 585px; background:url('../images/about_BG01.png') no-repeat center / cover;}
-.aboutArea .companyArea ul li:not(:last-child){margin-bottom: 60px;}
-.aboutArea .companyArea ul li mark{font-size: 41px; margin-bottom: 20px; letter-spacing: 5px;}
-.aboutArea .companyArea ul li p{font-size: 22px; line-height: 40px;}
-
-.aboutArea .membersArea{margin-bottom: 155px;}
-.aboutArea .membersArea h3{font-size: 41px; margin-bottom: 30px;}
-.aboutArea .membersArea ul{display: flex; flex-wrap: wrap; justify-content: space-between;}
-.aboutArea .membersArea ul li{width: 310px;}
-.aboutArea .membersArea ul li:not(:nth-child(3n)){margin-right: 245px;}
-.aboutArea .membersArea ul li:not(:nth-child(-n + 3)){margin-top: 80px;}
-.aboutArea .membersArea ul li img{width: 100%; margin-bottom: 5px;}
-.aboutArea .membersArea ul li h4{font-size: 22px; margin-bottom: 20px;}
-.aboutArea .membersArea ul li mark{font-size: 26px;}
-
-.aboutArea .historyArea h3{font-size: 40px; margin-bottom: 85px;}
-.aboutArea .historyArea > ol > li{display: flex;}
-.aboutArea .historyArea > ol > li mark{width: 170px; font-size: 46px;}
-.aboutArea .historyArea > ol > li > div{flex: 1; padding-left: 60px; position: relative;}
-.aboutArea .historyArea > ol > li:first-child > div:first-of-type{margin-top: 10px;}
-.aboutArea .historyArea > ol > li:last-child > div:first-of-type{padding-bottom: 100px;}
-.aboutArea .historyArea > ol > li > div::before{content: ''; position: absolute; top: 0; left: -11.5px; width: 23px; height: 23px; background-color: #605abf; border-radius: 100%;}
-.aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
-.aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
-.aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}
-
-
-/* our service */
-.serviceArea{padding:80px 0 200px;}
-.serviceArea h4{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
-.serviceArea h4 + p{font-size: 40px; font-weight: 600; margin-bottom: 50px;}
-.serviceArea .serviceList{font-size: 26px; font-weight: 600;}
-.serviceArea .serviceList li{display: flex; align-items: center;}
-.serviceArea .serviceList li:not(:last-child){margin-bottom: 15px;}
-.serviceArea .serviceList li::before{content: ''; width: 6px; height: 6px; background-color: white; border-radius: 100%; margin: 0 10px 0 3px;}
-
-.serviceArea .digitalArea{padding: 200px 0; position: relative; margin-bottom: 200px;}
-.serviceArea .digitalArea div h3{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
-.serviceArea .digitalArea div p{font-size: 40px; font-weight: 600; margin-bottom: 60px;}
-.serviceArea .digitalArea .serviceList{margin-bottom: 180px;}
-.serviceArea .digitalArea .imgBox::after{content: ''; display: block; clear: both;}
-.serviceArea .digitalArea .imgBox li{float: left;}
-.serviceArea .digitalArea .imgBox li:not(:last-child){margin-right: 10px;}
-.serviceArea .digitalArea > img{position: absolute; right: 0; bottom: 0;}
-
-.serviceArea .virtualArea{margin-bottom: 300px;}
-.serviceArea .virtualArea .serviceList{margin-bottom: 80px;}
-.serviceArea .virtualArea .imgBox{height: 670px; text-indent: -9999px; display: flex; justify-content: space-between;}
-.serviceArea .virtualArea .imgBox::after , .serviceArea .virtualArea .imgBox::before{
-    content: ''; display: block; width: calc((100% - 10px) / 2); height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;
-}
-.serviceArea .virtualArea .imgBox::after{background-image: url('../images/service_BG01_01.png');}
-.serviceArea .virtualArea .imgBox::before{background-image: url('../images/service_BG01_02.png');}
-
-.serviceArea .ARArea{margin-bottom: 250px;}
-.serviceArea .ARArea .serviceList{margin-bottom: 80px;}
-.serviceArea .ARArea .imgBox{display: flex; justify-content: space-between;}
-.serviceArea .ARArea .imgBox img{display: block; width: calc((100% - 10px) / 2); }
-
-.serviceArea .designArea .imgBox img{width: 100%;}
-
-
-
-/* press */
-.pressArea{background-color: black; padding-bottom: 60px; box-sizing: border-box; display: flex; align-items: flex-end;}
-.pressArea > div{display: flex; position: relative;}
-.pressArea > div h2{line-height: 80px; max-width: 300px; margin-right: 230px;}
-.pressArea > div ul li{display: flex; align-items: flex-end;}
-.pressArea > div ul li:not(:last-child){margin-bottom: 65px;}
-.pressArea > div ul li img{max-width: 620px; margin-right: 50px;}
-.pressArea > div ul li div strong{font-size: 32px; font-weight: 700; line-height: 37px; display: block; margin-bottom: 20px;}
-.pressArea > div ul li div time{font-size: 18px; font-weight: 700; display: block; margin-bottom: 20px;}
-.pressArea > div ul li div p{font-size: 18px; line-height: 30px; margin-bottom: 55px;}
-
-.pressArea > div .pagerBox{position: absolute; left: 0; bottom: 0; display: flex; align-items: center;}
-.pressArea > div .pagerBox a{font-size: 15px; font-weight: 700; color: white;}
-.pressArea > div .pagerBox > a{position: relative; }
-.pressArea > div .pagerBox > a::after{content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background-color: white;}
-.pressArea > div .pagerBox > a span{position: absolute; top: 0;}
-.pressArea > div .pagerBox > a:nth-of-type(1) span{left: -30px;}
-.pressArea > div .pagerBox > a:nth-of-type(2) span{right: -30px;}
-.pressArea > div .pagerBox ol{display: flex; margin: 0 30px;}
-.pressArea > div .pagerBox ol li a{display: block; width: 30px; line-height: 30px; border-radius: 100%; text-align: center;}
-.pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
-
-
-/* contactUs */
-.contactUsArea{background-color: black; padding-bottom: 60px; box-sizing: border-box; display: flex; align-items: flex-end; position: relative; overflow: hidden;}
-.contactUsArea > div{position: relative;}
-.contactUsArea > div h2{margin-bottom: 20px;}
-.contactUsArea > div mark{font-size: 30px; font-weight: 800; margin-bottom: 440px;}
-.contactUsArea > div button{position: absolute; right: 0; bottom: 0;}
-/* .contactUsArea > div p{font-size: 40px; font-weight: 600; line-height: 69px;} */
-.contactUsArea > div p.heartEmoticon::after{content: '';display: inline-block; width: 40px; height: 40px; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
-
-.contactUsArea .contactUsBox{position: absolute; right: calc(-1 * (600px + ((100% - 1800px) / 2))); top: 0; width: calc(600px + ((100% - 1800px) / 2)); height: 100%; padding-left: 50px; box-sizing: border-box; background-color: #605abf; z-index: 5;}
-.contactUsArea .contactUsBox > div{width: 550px; height: 100%; position: relative; display: flex; align-items: center; }
-
-.contactUsArea .contactUsBox > div .textBox{width: 100%; position: relative; z-index: 1; }
-.contactUsArea .contactUsBox > div .textBox ol{/* display: none; */}
-.contactUsArea .contactUsBox > div .textBox ol li{display: none; text-align: left; position: relative;}
-.contactUsArea .contactUsBox > div .textBox ol li.active{display: block; animation: contactUsQuery 1s forwards;}
-@keyframes contactUsQuery {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-.contactUsArea .contactUsBox > div .textBox ol li strong{display: block; font-size: 48px; font-weight: 700; line-height: 51px; color: white; margin-bottom: 20px;}
-.contactUsArea .contactUsBox > div .textBox ol li p{font-size: 26px; font-weight: 500; color: #605abf; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px;}
-.contactUsArea .contactUsBox > div .textBox ol li p{opacity: 0; position: absolute; right: 0; bottom: -135px; /* transition: 0.5s; */ animation: contactValue 1s forwards;}
-@keyframes contactValue {
-    0%{opacity: 0; bottom: -135px;}
-    100%{opacity: 1; bottom: -85px;}
-}
-.contactUsArea .contactUsBox > div .textBox ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
-.contactUsArea .contactUsBox > div .textBox .replayBtn{display: none; position: absolute; left: 0; bottom: -25px; font-size: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.4); }
-.contactUsArea .contactUsBox > div .textBox .replayBtn::after{content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.4);}
-
-.contactUsArea .contactUsBox > div .textBox .contactUsFin{width: 100%; display: none;}
-.contactUsArea .contactUsBox > div .textBox .contactUsFin p{font-size: 30px; font-weight: 600; line-height: 42px; text-align: center; margin-bottom: 40px;}
-.contactUsArea .contactUsBox > div .textBox .contactUsFin span{display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 275px; height: 70px; font-size: 24px; font-weight: 600; color: black; background-color: white; border-radius: 100px; }
-.contactUsArea .contactUsBox > div .textBox .contactUsFin span::after{content: ''; width: 39px; height: 39px; background: url('../images/smileEmoticon.png') no-repeat center / cover; margin-left: 20px;}
-
-
-.contactUsArea .contactUsBox > div .sendBox{position: absolute; left: 0; bottom: 55px; width: 100%; z-index: 2;}
-.contactUsArea .contactUsBox > div .sendBox input[type="text"]{width: 100%; height: 70px; font-size: 21px; font-weight: 600; color: white; padding: 0 40px; box-sizing: border-box; background-color: transparent; border: 1px solid white; border-radius: 100px;}
-.contactUsArea .contactUsBox > div .sendBox button{position: absolute; right: 40px; top: 0; font-size: 27px; font-weight: 800;}
