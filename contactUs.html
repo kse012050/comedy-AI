@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact Us</title>
+    <!-- splitting css -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <!-- splitting js -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <!-- jQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+    <script>
+        $(document).ready(function(){
+            var contactValue;
+            $('.contactUsBtn').click(function(){
+                $('.contactUsBox').animate({'right' : 0},500);
+                setTimeout(() => {
+                    $('.sendBox input[type="text"]').focus();
+                    $('.contactUsArea .textBox ol li').eq(0).addClass('active');
+                }, 500);
+            });
+
+            $('.sendBtn').click(function(){
+                if(!$('.contactUsArea .textBox ol li:last-child').hasClass('active') || !$('.contactUsArea .textBox ol li.active p').length){
+                    if(!$('.contactUsArea .textBox ol li.active p').length && $('.sendBox input[type="text"]').val() != ''){
+                        contactValue = $('.sendBox input[type="text"]').val();
+                        $('.contactUsArea .textBox ol li.active').append('<p>' + contactValue + '</p>');
+                        $('.sendBox input[type="text"]').val('')
+                        $('.replayBtn').fadeIn();
+                    }else if($('.contactUsArea .textBox ol li.active p').length){
+                        $('.contactUsArea .textBox ol li.active').next().addClass('active').siblings().removeClass('active');
+                        $('.replayBtn').hide();
+                        $('.sendBox input[type="text"]').removeAttr('style');
+                    }
+                }else{
+                    setTimeout(() => {
+                        $('.contactUsArea .textBox ol').hide();
+                        $('.contactUsBox > div .sendBox').hide();
+                        $('.replayBtn').hide();
+                        $('.contactUsFin').fadeIn();
+                    }, 500);
+                }
+            })
+
+            $('.sendBox input[type="text"]').keydown(function(key){
+                if(key.keyCode == 13){
+                    $('.sendBtn').click();
+                }
+                if($('.contactUsArea .textBox ol li.active p').length){
+                    $('.sendBox input[type="text"]').css('color','transparent')
+                    setTimeout(() => {
+                        $('.sendBox input[type="text"]').val('')
+                    }, 100);
+                }
+            })
+
+            $('.replayBtn').click(function(){
+                $('.contactUsArea .textBox ol li.active p').remove();
+                $('.sendBox input[type="text"]').removeAttr('style');
+                $('.sendBox input[type="text"]').focus();
+                $(this).hide();
+            })
+        })
+    </script>
+</head>
+<body>
+    <div class="subPage">
+        <header data-startAni="top">
+            <div class="width1900">
+                <h1><a href="index.html"><img src="images/logo_w.png" alt="meditat logo"></a></h1>
+                <button class="menuBtn">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <div>
+                        <div>
+                            <a href="#" class="active">EN</a>
+                            <a href="#">MN</a>
+                            <a href="#">CN</a>
+                        </div>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="whoIs.html">Digital Human</a></li>
+                            <li><a href="service.html">Our Service</a></li>
+                            <li><a href="press.html">Press & Media</a></li>
+                            <li><a href="contactUs.html">Contact US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main class="contactUsArea height100">
+            <div class="test contentArea width1200">
+                <div>
+                    <h2>
+                        <span class="titleDot">Contact Us</span>
+                        <mark>IT’S NICE TO MEET YOU</mark>
+                    </h2>
+                    
+                    <p class="heartEmoticon">
+                        If you want to know more about us,<br/>
+                        please leave your info here.<br/>
+                        I would love to hear from you!
+                    </p>
+                    <button class="btn contactUsBtn">Leave my info</button>
+                </div>
+            </div>
+           <div class="contactUsBox">
+                <div>
+                    <div class="textBox">
+                        <ol>
+                            <li>
+                                <strong>What is your Name?</strong>
+                            </li>
+                            <li>
+                                <strong>
+                                    What is your Company 
+                                    Name?
+                                </strong>
+                            </li>
+                            <li>
+                                <strong>
+                                    What is your E-mail
+                                    Adress?
+                                </strong>
+                            </li>
+                        </ol>
+                        <button class="replayBtn">replay</button>
+                        <div class="contactUsFin">
+                            <p>
+                                Thank you for your interests.<br/>
+                                We will get back to you soon!
+                            </p>
+                            <span>See you! </span>
+                        </div>
+                    </div>
+
+                    <div class="sendBox">
+                        <input type="text">
+                        <button class="sendBtn">SEND</button>
+                    </div>
+                </div>
+           </div>
+        </main>
+
+        <footer>
+            <div class="width1800">
+                <h2><img src="images/footer_logo.png" alt="meditat logo"></h2>
+                <div>
+                    <ul>
+                        <li><a href="#">meditalk blog</a></li>
+                        <li><a href="#">Mony Beauty Studi</a></li>
+                    </ul>
+                    <ul class="snsArea">
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                    <address>
+                        <p>Korea medical AI Inc, 509 Nonhyeon-ro, Gangnam-gu, Seoul, South Korea </p>
+                        <p>E-mail : <a href="#">info@meditat.net</a></p>
+                    </address>
+                    <p>Copyright© Korea Medical AI Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

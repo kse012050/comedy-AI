@@ -25,6 +25,9 @@
 .monyBG{background-color: #615bbf;}
 .onnyBG{background-color: #50b2b7;}
 
+.titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
+.titleDot::after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
+
 /* main animation */
 .textBox > div{opacity: 0;  animation: opacityAni 1s forwards;}
 @keyframes opacityAni {
@@ -62,8 +65,8 @@ header > div nav > div ul li a{font-size: 70px; font-weight: 700; color: white; 
 /* .imainPage header{top: -100%;} */
 
 /* 서브 페이지 */
-.subPage{background-color: black; color: white;}
-.subPage main{padding-top: 130px;}
+.subPage{background-color: black; /* color: white; */}
+/* .subPage main{padding-top: 130px;} */
 
 /* footer */
 footer{padding: 80px 0; background-color: #282828;}
