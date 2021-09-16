@@ -29,8 +29,8 @@
 .positionContents .newBox strong{margin-right: 35px;}
 .positionContents .textBox p{ font-size: 40px; font-weight: 700; letter-spacing: 2px; position: absolute; left: 0; bottom: 15px; width: 100%; text-align: center; pointer-events:all;}
 
-.monyBG{background-color: #675bc4;}
-.onnyBG{background-color: #59b7ba;}
+.monyBG{background-color: #7467cd;}
+.onnyBG{background-color: #5abac0;}
 
 .titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
 .titleDot::after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
@@ -72,7 +72,7 @@ header > div .menuBtn span:not(:last-child){margin-bottom: 15px;}
 header > div .menuBtn.active span:nth-child(1){transform: translateY(9px) rotate(225deg);}
 header > div .menuBtn.active span:nth-child(2){transform: translateY(-9px) rotate(-225deg);}
 
-header > div nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: black; z-index: 999; display: none;}
+header > div nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: black;  display: none;}
 header > div nav > div{height: 100%; display: flex; flex-direction: column; align-items: center;}
 header > div nav > div div{height: 130px; display: flex; align-items: center;}
 header > div nav > div div a{font-size: 22px; font-weight: 700; color: white; line-height: 45px; padding: 0 35px; border-radius: 100px;}
