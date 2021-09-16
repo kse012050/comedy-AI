@@ -4,7 +4,7 @@
 .width1800{max-width: 1800px; width: 100%; margin: 0 auto;}
 .width1200{max-width: 1200px; width: calc(100% - 60px); margin: 0 auto;}
 
-.height100{height: 1080px;}
+.height100{height: 800px;}
 
 .mainPage > [class*="Area"]{position: relative;}
 
@@ -27,10 +27,10 @@
 .positionContents .pageBox span.active{width: 43px; background-color: white; border-radius: 100px;}
 .positionContents .newBox{position: absolute; left: 0; bottom: 50px; display: flex; font-size: 18px;}
 .positionContents .newBox strong{margin-right: 35px;}
-.positionContents .textBox p{ font-size: 40px; font-weight: 700; letter-spacing: 2px; position: absolute; left: 0; bottom: 50px; width: 100%; text-align: center; pointer-events:all;}
+.positionContents .textBox p{ font-size: 40px; font-weight: 700; letter-spacing: 2px; position: absolute; left: 0; bottom: 15px; width: 100%; text-align: center; pointer-events:all;}
 
-.monyBG{background-color: #685cc5;}
-.onnyBG{background-color: #50b2b7;}
+.monyBG{background-color: #675bc4;}
+.onnyBG{background-color: #59b7ba;}
 
 .titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
 .titleDot::after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
@@ -61,7 +61,7 @@
 .subPage .lh04{line-height: 32px}
 
 /* header */
-header{position: fixed; left: 0; top: 0; width: 100%; height: 130px; z-index: 100;}
+header{position: fixed; left: 0; top: 0; width: 100%; height: 130px; z-index: 1000;}
 header > div{height: 100%; display: flex; justify-content: space-between; align-items: center;}
 header > div h1{max-width: 142px; position: relative; z-index: 1;}
 header > div h1 a img{width: 100%;}
@@ -72,7 +72,7 @@ header > div .menuBtn span:not(:last-child){margin-bottom: 15px;}
 header > div .menuBtn.active span:nth-child(1){transform: translateY(9px) rotate(225deg);}
 header > div .menuBtn.active span:nth-child(2){transform: translateY(-9px) rotate(-225deg);}
 
-header > div nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: black; z-index: 0; display: none;}
+header > div nav{position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: black; z-index: 999; display: none;}
 header > div nav > div{height: 100%; display: flex; flex-direction: column; align-items: center;}
 header > div nav > div div{height: 130px; display: flex; align-items: center;}
 header > div nav > div div a{font-size: 22px; font-weight: 700; color: white; line-height: 45px; padding: 0 35px; border-radius: 100px;}
