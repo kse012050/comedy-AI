@@ -1,4 +1,4 @@
-@media screen and (min-width:1280px){
+@media screen and (max-width:1279px){
     .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
     .videoBox video{width: 1900px;}
 
@@ -10,7 +10,7 @@
     .mainArea .contentArea .textBox div{display: none; text-align: center;}
     .mainArea .contentArea .textBox div.active{display: block;}
     .mainArea .contentArea .textBox div img{position: absolute; left: 0; bottom: 0; width: 100%;}
-    .mainArea .contentArea .textBox div p{font-size: 120px; font-weight: 600; }
+    .mainArea .contentArea .textBox div p{font-size: 68px; font-weight: 600; }
     .mainArea .contentArea .textBox div:nth-child(1) p{letter-spacing: 40px;}
     .mainArea .contentArea .textBox div:nth-child(2) p{letter-spacing: 15px;}
     .mainArea .contentArea .textBox div:nth-child(3) p{letter-spacing: 10px;}
