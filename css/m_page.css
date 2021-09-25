@@ -46,27 +46,31 @@
     
     
     /* intro 페이지 */
-    .introArea > .contentArea > div{position: relative; width: 100%;}
-    .introArea > .contentArea > div h2{font-size: 170px; font-weight: 700; margin-bottom: 50px;}
+    .introArea{padding-top: 100px;}
+    .introArea > .contentArea > div{position: relative; width: 100%; text-align: center;}
+    .introArea > .contentArea > div > *{margin-bottom: 50px;}
+    .introArea > .contentArea > div h2{font-size: 170px; font-weight: 700; }
     .introArea > .contentArea > div h2 span{font-size: 42px; font-weight: 700; display: block; }
-    .introArea > .contentArea > div ul{font-size: 22px;}
-    .introArea > .contentArea > div ul:not([title]){margin-bottom: 50px;}
-    .introArea > .contentArea > div ul:not([title]) li{display: flex;}
+    .introArea > .contentArea > div ul{font-size: 24px;}
+    .introArea > .contentArea > div ul:not([title]){}
+    .introArea > .contentArea > div ul:not([title]) li{display: flex; justify-content: center;}
     .introArea > .contentArea > div ul:not([title]) li:not(:last-child){margin-bottom: 25px;}
     .introArea > .contentArea > div ul:not([title]) li strong{margin-right: 10px;}
     .introArea > .contentArea > div ul[title]::before{content: attr(title); font-weight: 700; display: block; margin-bottom: 15px;}
     .introArea > .contentArea > div ul[title] li:not(:last-child){margin-bottom: 15px;}
     .introArea > .contentArea > div ul[title] li a{position: relative;}
     .introArea > .contentArea > div ul[title] li a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: white;}
-    .introArea > .contentArea > img{position: absolute; right: 0; bottom: 0; width: 700px;}
+    .introArea > .contentArea > img{position: absolute; right: 0; bottom: 0; width: 700px; display: none;}
     .introArea > .contentArea > p{position: absolute; left: 0; bottom: 60px;}
     .introArea > .contentArea > button{position: absolute; right: 0; top: 0;}
-    .introArea > .contentArea > div a.btn{position: absolute; right: 0; top: 40px;}
+    .introArea .positionContents{position: static;}
+    .introArea .positionContents .textBox p{position: static;}
     
     /* tolk 페이지 */
+    .talkArea{display: flex; align-items: flex-end;}
     .talkArea .textBox{height: 100%; display: flex; justify-content: flex-end; align-items: center; position: relative; z-index: 1;}
-    .talkArea .contentArea{justify-content: flex-end;}
-    .talkArea ol li{display: none;  text-align: right;}
+    .talkArea .contentArea{justify-content: center; margin-bottom: 8.7vh;}
+    .talkArea ol li{display: none;  text-align: center;}
     .talkArea ol li.active{display: block; animation: talkBox 1.5s forwards;}
     @keyframes talkBox {
         0%{opacity: 0;}
@@ -80,6 +84,7 @@
     .talkArea ol li p , .talkArea .textBox ol li a{opacity: 0; position: relative; top: 50px; transition: 0.5s;}
     .talkArea ol li p.active , .talkArea ol li a.active{opacity: 1; top: 0;}
     .talkArea ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
+    .talkArea .videoBox{display: none;}
     
     
     /* sub 페이지 */
