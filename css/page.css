@@ -8,14 +8,15 @@
     .mainArea{background-color: #5f53c1;}
     .mainArea .contentArea{justify-content: space-between; width: 100%;} 
     .mainArea .contentArea .textBox{width: 100%;}
-    .mainArea .contentArea .textBox div{display: none; text-align: center;}
-    .mainArea .contentArea .textBox div.active{display: block;}
-    .mainArea .contentArea .textBox div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%)}
-    .mainArea .contentArea .textBox div p{font-size: 120px; font-weight: 600; }
-    .mainArea .contentArea .textBox div:nth-child(1) p{letter-spacing: 40px;}
-    .mainArea .contentArea .textBox div:nth-child(2) p{letter-spacing: 15px;}
-    .mainArea .contentArea .textBox div:nth-child(3) p{letter-spacing: 10px;}
-    .mainArea .contentArea .textBox div:nth-child(3){position: relative;}
+    .mainArea .contentArea .textBox > div{display: none; text-align: center;}
+    .mainArea .contentArea .textBox > div.active{display: block;}
+    .mainArea .contentArea .textBox > div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%);}
+    .mainArea .contentArea .textBox > div .mainImgBG{position: absolute; left: 50%; bottom: 0; width: 75%; padding-bottom: 62%; transform: translateX(-50%); background: url('../images/mein_mony.png') no-repeat center / cover;}
+    .mainArea .contentArea .textBox > div p{font-size: 120px; font-weight: 600; }
+    .mainArea .contentArea .textBox > div:nth-child(1) p{letter-spacing: 40px;}
+    .mainArea .contentArea .textBox > div:nth-child(2) p{letter-spacing: 15px;}
+    .mainArea .contentArea .textBox > div:nth-child(3) p{letter-spacing: 10px;}
+    .mainArea .contentArea .textBox > div:nth-child(3){position: relative;}
     .mainArea .contentArea .textBox .btn{min-width: 305px; box-sizing: border-box; position: absolute; bottom: -150px; left: calc(50% - 152.5px);}
 
 

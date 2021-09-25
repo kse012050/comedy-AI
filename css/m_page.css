@@ -5,27 +5,29 @@
     
     /* main 페이지*/
     .mainArea{background-color: #5f53c1;}
-    .mainArea .contentArea{justify-content: space-between; width: 100%;} 
+    .mainArea .contentArea{ width: 100%; justify-content: space-between; align-items: flex-start; padding-top: 185px; padding-top: calc(100px + 7.5vh); box-sizing: border-box;} 
     .mainArea .contentArea .textBox{width: 100%;}
-    .mainArea .contentArea .textBox div{display: none; text-align: center;}
-    .mainArea .contentArea .textBox div.active{display: block;}
-    .mainArea .contentArea .textBox div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%)}
-    .mainArea .contentArea .textBox div p{font-size: 120px; font-weight: 600; }
-    .mainArea .contentArea .textBox div:nth-child(1) p{letter-spacing: 40px;}
-    .mainArea .contentArea .textBox div:nth-child(2) p{letter-spacing: 15px;}
-    .mainArea .contentArea .textBox div:nth-child(3) p{letter-spacing: 10px;}
-    .mainArea .contentArea .textBox div:nth-child(3){position: relative;}
+    .mainArea .contentArea .textBox > div{display: none; text-align: center;}
+    .mainArea .contentArea .textBox > div.active{display: block;}
+    .mainArea .contentArea .textBox > div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%)}
+    .mainArea .contentArea .textBox > div .mainImgBG{position: absolute; left: 50%; bottom: 0; width: 75%; padding-bottom: 62; transform: translateX(-50%); background: url('../images/m/mein_mony.png') no-repeat top center / cover;}
+    .mainArea .contentArea .textBox > div p{font-size: 68px; font-weight: 600; }
+    .mainArea .contentArea .textBox > div:nth-child(1) p{letter-spacing: 15px;}
+    .mainArea .contentArea .textBox > div:nth-child(2) p{letter-spacing: 10px;}
+    .mainArea .contentArea .textBox > div:nth-child(3) p{letter-spacing: 5px;}
+    .mainArea .contentArea .textBox > div:nth-child(3){position: relative;}
     .mainArea .contentArea .textBox .btn{min-width: 305px; box-sizing: border-box; position: absolute; bottom: -150px; left: calc(50% - 152.5px);}
     
     
     /* whoIs 페이지 */
     .whoIsArea{position: relative; overflow: hidden; }
-    .whoIsArea section{position: absolute; top: 0; width: 100%;}
+    .whoIsArea section{position: absolute; top: 0; width: 100%; padding-top: calc(100px + 70px + 9.5vh); box-sizing: border-box;}
     .whoIsArea section:nth-of-type(1){left: 0; z-index: 5;}
     .whoIsArea section:nth-of-type(2){left: 100%; z-index: 6;}
-    .whoIsArea section div h2{width: 100%;  font-size: 200px; font-weight: 700;  display: flex; justify-content: space-between; letter-spacing: 10px;}
+    .whoIsArea section div h2{width: 100%;  font-size: 200px; font-weight: 700;  display: flex; justify-content: center; letter-spacing: 10px;}
     .whoIsArea section div h2 span{position: relative; z-index: 1;}
-    .whoIsArea section > div:first-child{max-width: 980px; margin: 0 auto; position: relative; z-index: 1;}
+    .whoIsArea section > div:first-child{max-width: 980px; margin: 0 auto; position: relative; z-index: 1; }
+    .whoIsArea section .btn{position: absolute; top: -80px; left: 50%; transform: translateX(-50%); white-space: nowrap;}
     .whoIsArea section .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
     .whoIsArea section .videoBox video{width: 100vw; max-width: 1500px;}
     /* .whoIsArea section.mony .videoBox{background-color: #615bbf; background: url('../images/test.png') no-repeat center / cover;} */
@@ -35,7 +37,7 @@
     .whoIsArea section.mony .videoBox > div::after{right: 0;} */
     /* .whoIsArea section.onny .videoBox{background-color: #50b2b7;} */
     .whoIsArea .positionContents{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
-    .whoIsArea .positionContents > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; position: relative;}
+    .whoIsArea .positionContents > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; padding-bottom: 35vh; box-sizing: border-box;}
     .whoIsArea .positionContents > div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
     .whoIsArea .positionContents > div button:hover{letter-spacing: 15px;}
     .whoIsArea .positionContents > div button span:not([data-whoIs]){display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
