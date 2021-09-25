@@ -87,7 +87,7 @@
     
     
     /* sub 페이지 */
-    .subPage main{padding: 100px 0 0; box-sizing: border-box;}
+    .subPage main{padding-top: 100px; box-sizing: border-box;}
     .subPage main h2{font-size: 70px;}
     
     /* contactUs 페이지*/
@@ -101,7 +101,7 @@
     .contactUsArea > .contentArea > div p{font-size: 30px; font-weight: 600; line-height: 69px;}
     .contactUsArea > .contentArea > div p.heartEmoticon::after{content: '';display: inline-block; width: 40px; height: 40px; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
     
-    .contactUsArea .contactUsBox{position: absolute; right: -100%; top: 0; width: 100%; height: 100%; display: flex; align-items: center; padding-left: 50px; box-sizing: border-box; background-color: #605abf; z-index: 5;}
+    .contactUsArea .contactUsBox{position: absolute; right: -100%; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; padding-left: 50px; box-sizing: border-box; background-color: #605abf; z-index: 5;}
     .contactUsArea .contactUsBox > div{padding-top: 130px; width: 550px; display: flex; align-items: center; position: relative; }
     .contactUsArea .contactUsBox > div .textBox{width: 100%; position: relative; z-index: 1; }
     .contactUsArea .contactUsBox > div .textBox ol li{display: none; text-align: left; position: relative;}
@@ -200,7 +200,7 @@
     
     
     /* our service */
-    .serviceArea{padding:80px 0 0;}
+    .serviceArea{padding-bottom: 100px;}
     .serviceArea h4{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
     .serviceArea h4 + p{font-size: 40px; font-weight: 600; margin-bottom: 50px;}
     .serviceArea .serviceList{font-size: 26px; font-weight: 600;}
@@ -208,28 +208,28 @@
     .serviceArea .serviceList li:not(:last-child){margin-bottom: 15px;}
     .serviceArea .serviceList li::before{content: ''; width: 6px; height: 6px; background-color: white; border-radius: 100%; margin: 0 10px 0 3px;}
     
-    .serviceArea .digitalArea{padding: 200px 0; margin-bottom: 100px;}
-    .serviceArea .digitalArea > div:nth-child(1){position: relative; z-index: 10;}
+    .serviceArea .digitalArea{margin-bottom: 150px;}
+    .serviceArea .digitalArea > div:nth-child(1){position: relative; z-index: 10; margin-bottom: 80px;}
     .serviceArea .digitalArea > div:nth-child(1) h3{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
     .serviceArea .digitalArea > div:nth-child(1) p{font-size: 40px; font-weight: 600; margin-bottom: 60px;}
-    .serviceArea .digitalArea .serviceList{margin-bottom: 440px;}
+    .serviceArea .digitalArea .serviceList{margin-bottom: 70px;}
     .serviceArea .digitalArea .imgList::after{content: ''; display: block; clear: both;}
-    .serviceArea .digitalArea .imgList li{float: left; max-width: 300px;}
+    .serviceArea .digitalArea .imgList li{float: left; max-width: calc((100% - 20px)/ 3); height: 209px; overflow: hidden;}
     .serviceArea .digitalArea .imgList li:not(:last-child){margin-right: 10px;}
     .serviceArea .digitalArea .imgList li img{width: 100%;}
-    .serviceArea .digitalArea .imgArea{max-width: 1800px; margin: 0 auto; position: relative; z-index: 0;}
-    .serviceArea .digitalArea .imgArea img{position: absolute; right: 0px; bottom: 115px;}
+    .serviceArea .digitalArea .imgArea{text-align: center;}
+    .serviceArea .digitalArea .imgArea img{ max-width: 640px; width: 100%;}
     
-    .serviceArea .virtualArea{margin-bottom: 300px;}
-    .serviceArea .virtualArea div p{margin-bottom: 200px;}
-    .serviceArea .virtualArea .imgBox{height: 660px; text-indent: -9999px; display: flex; justify-content: space-between;}
+    .serviceArea .virtualArea{margin-bottom: 150px;}
+    .serviceArea .virtualArea div p{line-height: 1.3; margin-bottom: 80px;}
+    .serviceArea .virtualArea .imgBox{height: 445px; text-indent: -9999px; display: flex; justify-content: space-between;}
     .serviceArea .virtualArea .imgBox::after , .serviceArea .virtualArea .imgBox::before{
-        content: ''; display: block; width: calc((100% - 10px) / 2); height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;
+        content: ''; display: block; width:100%; height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;
     }
     .serviceArea .virtualArea .imgBox::after{background-image: url('../images/service_virtual01.png');}
-    .serviceArea .virtualArea .imgBox::before{background-image: url('../images/service_virtual02.png');}
+    .serviceArea .virtualArea .imgBox::before{display: none; background-image: url('../images/service_virtual02.png');}
     
-    .serviceArea .ARArea{margin-bottom: 250px;}
+    .serviceArea .ARArea{margin-bottom: 150px;}
     .serviceArea .ARArea .serviceList{margin-bottom: 90px;}
     .serviceArea .ARArea .imgArea{display: flex; justify-content: space-between;}
     .serviceArea .ARArea .imgArea img{width: calc((100% - 10px) / 2);}
