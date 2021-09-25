@@ -1,7 +1,7 @@
-<<<<<<< HEAD
 @media screen and (min-width:1280px){
+
     .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
-    .videoBox video{width: 1900px;}
+    .videoBox video{width: 1425px;}
 
 
     /* main 페이지*/
@@ -10,7 +10,7 @@
     .mainArea .contentArea .textBox{width: 100%;}
     .mainArea .contentArea .textBox div{display: none; text-align: center;}
     .mainArea .contentArea .textBox div.active{display: block;}
-    .mainArea .contentArea .textBox div img{position: absolute; left: 0; bottom: 0; width: 100%;}
+    .mainArea .contentArea .textBox div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%)}
     .mainArea .contentArea .textBox div p{font-size: 120px; font-weight: 600; }
     .mainArea .contentArea .textBox div:nth-child(1) p{letter-spacing: 40px;}
     .mainArea .contentArea .textBox div:nth-child(2) p{letter-spacing: 15px;}
@@ -28,7 +28,7 @@
     .whoIsArea section div h2 span{position: relative; z-index: 1;}
     .whoIsArea section > div:first-child{max-width: 980px; margin: 0 auto; position: relative; z-index: 1;}
     .whoIsArea section .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
-    .whoIsArea section .videoBox video{width: 1900px;}
+    .whoIsArea section .videoBox video{width: 100vw; max-width: 1500px;}
     /* .whoIsArea section.mony .videoBox{background-color: #615bbf; background: url('../images/test.png') no-repeat center / cover;} */
     /* .whoIsArea section.mony .videoBox > div{position: relative;}
     .whoIsArea section.mony .videoBox > div::after, .whoIsArea section.mony .videoBox > div::before{content: ''; position: absolute; width: 3px; height: 100%; top: 0; background-color: #615bbf;}
@@ -52,12 +52,12 @@
     .introArea > .contentArea > div ul:not([title]){margin-bottom: 50px;}
     .introArea > .contentArea > div ul:not([title]) li{display: flex;}
     .introArea > .contentArea > div ul:not([title]) li:not(:last-child){margin-bottom: 25px;}
-    .introArea > .contentArea > div ul:not([title]) li strong{margin-right: 20px;}
+    .introArea > .contentArea > div ul:not([title]) li strong{margin-right: 10px;}
     .introArea > .contentArea > div ul[title]::before{content: attr(title); font-weight: 700; display: block; margin-bottom: 15px;}
     .introArea > .contentArea > div ul[title] li:not(:last-child){margin-bottom: 15px;}
     .introArea > .contentArea > div ul[title] li a{position: relative;}
     .introArea > .contentArea > div ul[title] li a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: white;}
-    .introArea > .contentArea > img{position: absolute; right: 0; bottom: 0; width: 730px;}
+    .introArea > .contentArea > img{position: absolute; right: 0; bottom: 0; width: 700px;}
     .introArea > .contentArea > p{position: absolute; left: 0; bottom: 60px;}
     .introArea > .contentArea > button{position: absolute; right: 0; top: 0;}
     .introArea > .contentArea > div a.btn{position: absolute; right: 0; top: 40px;}
@@ -82,13 +82,13 @@
 
 
     /* sub 페이지 */
-    .subPage main{padding: 130px 0 0; box-sizing: border-box;}
+    .subPage main{padding: 100px 0 0; box-sizing: border-box;}
     .subPage main h2{font-size: 70px;}
 
     /* contactUs 페이지*/
     .contactUsArea{ box-sizing: border-box; position: relative; overflow: hidden;}
-    .contactUsArea > div{padding-top: 130px; box-sizing: border-box;}
-    .contactUsArea > div > div{height: 765px;}
+    .contactUsArea > div{box-sizing: border-box;}
+    .contactUsArea > div > div{height: 500px;}
     .contactUsArea > .contentArea > div{width: 100%; position: relative; display: flex; flex-direction: column; justify-content: space-between;}
     .contactUsArea > .contentArea > div h2 mark{display: block; font-size: 30px; font-weight: 800; margin-top: 30px;}
     .contactUsArea > .contentArea > div button{position: absolute; right: 0; bottom: 35px;}
@@ -231,7 +231,7 @@
     .pressArea > div{display: flex; position: relative;}
     .pressArea > div h2{line-height: 80px; max-width: 300px; margin-right: 30px; flex-shrink: 0;}
     .pressArea > div ul li{display: flex; }
-    .pressArea > div ul li:not(:last-child){margin-bottom: 70px;}
+    .pressArea > div ul li:not(:last-child){margin-bottom: 35px;}
     .pressArea > div ul li img{max-width: 515px; margin-right: 30px;}
     .pressArea > div ul li div{display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;}
     .pressArea > div ul li div strong{font-size: 28px; font-weight: 700; line-height: 1.3; display: block; margin-bottom: 30px;}
@@ -249,253 +249,3 @@
     .pressArea > div .pagerBox ol li a{display: block; width: 30px; line-height: 30px; border-radius: 100%; text-align: center;}
     .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
 }
-=======
-.videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
-.videoBox video{width: 1425px;}
-
-
-/* main 페이지*/
-.mainArea{background-color: #5f53c1;}
-.mainArea .contentArea{justify-content: space-between; width: 100%;} 
-.mainArea .contentArea .textBox{width: 100%;}
-.mainArea .contentArea .textBox div{display: none; text-align: center;}
-.mainArea .contentArea .textBox div.active{display: block;}
-.mainArea .contentArea .textBox div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%)}
-.mainArea .contentArea .textBox div p{font-size: 120px; font-weight: 600; }
-.mainArea .contentArea .textBox div:nth-child(1) p{letter-spacing: 40px;}
-.mainArea .contentArea .textBox div:nth-child(2) p{letter-spacing: 15px;}
-.mainArea .contentArea .textBox div:nth-child(3) p{letter-spacing: 10px;}
-.mainArea .contentArea .textBox div:nth-child(3){position: relative;}
-.mainArea .contentArea .textBox .btn{min-width: 305px; box-sizing: border-box; position: absolute; bottom: -150px; left: calc(50% - 152.5px);}
-
-
-/* whoIs 페이지 */
-.whoIsArea{position: relative; overflow: hidden; }
-.whoIsArea section{position: absolute; top: 0; width: 100%;}
-.whoIsArea section:nth-of-type(1){left: 0; z-index: 5;}
-.whoIsArea section:nth-of-type(2){left: 100%; z-index: 6;}
-.whoIsArea section div h2{width: 100%;  font-size: 200px; font-weight: 700;  display: flex; justify-content: space-between; letter-spacing: 10px;}
-.whoIsArea section div h2 span{position: relative; z-index: 1;}
-.whoIsArea section > div:first-child{max-width: 980px; margin: 0 auto; position: relative; z-index: 1;}
-.whoIsArea section .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
-.whoIsArea section .videoBox video{width: 100vw; max-width: 1500px;}
-/* .whoIsArea section.mony .videoBox{background-color: #615bbf; background: url('../images/test.png') no-repeat center / cover;} */
-/* .whoIsArea section.mony .videoBox > div{position: relative;}
-.whoIsArea section.mony .videoBox > div::after, .whoIsArea section.mony .videoBox > div::before{content: ''; position: absolute; width: 3px; height: 100%; top: 0; background-color: #615bbf;}
-.whoIsArea section.mony .videoBox > div::before{left: 0;}
-.whoIsArea section.mony .videoBox > div::after{right: 0;} */
-/* .whoIsArea section.onny .videoBox{background-color: #50b2b7;} */
-.whoIsArea .positionContents{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
-.whoIsArea .positionContents > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; position: relative;}
-.whoIsArea .positionContents > div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
-.whoIsArea .positionContents > div button:hover{letter-spacing: 15px;}
-.whoIsArea .positionContents > div button span:not([data-whoIs]){display: inline-block; width: 20px; height: 2px; background-color: white; margin-right: 15px; position: relative;}
-.whoIsArea .positionContents > div button span:not([data-whoIs])::after{content: ''; position: absolute; right: 0; bottom: 0; width: 50%; height: 100%; background-color: white; transform: rotate(45deg); transform-origin: right;}
-.whoIsArea .positionContents > div button span[data-whoIs="mony"]{display: none;}
-
-
-/* intro 페이지 */
-.introArea > .contentArea > div{position: relative; width: 100%;}
-.introArea > .contentArea > div h2{font-size: 170px; font-weight: 700; margin-bottom: 50px;}
-.introArea > .contentArea > div h2 span{font-size: 42px; font-weight: 700; display: block; }
-.introArea > .contentArea > div ul{font-size: 22px;}
-.introArea > .contentArea > div ul:not([title]){margin-bottom: 50px;}
-.introArea > .contentArea > div ul:not([title]) li{display: flex;}
-.introArea > .contentArea > div ul:not([title]) li:not(:last-child){margin-bottom: 25px;}
-.introArea > .contentArea > div ul:not([title]) li strong{margin-right: 10px;}
-.introArea > .contentArea > div ul[title]::before{content: attr(title); font-weight: 700; display: block; margin-bottom: 15px;}
-.introArea > .contentArea > div ul[title] li:not(:last-child){margin-bottom: 15px;}
-.introArea > .contentArea > div ul[title] li a{position: relative;}
-.introArea > .contentArea > div ul[title] li a::after{content: ''; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background-color: white;}
-.introArea > .contentArea > img{position: absolute; right: 0; bottom: 0; width: 700px;}
-.introArea > .contentArea > p{position: absolute; left: 0; bottom: 60px;}
-.introArea > .contentArea > button{position: absolute; right: 0; top: 0;}
-.introArea > .contentArea > div a.btn{position: absolute; right: 0; top: 40px;}
-
-/* tolk 페이지 */
-.talkArea .textBox{height: 100%; display: flex; justify-content: flex-end; align-items: center; position: relative; z-index: 1;}
-.talkArea .contentArea{justify-content: flex-end;}
-.talkArea ol li{display: none;  text-align: right;}
-.talkArea ol li.active{display: block; animation: talkBox 1.5s forwards;}
-@keyframes talkBox {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-.talkArea ol li strong{display: none; opacity: 0; font-size: 48px; font-weight: 700; line-height: 60px; color: white; margin-bottom: 20px;}
-.talkArea ol li strong.active{display: block; animation: talkBox 1s forwards;}
-.talkArea ol li p{font-size: 26px; font-weight: 400; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px; position: relative; cursor: pointer;}
-.talkArea.monyArea ol li p{color: #605abf;}
-.talkArea.onnyArea ol li p{color: #50b2b7;}
-.talkArea ol li p , .talkArea .textBox ol li a{opacity: 0; position: relative; top: 50px; transition: 0.5s;}
-.talkArea ol li p.active , .talkArea ol li a.active{opacity: 1; top: 0;}
-.talkArea ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
-
-
-/* sub 페이지 */
-.subPage main{padding: 100px 0 0; box-sizing: border-box;}
-.subPage main h2{font-size: 70px;}
-
-/* contactUs 페이지*/
-.contactUsArea{ box-sizing: border-box; position: relative; overflow: hidden;}
-.contactUsArea > div{box-sizing: border-box;}
-.contactUsArea > div > div{height: 500px;}
-.contactUsArea > .contentArea > div{width: 100%; position: relative; display: flex; flex-direction: column; justify-content: space-between;}
-.contactUsArea > .contentArea > div h2 mark{display: block; font-size: 30px; font-weight: 800; margin-top: 30px;}
-.contactUsArea > .contentArea > div button{position: absolute; right: 0; bottom: 35px;}
-.contactUsArea > .contentArea > div p{font-size: 30px; font-weight: 600; line-height: 69px;}
-.contactUsArea > .contentArea > div p.heartEmoticon::after{content: '';display: inline-block; width: 40px; height: 40px; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
-
-.contactUsArea .contactUsBox{position: absolute; right: calc(-1 * (600px + ((100% - 1200px) / 2))); top: 0; width: calc(600px + ((100% - 1200px) / 2)); height: 100%; display: flex; align-items: center; padding-left: 50px; box-sizing: border-box; background-color: #605abf; z-index: 5;}
-.contactUsArea .contactUsBox > div{padding-top: 130px; width: 550px; display: flex; align-items: center; position: relative; }
-.contactUsArea .contactUsBox > div .textBox{width: 100%; position: relative; z-index: 1; }
-.contactUsArea .contactUsBox > div .textBox ol li{display: none; text-align: left; position: relative;}
-.contactUsArea .contactUsBox > div .textBox ol li.active{display: block; animation: contactUsQuery 1s forwards;}
-@keyframes contactUsQuery {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
-.contactUsArea .contactUsBox > div .textBox ol li strong{display: block; font-size: 48px; font-weight: 700; line-height: 51px; color: white; margin-bottom: 20px;}
-.contactUsArea .contactUsBox > div .textBox ol li p{font-size: 26px; font-weight: 500; color: #605abf; display: inline-block; line-height: 60px; padding: 0 35px; background-color: white; border-radius: 100px;}
-.contactUsArea .contactUsBox > div .textBox ol li p{opacity: 0; position: absolute; right: 0; bottom: -135px; /* transition: 0.5s; */ animation: contactValue 1s forwards;}
-@keyframes contactValue {
-    0%{opacity: 0; bottom: -135px;}
-    100%{opacity: 1; bottom: -85px;}
-}
-.contactUsArea .contactUsBox > div .textBox ol li p::after{content: ''; position: absolute; right: -2px; top: 3px; width: 14px; height: 14px; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
-.contactUsArea .contactUsBox > div .textBox .replayBtn{display: none; position: absolute; left: 0; bottom: -25px; font-size: 24px; font-weight: 600; color: rgba(255, 255, 255, 0.4); }
-.contactUsArea .contactUsBox > div .textBox .replayBtn::after{content: ''; position: absolute; left: 0; bottom: -5px; width: 100%; height: 1px; background-color: rgba(255, 255, 255, 0.4);}
-
-.contactUsArea .contactUsBox > div .textBox .contactUsFin{width: 100%; display: none;}
-.contactUsArea .contactUsBox > div .textBox .contactUsFin p{font-size: 30px; font-weight: 600; line-height: 42px; text-align: center; margin-bottom: 40px;}
-.contactUsArea .contactUsBox > div .textBox .contactUsFin span{display: flex; justify-content: center; align-items: center; margin: 0 auto; width: 275px; height: 70px; font-size: 24px; font-weight: 600; color: black; background-color: white; border-radius: 100px; }
-.contactUsArea .contactUsBox > div .textBox .contactUsFin span::after{content: ''; width: 39px; height: 39px; background: url('../images/smileEmoticon.png') no-repeat center / cover; margin-left: 20px;}
-
-.contactUsArea .contactUsBox > div .sendBox{position: absolute; left: 0; bottom: 0; width: 100%; z-index: 2;}
-.contactUsArea .contactUsBox > div .sendBox input[type="text"]{width: 100%; height: 70px; font-size: 21px; font-weight: 600; color: white; padding: 0 40px; box-sizing: border-box; background-color: transparent; border: 1px solid white; border-radius: 100px;}
-.contactUsArea .contactUsBox > div .sendBox button{position: absolute; right: 40px; top: 0; font-size: 27px; line-height: 70px; font-weight: 800;}
-
-
-
-/* subPage */
-.aboutArea mark{font-weight: 700;}
-
-.aboutArea > p{margin-bottom: 230px;}
-
-.aboutArea .meditatArea{background-color: #605abf; padding: 760px 0 100px; margin-bottom: 190px; position: relative;}
-.aboutArea .meditatArea h3{position: absolute; top: -130px; right: 0; width: calc(100% - 60px); height: 790px; text-align: center; background: url('../images/about_meditatBG.png') no-repeat center / cover;}
-.aboutArea .meditatArea h3 img{width: 100%; max-width: 1200px;}
-.aboutArea .meditatArea div{display: flex;}
-.aboutArea .meditatArea div strong{width: 300px; flex-shrink: 0;}
-.aboutArea .meditatArea div p{padding: 0 45px;}
-
-.aboutArea .thinkArea{display: flex; flex-wrap: wrap; margin-bottom: 210px;}
-.aboutArea .thinkArea p{flex: 1; font-size: 90px; font-weight: 700; line-height: 110px; margin-bottom: 150px; text-align: center;}
-.aboutArea .thinkArea mark{width: 100%; font-size: 60px; text-align: center;}
-
-.aboutArea .WKDAArea{margin-bottom: 300px; position: relative; padding-top: 300px;}
-.aboutArea .WKDAArea img{position: absolute; left: 50%; top: 0; transform: translateX(-50%);}
-.aboutArea .WKDAArea ul{width: 1200px; margin: 0 auto;}
-.aboutArea .WKDAArea ul::after{content: ''; display: block; clear: both;}
-.aboutArea .WKDAArea ul li{float: left;}
-.aboutArea .WKDAArea ul li:nth-child(1){width: 250px; margin-right: 125px;}
-.aboutArea .WKDAArea ul li:nth-child(2){width: 220px; margin-right: 80px;}
-.aboutArea .WKDAArea ul li:nth-child(3){width: 230px; margin-right: 70px;}
-.aboutArea .WKDAArea ul li:nth-child(4){width: 225px;}
-/* .aboutArea .WKDAArea ul li:not(:last-child){margin-right: 100px;} */
-.aboutArea .WKDAArea ul li mark{font-size: 40px; line-height: 47px; margin-bottom: 30px;}
-.aboutArea .WKDAArea ul li p{font-size: 22px; line-height: 32px;}
-
-.aboutArea .imgArea{max-width: 950px; position: relative; margin: 0 auto 260px;}
-.aboutArea .imgArea::before{content:''; display: block; width: 100%; padding-bottom: 100%; background-color: #605abf; margin-bottom: 260px;}
-.aboutArea .imgArea img{position: absolute;}
-.aboutArea .imgArea img:nth-child(1){top: -175px; left: -125px;}
-.aboutArea .imgArea img:nth-child(2){bottom: 120px; right: -120px;}
-
-.aboutArea .companyArea{position: relative; margin-bottom: 60px;}
-.aboutArea .companyArea::after{content: ''; position: absolute; top: 0; right: 0; width: calc(600px + ((100% - 1200px) / 2) ); height: 585px; background:url('../images/about_companyBG.png') no-repeat center / cover;}
-.aboutArea .companyArea ul li:not(:last-child){margin-bottom: 60px;}
-.aboutArea .companyArea ul li mark{font-size: 40px; margin-bottom: 20px; letter-spacing: 5px;}
-.aboutArea .companyArea ul li p{font-size: 22px; line-height: 40px;}
-
-.aboutArea .membersArea{margin-bottom: 155px;}
-.aboutArea .membersArea h3{font-size: 40px; margin-bottom: 30px;}
-.aboutArea .membersArea ul{display: flex; flex-wrap: wrap; justify-content: space-between;}
-.aboutArea .membersArea ul li{width: calc((80% / 3));}
-.aboutArea .membersArea ul li:not(:nth-child(3n)){margin-right: 10%;}
-.aboutArea .membersArea ul li:not(:nth-child(-n + 3)){margin-top: 80px;}
-.aboutArea .membersArea ul li img{width: 100%; margin-bottom: 10px;}
-.aboutArea .membersArea ul li h4{font-size: 22px; margin-bottom: 20px;}
-.aboutArea .membersArea ul li mark{font-size: 26px;}
-
-.aboutArea .historyArea h3{font-size: 40px; margin-bottom: 85px;}
-.aboutArea .historyArea > ol > li{display: flex;}
-.aboutArea .historyArea > ol > li mark{width: 170px; font-size: 46px;}
-.aboutArea .historyArea > ol > li > div{flex: 1; padding-left: 60px; position: relative;}
-.aboutArea .historyArea > ol > li:first-child > div:first-of-type{margin-top: 10px;}
-.aboutArea .historyArea > ol > li:last-child > div:first-of-type{padding-bottom: 100px;}
-.aboutArea .historyArea > ol > li > div::before{content: ''; position: absolute; top: 0; left: -11.5px; width: 23px; height: 23px; background-color: #605abf; border-radius: 100%;}
-.aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
-.aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
-.aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}
-
-
-/* our service */
-.serviceArea{padding:80px 0 0;}
-.serviceArea h4{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
-.serviceArea h4 + p{font-size: 40px; font-weight: 600; margin-bottom: 50px;}
-.serviceArea .serviceList{font-size: 26px; font-weight: 600;}
-.serviceArea .serviceList li{display: flex; align-items: center;}
-.serviceArea .serviceList li:not(:last-child){margin-bottom: 15px;}
-.serviceArea .serviceList li::before{content: ''; width: 6px; height: 6px; background-color: white; border-radius: 100%; margin: 0 10px 0 3px;}
-
-.serviceArea .digitalArea{padding: 200px 0; margin-bottom: 100px;}
-.serviceArea .digitalArea > div:nth-child(1){position: relative; z-index: 10;}
-.serviceArea .digitalArea > div:nth-child(1) h3{font-size: 60px; font-weight: 700; margin-bottom: 30px;}
-.serviceArea .digitalArea > div:nth-child(1) p{font-size: 40px; font-weight: 600; margin-bottom: 60px;}
-.serviceArea .digitalArea .serviceList{margin-bottom: 440px;}
-.serviceArea .digitalArea .imgList::after{content: ''; display: block; clear: both;}
-.serviceArea .digitalArea .imgList li{float: left; max-width: 300px;}
-.serviceArea .digitalArea .imgList li:not(:last-child){margin-right: 10px;}
-.serviceArea .digitalArea .imgList li img{width: 100%;}
-.serviceArea .digitalArea .imgArea{max-width: 1800px; margin: 0 auto; position: relative; z-index: 0;}
-.serviceArea .digitalArea .imgArea img{position: absolute; right: 0px; bottom: 115px;}
-
-.serviceArea .virtualArea{margin-bottom: 300px;}
-.serviceArea .virtualArea div p{margin-bottom: 200px;}
-.serviceArea .virtualArea .imgBox{height: 660px; text-indent: -9999px; display: flex; justify-content: space-between;}
-.serviceArea .virtualArea .imgBox::after , .serviceArea .virtualArea .imgBox::before{
-    content: ''; display: block; width: calc((100% - 10px) / 2); height: 100%; background-repeat: no-repeat; background-position: center; background-size: cover;
-}
-.serviceArea .virtualArea .imgBox::after{background-image: url('../images/service_virtual01.png');}
-.serviceArea .virtualArea .imgBox::before{background-image: url('../images/service_virtual02.png');}
-
-.serviceArea .ARArea{margin-bottom: 250px;}
-.serviceArea .ARArea .serviceList{margin-bottom: 90px;}
-.serviceArea .ARArea .imgArea{display: flex; justify-content: space-between;}
-.serviceArea .ARArea .imgArea img{width: calc((100% - 10px) / 2);}
-
-.serviceArea .designArea .imgBox img{width: 100%;}
-
-/* press */
-.pressArea{background-color: black;  display: flex; align-items: center;}
-.pressArea > div{display: flex; position: relative;}
-.pressArea > div h2{line-height: 80px; max-width: 300px; margin-right: 30px; flex-shrink: 0;}
-.pressArea > div ul li{display: flex; }
-.pressArea > div ul li:not(:last-child){margin-bottom: 35px;}
-.pressArea > div ul li img{max-width: 515px; margin-right: 30px;}
-.pressArea > div ul li div{display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start;}
-.pressArea > div ul li div strong{font-size: 28px; font-weight: 700; line-height: 1.3; display: block; margin-bottom: 30px;}
-.pressArea > div ul li div time{font-size: 18px; font-weight: 700; display: block; margin-bottom: 20px;}
-.pressArea > div ul li div p{font-size: 16px; line-height: 30px; margin-bottom: 55px;}
-
-.pressArea > div .pagerBox{position: absolute; left: 0; bottom: 0; display: flex; align-items: center;}
-.pressArea > div .pagerBox a{font-size: 15px; font-weight: 700; color: white;}
-.pressArea > div .pagerBox > a{position: relative; }
-.pressArea > div .pagerBox > a::after{content: ''; position: absolute; left: 0; bottom: -2px; width: 100%; height: 1px; background-color: white;}
-.pressArea > div .pagerBox > a span{position: absolute; top: 0;}
-.pressArea > div .pagerBox > a:nth-of-type(1) span{left: -30px;}
-.pressArea > div .pagerBox > a:nth-of-type(2) span{right: -30px;}
-.pressArea > div .pagerBox ol{display: flex; margin: 0 30px;}
-.pressArea > div .pagerBox ol li a{display: block; width: 30px; line-height: 30px; border-radius: 100%; text-align: center;}
-.pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
->>>>>>> 913ab3eb9205e0038a27c357ca37de8d8e579b0c
