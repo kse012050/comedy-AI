@@ -137,20 +137,20 @@
     
     .aboutArea > p{margin-bottom: 230px;}
     
-    .aboutArea .meditatArea{background-color: #605abf; padding: 760px 0 100px; margin-bottom: 190px; position: relative;}
-    .aboutArea .meditatArea h3{position: absolute; top: -130px; right: 0; width: calc(100% - 60px); height: 790px; text-align: center; background: url('../images/about_meditatBG.png') no-repeat center / cover;}
-    .aboutArea .meditatArea h3 img{width: 100%; max-width: 1200px;}
-    .aboutArea .meditatArea div{display: flex;}
-    .aboutArea .meditatArea div strong{width: 300px; flex-shrink: 0;}
-    .aboutArea .meditatArea div p{padding: 0 45px;}
+    .aboutArea .meditatArea{background-color: #605abf; padding: 400px 0 100px; margin-bottom: 190px; position: relative;}
+    .aboutArea .meditatArea h3{position: absolute; top: -130px; right: 0; width: calc(100% - 30px); height: 450px; text-align: center; background: url('../images/about_meditatBG.png') no-repeat center / cover;}
+    .aboutArea .meditatArea h3 img{width: 100%; max-width: 610px;}
+    /* .aboutArea .meditatArea div{display: flex;} */
+    .aboutArea .meditatArea div strong{display: block; margin-bottom: 50px;}
+    /* .aboutArea .meditatArea div p{padding: 0 45px;} */
     
     .aboutArea .thinkArea{display: flex; flex-wrap: wrap; margin-bottom: 210px;}
     .aboutArea .thinkArea p{flex: 1; font-size: 90px; font-weight: 700; line-height: 110px; margin-bottom: 150px; text-align: center;}
     .aboutArea .thinkArea mark{width: 100%; font-size: 60px; text-align: center;}
     
-    .aboutArea .WKDAArea{margin-bottom: 300px; position: relative; padding-top: 300px;}
-    .aboutArea .WKDAArea img{position: absolute; left: 50%; top: 0; transform: translateX(-50%);}
-    .aboutArea .WKDAArea ul{width: 1200px; margin: 0 auto;}
+    .aboutArea .WKDAArea{margin-bottom: 340px; position: relative; max-width: none; width: auto; overflow: auto;}
+    /* .aboutArea .WKDAArea img{position: absolute; left: 50%; top: 0; transform: translateX(-50%);} */
+    .aboutArea .WKDAArea ul{width: 1200px; margin-left: 60px;}
     .aboutArea .WKDAArea ul::after{content: ''; display: block; clear: both;}
     .aboutArea .WKDAArea ul li{float: left;}
     .aboutArea .WKDAArea ul li:nth-child(1){width: 250px; margin-right: 125px;}
@@ -161,14 +161,15 @@
     .aboutArea .WKDAArea ul li mark{font-size: 40px; line-height: 47px; margin-bottom: 30px;}
     .aboutArea .WKDAArea ul li p{font-size: 22px; line-height: 32px;}
     
-    .aboutArea .imgArea{max-width: 950px; position: relative; margin: 0 auto 260px;}
-    .aboutArea .imgArea::before{content:''; display: block; width: 100%; padding-bottom: 100%; background-color: #605abf; margin-bottom: 260px;}
-    .aboutArea .imgArea img{position: absolute;}
-    .aboutArea .imgArea img:nth-child(1){top: -175px; left: -125px;}
-    .aboutArea .imgArea img:nth-child(2){bottom: 120px; right: -120px;}
+    .aboutArea .imgArea{position: relative; margin-bottom: 260px;}
+    .aboutArea .imgArea::before{content:''; display: block; width: 100%; height: 760px; background-color: #605abf; margin-bottom: 260px;}
+    .aboutArea .imgArea img{position: absolute; width: 560px;}
+    .aboutArea .imgArea img:nth-child(1){top: -175px; left: 0;}
+    .aboutArea .imgArea img:nth-child(2){bottom: 115px; right: 0;}
     
-    .aboutArea .companyArea{position: relative; margin-bottom: 60px;}
-    .aboutArea .companyArea::after{content: ''; position: absolute; top: 0; right: 0; width: calc(600px + ((100% - 1200px) / 2) ); height: 585px; background:url('../images/about_companyBG.png') no-repeat center / cover;}
+    .aboutArea .companyArea{position: relative; margin-bottom: 80px;}
+    .aboutArea .companyArea::after{content: ''; display: block; width: 100%; height: 460px; background:url('../images/about_companyBG.png') no-repeat center / cover;}
+    .aboutArea .companyArea ul{margin-bottom: 100px;}
     .aboutArea .companyArea ul li:not(:last-child){margin-bottom: 60px;}
     .aboutArea .companyArea ul li mark{font-size: 40px; margin-bottom: 20px; letter-spacing: 5px;}
     .aboutArea .companyArea ul li p{font-size: 22px; line-height: 40px;}
@@ -176,23 +177,26 @@
     .aboutArea .membersArea{margin-bottom: 155px;}
     .aboutArea .membersArea h3{font-size: 40px; margin-bottom: 30px;}
     .aboutArea .membersArea ul{display: flex; flex-wrap: wrap; justify-content: space-between;}
-    .aboutArea .membersArea ul li{width: calc((80% / 3));}
-    .aboutArea .membersArea ul li:not(:nth-child(3n)){margin-right: 10%;}
-    .aboutArea .membersArea ul li:not(:nth-child(-n + 3)){margin-top: 80px;}
+    .aboutArea .membersArea ul li{width: 48%; text-align: center;}
+    .aboutArea .membersArea ul li:not(:nth-child(2n)){margin-right: 4%;}
+    .aboutArea .membersArea ul li:not(:nth-child(-n + 2)){margin-top: 4%;}
     .aboutArea .membersArea ul li img{width: 100%; margin-bottom: 10px;}
     .aboutArea .membersArea ul li h4{font-size: 22px; margin-bottom: 20px;}
-    .aboutArea .membersArea ul li mark{font-size: 26px;}
+    .aboutArea .membersArea ul li mark{font-size: 26px; letter-spacing: -1px;}
     
     .aboutArea .historyArea h3{font-size: 40px; margin-bottom: 85px;}
-    .aboutArea .historyArea > ol > li{display: flex;}
-    .aboutArea .historyArea > ol > li mark{width: 170px; font-size: 46px;}
-    .aboutArea .historyArea > ol > li > div{flex: 1; padding-left: 60px; position: relative;}
+    /* .aboutArea .historyArea > ol > li{display: flex;} */
+    .aboutArea .historyArea > ol > li{position: relative; padding-left: 45px; padding-bottom: 55px;}
+    .aboutArea .historyArea > ol > li:last-child{overflow: hidden;}
+    .aboutArea .historyArea > ol > li mark{font-size: 46px; margin-bottom: 40px;}
+    .aboutArea .historyArea > ol > li > div{}
+    .aboutArea .historyArea > ol > li::before{content: ''; position: absolute; top: 10px; left: 10px; width: 23px; height: 23px; background-color: #605abf; border-radius: 100%;}
+    .aboutArea .historyArea > ol > li::after{content: ''; position: absolute; top: 10px; left: 20px; width: 1px; height: 100%; background-color: #605abf;}
     .aboutArea .historyArea > ol > li:first-child > div:first-of-type{margin-top: 10px;}
     .aboutArea .historyArea > ol > li:last-child > div:first-of-type{padding-bottom: 100px;}
-    .aboutArea .historyArea > ol > li > div::before{content: ''; position: absolute; top: 0; left: -11.5px; width: 23px; height: 23px; background-color: #605abf; border-radius: 100%;}
-    .aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
-    .aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
-    .aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}
+    .aboutArea .historyArea > ol > li > div ol li{font-size: 22px;}
+    .aboutArea .historyArea > ol > li > div ol li:not(:last-child){margin-bottom: 40px;}
+    .aboutArea .historyArea > ol > li > div ol li strong{display: block; margin-bottom: 20px;}
     
     
     /* our service */
