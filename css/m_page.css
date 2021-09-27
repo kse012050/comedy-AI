@@ -113,6 +113,7 @@
 
     .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
     .videoBox video{width: 89.063rem;}
+    .videoBox .PCVideo{display: none;}
     
     
     /* main 페이지*/
@@ -187,7 +188,7 @@
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
-    .talkArea ol li strong{display: none; opacity: 0; font-size: 3.000rem; font-weight: 700; line-height: 3.750rem; color: white; margin-bottom: 1.250rem;}
+    .talkArea ol li strong{display: none; opacity: 0; font-size: 3.000rem; font-weight: 700; line-height: 3.750rem; color: white; margin-bottom: 1.250rem; text-shadow: 0.313rem 0.313rem 0.625rem black;}
     .talkArea ol li strong.active{display: block; animation: talkBox 1s forwards;}
     .talkArea ol li p{font-size: 1.625rem; font-weight: 400; display: inline-block; line-height: 3.750rem; padding: 0 2.188rem; background-color: white; border-radius: 6.250rem; position: relative; cursor: pointer;}
     .talkArea.monyArea ol li p{color: #605abf;}
@@ -195,7 +196,8 @@
     .talkArea ol li p , .talkArea .textBox ol li a{opacity: 0; position: relative; top: 3.125rem; transition: 0.5s;}
     .talkArea ol li p.active , .talkArea ol li a.active{opacity: 1; top: 0;}
     .talkArea ol li p::after{content: ''; position: absolute; right: -0.125rem; top: 0.188rem; width: 0.875rem; height: 0.875rem; background: url('../images/talkBGAfter.png') no-repeat center / cover;}
-    .talkArea .videoBox{display: none;}
+    .talkArea .videoBox{align-items: flex-end;}
+    .talkArea .videoBox video{width: 140vh; max-width: 1500px;}
     
     
     /* sub 페이지 */
