@@ -117,18 +117,18 @@
     
     /* main 페이지*/
     .mainArea{background-color: #5f53c1;}
-    .mainArea .contentArea{ width: 100%; justify-content: space-between; align-items: flex-start; padding-top: 11.563rem; padding-top: calc(6.250rem + 7.5vh); box-sizing: border-box;} 
+    .mainArea .contentArea{ width: 100%; justify-content: space-between; align-items: flex-start; padding-top: 11.563rem; padding-top: calc(6.250rem + 7.5vh); box-sizing: border-box; position: static;} 
     .mainArea .contentArea .textBox{width: 100%;}
     .mainArea .contentArea .textBox > div{display: none; text-align: center;}
     .mainArea .contentArea .textBox > div.active{display: block;}
     .mainArea .contentArea .textBox > div img{position: absolute; left: 50%; bottom: 0; width: 75%; transform: translateX(-50%)}
-    .mainArea .contentArea .textBox > div .mainImgBG{position: absolute; left: 50%; bottom: 0; width: 75%; padding-bottom: 62; transform: translateX(-50%); background: url('../images/m/mein_mony.png') no-repeat top center / cover;}
+    .mainArea .contentArea .textBox > div .mainImgBG{display: none; position: absolute; left: 50%; bottom: 0; width: 75%; padding-bottom: 62vh; transform: translateX(-50%); background: url('../images/m/mein_mony.png') no-repeat top center / cover;}
     .mainArea .contentArea .textBox > div p{font-size: 4.250rem; font-weight: 600; }
     .mainArea .contentArea .textBox > div:nth-child(1) p{letter-spacing: 0.938rem;}
     .mainArea .contentArea .textBox > div:nth-child(2) p{letter-spacing: 0.625rem;}
     .mainArea .contentArea .textBox > div:nth-child(3) p{letter-spacing: 0.313rem;}
     .mainArea .contentArea .textBox > div:nth-child(3){position: relative;}
-    .mainArea .contentArea .textBox .btn{min-width: 19.063rem; box-sizing: border-box; position: absolute; bottom: -9.375rem; left: calc(50% - 152.0.313rem);}
+    .mainArea .contentArea .textBox .btn{min-width: 19.063rem; box-sizing: border-box; position: absolute; bottom: -9.375rem; left: calc(50% - 9.5315rem);}
     
     
     /* whoIs 페이지 */
