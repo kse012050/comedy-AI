@@ -42,7 +42,9 @@
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
-    [data-animate="blur"] .char{filter: blur(100px); opacity: 0; animation: 1s forwards; /* animation-delay: calc(0.3s * var(--char-index)); */}
+
+    [data-animate="blur"] .char{filter: blur(100px); opacity: 0; animation:blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));}
+    .textBox > div:first-of-type [data-animate="blur"] .char{animation-delay: calc((0.3s * var(--char-index)) + 1s);}
     @keyframes blurAni {
         0%{filter: blur(10em); opacity: 0;}
         100%{filter: blur(0px); opacity: 1;}
@@ -156,7 +158,9 @@
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
-    [data-animate="blur"] .char{filter: blur(6.250rem); opacity: 0; animation: 1s forwards; /* animation-delay: calc(0.3s * var(--char-index)); */}
+    /* [data-animate="blur"] .char{filter: blur(6.250rem); opacity: 0; animation:blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));} */
+    [data-animate="blur"] .char{filter: blur(6.250rem); opacity: 0; animation:blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));}
+    .textBox > div:first-of-type [data-animate="blur"] .char{animation-delay: calc((0.3s * var(--char-index)) + 1s);}
     @keyframes blurAni {
         0%{filter: blur(10em); opacity: 0;}
         100%{filter: blur(0px); opacity: 1;}

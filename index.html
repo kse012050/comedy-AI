@@ -45,18 +45,41 @@
             $('.pageBox').append('<span></<span>')
         }
 
-        $('.textBox')[0].addEventListener('animationend',function(){
-            mainTextAnimation()
+        // $('.textBox')[0].addEventListener('animationend',function(){
+        //     mainTextAnimation()
             
-        });
+        // });
 
+        var test = startAniDuration * 1000 + 1000;
+        var testIdx = 0;
+        var test01 =  $('.textBox > div');
+        $('.textBox > div').each(function(){
+            test = test + ($(this).find('.char').length * 300) + 2000;
+            if(!($(this).index() == ($('.textBox > div').length - 1))){
+                // $(this).find('.char').last()[0].addEventListener('animationend',function(){
+                //     testIdx++;
+                //     $('.textBox > div').removeClass('active');
+                //     $('.textBox > div').eq(testIdx).addClass('active');
+                // });
+                setTimeout(function(){
+                    testIdx++;
+                    test01.removeClass('active');
+                    test01.eq(testIdx).addClass('active');
+                },test)
+            }
+        })
+
+   /*      $('.textBox > div.active .char').last()[0].addEventListener('animationend',function(){
+            $('.textBox > div').removeClass('active');
+            $('.textBox > div').eq(1).addClass('active');
+        }); */
 
       
 
 
-        function mainTextAnimation(){
+        // function mainTextAnimation(){
             // console.log($('.textBox > *')[0]);
-            $('.textBox > *').each(function(){
+           /*  $('.textBox > *').each(function(){
                 $(this)[0].addEventListener('animationend',function(e){
                     e.stopPropagation();
                 });
@@ -80,8 +103,8 @@
                         mainTextAnimation();
                     }, 2000);
                 }
-            })
-        }
+            }) */
+        // }
     })
     </script>
 </head>
@@ -117,22 +140,22 @@
             <div class="contentArea width1200">
                 <div class="textBox" data-startAni="opacity">
                     <div class="active">
-                        <p data-splitting>Beautiful</p>
+                        <p>Beautiful</p>
                         <div class="mainImgBG">
 
                         </div>
                         <!-- <img src="images/mein_mony.png" alt="mony" data-startAni="opacity01"> -->
                         <p data-splitting data-animate="blur">Inspiration</p>
                     </div>
-                   <!--  <div>
-                        <p data-splitting>It’s time to</p>
+                    <div>
+                        <p>It’s time to</p>
                         <p data-splitting data-animate="blur">Meet Unthink</p>
                     </div>
                     <div>
-                        <p data-splitting>Are you ready</p>
+                        <p>Are you ready</p>
                         <p data-splitting data-animate="blur">to explore?</p>
                         <a href="whoIs.html" class="btn">Explore</a>
-                    </div> -->
+                    </div>
                 </div>
                 <!-- <div class="videoBox">
                     <video src="../video/video01.mp4" autoplay muted loop></video>
