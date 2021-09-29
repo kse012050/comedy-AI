@@ -28,7 +28,6 @@
 
         var mainAnimateIdx = 0;
 
-        // $('header[data-startAni]').css('top',-$('header[data-startAni]').height());
         $('[data-startAni="top"]').css({'top': function(){
                 return -$(this).height();
             }
@@ -45,66 +44,20 @@
             $('.pageBox').append('<span></<span>')
         }
 
-        // $('.textBox')[0].addEventListener('animationend',function(){
-        //     mainTextAnimation()
-            
-        // });
 
-        var test = startAniDuration * 1000 + 1000;
-        var testIdx = 0;
-        var test01 =  $('.textBox > div');
+        var mainTextDelay = startAniDuration * 1000 + 1000;
+        var mainTextIdx = 0;
+        var mainTextSelector =  $('.textBox > div');
         $('.textBox > div').each(function(){
-            test = test + ($(this).find('.char').length * 300) + 2000;
+            mainTextDelay = mainTextDelay + ($(this).find('.char').length * 300) + 2000;
             if(!($(this).index() == ($('.textBox > div').length - 1))){
-                // $(this).find('.char').last()[0].addEventListener('animationend',function(){
-                //     testIdx++;
-                //     $('.textBox > div').removeClass('active');
-                //     $('.textBox > div').eq(testIdx).addClass('active');
-                // });
                 setTimeout(function(){
-                    testIdx++;
-                    test01.removeClass('active');
-                    test01.eq(testIdx).addClass('active');
-                },test)
+                    mainTextIdx++;
+                    mainTextSelector.removeClass('active');
+                    mainTextSelector.eq(mainTextIdx).addClass('active');
+                },mainTextDelay)
             }
         })
-
-   /*      $('.textBox > div.active .char').last()[0].addEventListener('animationend',function(){
-            $('.textBox > div').removeClass('active');
-            $('.textBox > div').eq(1).addClass('active');
-        }); */
-
-      
-
-
-        // function mainTextAnimation(){
-            // console.log($('.textBox > *')[0]);
-           /*  $('.textBox > *').each(function(){
-                $(this)[0].addEventListener('animationend',function(e){
-                    e.stopPropagation();
-                });
-            })
-          
-            $('.pageBox span').removeClass('active');
-            $('.pageBox span').eq(mainAnimateIdx).addClass('active');
-            $('.textBox > div.active').find('[data-animate="blur"] span.char').css({'animation-delay' : function(idx){
-                    textAniDuration = (((idx * 0.3) + startAniDuration) * 1000)
-                    return textAniDuration + 'ms';
-                }
-            });
-
-            $('.textBox > div.active').find('[data-animate="blur"] span.char').css({'animation-name' :'blurAni'});
-            $('.textBox > div.active').find('[data-animate="blur"] span.char').last()[0].addEventListener('animationend',function(){
-                if($('.textBox > div.active').next().length){
-                    setTimeout(() => {
-                        $('.textBox > div.active').removeClass('active');
-                        $(this).parent().parent().parent().next().addClass('active');
-                        mainAnimateIdx++;
-                        mainTextAnimation();
-                    }, 2000);
-                }
-            }) */
-        // }
     })
     </script>
 </head>

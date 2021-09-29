@@ -30,8 +30,8 @@
     .positionContents .newBox strong{margin-right: 35px;}
     .positionContents .textBox p{ font-size: 40px; font-weight: 700; letter-spacing: 2px; position: absolute; left: 0; bottom: 15px; width: 100%; text-align: center; pointer-events:all;}
     
-    .monyBG{background-color: #7467cd;}
-    .onnyBG{background-color: #5abac0;}
+    .monyBG{background-color: #685cc5;}
+    .onnyBG{background-color: #50b2b6;}
     
     .titleDot span{display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
     .titleDot::after{content: ''; display: inline-block; width: 25px; height: 25px; background-color: #605abf; border-radius: 100%; margin-left: 15px;}
@@ -146,8 +146,8 @@
     .positionContents .newBox strong{margin-right: 2.188rem;}
     .positionContents .textBox p{ font-size: 3.000rem; font-weight: 700; line-height: 4.375rem; letter-spacing: 0.125rem; position: absolute; left: 0; bottom: 0.938rem; width: 100%; text-align: center; pointer-events:all;}
     
-    .monyBG{background-color: #7467cd;}
-    .onnyBG{background-color: #5abac0;}
+    .monyBG{background-color: #685cc5;}
+    .onnyBG{background-color: #50b2b6;}
     
     .titleDot span{display: inline-block; width: 1.563rem; height: 1.563rem; background-color: #605abf; border-radius: 100%; margin-left: 0.938rem;}
     .titleDot::after{content: ''; display: inline-block; width: 1.563rem; height: 1.563rem; background-color: #605abf; border-radius: 100%; margin-left: 0.938rem;}
