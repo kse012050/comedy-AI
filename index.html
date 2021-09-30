@@ -48,6 +48,9 @@
         var mainTextDelay = startAniDuration * 1000 + 1000;
         var mainTextIdx = 0;
         var mainTextSelector =  $('.textBox > div');
+        var mainTextPage =  $('.pageBox span');
+        mainTextPage.eq(mainTextIdx).addClass('active');
+
         $('.textBox > div').each(function(){
             mainTextDelay = mainTextDelay + ($(this).find('.char').length * 300) + 2000;
             if(!($(this).index() == ($('.textBox > div').length - 1))){
@@ -55,6 +58,8 @@
                     mainTextIdx++;
                     mainTextSelector.removeClass('active');
                     mainTextSelector.eq(mainTextIdx).addClass('active');
+                    mainTextPage.removeClass('active');
+                    mainTextPage.eq(mainTextIdx).addClass('active');
                 },mainTextDelay)
             }
         })
