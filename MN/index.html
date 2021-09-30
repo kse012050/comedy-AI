@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>코메디 AI</title>
+    <!-- splitting css -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <!-- splitting js -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+
+    <!-- jQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/common.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+    <script> 
+    $(document).ready(function(){
+        Splitting(); 
+
+        var startAniDuration = 1;
+        var startAniDelay = 1000;
+        var textBoxAniDuration = 0;
+        var textAniDuration = 0;
+
+        var mainAnimateIdx = 0;
+
+        $('[data-startAni="top"]').css({'top': function(){
+                return -$(this).height();
+            }
+        });
+        $('[data-startAni="top"]').delay(startAniDelay).animate({top:0},startAniDuration * 1000);
+
+        $('[data-startAni="opacity"]').css({'opacity':'0'});
+        $('[data-startAni="opacity"]').delay(startAniDelay).animate({opacity:1},startAniDuration * 1000);
+
+        $('[data-startAni="opacity01"]').css({'opacity':'0'});
+        $('[data-startAni="opacity01"]').delay(1500).animate({opacity:1},startAniDuration * 1000);
+
+        for(var i = 0 ; i < $('.textBox > div').length; i++){
+            $('.pageBox').append('<span></<span>')
+        }
+
+
+        var mainTextDelay = startAniDuration * 1000 + 1000;
+        var mainTextIdx = 0;
+        var mainTextSelector =  $('.textBox > div');
+        $('.textBox > div').each(function(){
+            mainTextDelay = mainTextDelay + ($(this).find('.char').length * 300) + 2000;
+            if(!($(this).index() == ($('.textBox > div').length - 1))){
+                setTimeout(function(){
+                    mainTextIdx++;
+                    mainTextSelector.removeClass('active');
+                    mainTextSelector.eq(mainTextIdx).addClass('active');
+                },mainTextDelay)
+            }
+        })
+    })
+    </script>
+</head>
+<body>
+    <div class="mainPage">
+        <header data-startAni="top">
+            <div class="width1900">
+                <h1><a href="index.html"><img src="images/logo_w.png" alt="meditat logo"></a></h1>
+                <button class="menuBtn">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <div>
+                        <div>
+                            <a href="#" class="active">EN</a>
+                            <a href="#">MN</a>
+                            <a href="#">CN</a>
+                        </div>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="whoIs.html">Digital Human</a></li>
+                            <li><a href="service.html">Our Service</a></li>
+                            <li><a href="press.html">Press & Media</a></li>
+                            <li><a href="contactUs.html">Contact US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="mainArea height100">
+            <div class="contentArea width1200">
+                <div class="textBox" data-startAni="opacity">
+                    <div class="active">
+                        <p>Beautiful</p>
+                        <div class="mainImgBG">
+
+                        </div>
+                        <p data-splitting data-animate="blur">Inspiration</p>
+                    </div>
+                    <div>
+                        <p>It’s time to</p>
+                        <p data-splitting data-animate="blur">Meet Unthink</p>
+                    </div>
+                    <div>
+                        <p>Are you ready</p>
+                        <p data-splitting data-animate="blur">to explore?</p>
+                        <a href="whoIs.html" class="btn">Explore</a>
+                    </div>
+                </div>
+            </div>
+            <div class="positionContents">
+                <div class="width1900">
+                    <div class="newBox" data-startAni="opacity">
+                        <strong>NEWS</strong>
+                        <p>Mony’s Beauty Suite is lanched</p>
+                    </div>
+                    <div class="pageBox" data-startAni="opacity">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="width1900">
+                <h2><img src="images/logo_w.png" alt="meditat logo"></h2>
+                <div>
+                    <ul>
+                        <li><a href="https://meditalk.live">meditalk blog</a></li>
+                        <li><a href="https://mony.studio">Mony Studi</a></li>
+                    </ul>
+                    <address>
+                        <p>KOMEDI AI 股份公司 , 首尔特别市铜雀区鹭梁津路10，Space Sallim共享办公空间</p>
+                        <p>E-mail : <a href="#">info@meditat.net</a></p>
+                    </address>
+                    <p>Copyright©2021 Korea Medical AI Inc. All Rights Reserved.</p>
+                    <ul class="snsArea">
+                        <li><a href="https://www.facebook.com/MeditatTalks/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/mony.glam/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onny</title>
+    <!-- splitting css -->
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css" />
+    <link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css" />
+    <!-- splitting js -->
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <!-- jQuery cdn -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- material icon -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="js/common.js"></script>
+    <script src="https://unpkg.com/typeit@8.0.2/dist/index.umd.js"></script>
+    <link rel="stylesheet" href="css/import.css">
+    <script>
+        $(document).ready(function(){
+            $('.talkArea ol li').eq(0).addClass('active');
+            $('.talkArea ol li.active strong').eq(0).addClass('active');
+            talkAnimation();
+            function talkAnimation(){
+                $('.talkArea ol li.active strong.active')[0].addEventListener('animationend',function(){
+                    if($(this).next().prop('tagName') == 'STRONG'){
+                        $(this).fadeOut(function(){
+                            $(this).next().addClass('active');
+                        })
+                    }
+                })
+                setTimeout(() => {
+                    $('.talkArea ol li.active p').addClass('active');
+                }, 1000);
+            }
+
+            $('.talkArea ol li p').click(function(){
+                $(this).parent().removeClass('active').next().addClass('active');
+                $('.talkArea ol li.active strong').eq(0).addClass('active');
+                talkAnimation();
+            })
+        });
+    </script>
+</head>
+<body>
+    <div class="mainPage">
+        <header data-startAni="top">
+            <div class="width1900">
+                <h1><a href="index.html"><img src="images/logo_w.png" alt="meditat logo"></a></h1>
+                <button class="menuBtn">
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav>
+                    <div>
+                        <div>
+                            <a href="#" class="active">EN</a>
+                            <a href="#">MN</a>
+                            <a href="#">CN</a>
+                        </div>
+                        <ul>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="whoIs.html">Digital Human</a></li>
+                            <li><a href="service.html">Our Service</a></li>
+                            <li><a href="press.html">Press & Media</a></li>
+                            <li><a href="contactUs.html">Contact US</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <div class="talkArea onnyArea onnyBG height100">
+            <div class="contentArea width1200">
+                <ol>
+                    <li>
+                        <strong>Сайн уу!</strong>
+                        <p>Сайн уу, Онни</p>
+                    </li>
+                    <li>
+                        <strong>
+                            Би мэдитатын Эрүүл мэндийн зөвлөх,<br/>
+                            менежер байна
+                        </strong>
+                        <p>Баярлалаа!</p>
+                    </li>
+                    <li>
+                        <strong>
+                            Бид бүгд л эмчилгээний журмаар<br/>
+                            аялахдаа айдастай байдаг шүү дээ.<br/>
+                            Ялангуяа тухайн улсад<br/>
+                            таньдаг хүн байхгүй бо
+                        </strong>
+                        <p>Яг тийм!</p>
+                    </li>
+                    <li>
+                        <strong>
+                            Гэхдээ та бүү санаа зов!<br/>
+                            сайхан болох аялалдаа<br/>
+                            хамтдаа гарцгаая
+                        </strong>
+                        <p>Ямар сайхан хэрэг вэ, баярлалаа.</p>
+                    </li>
+                    <li>
+                        <strong>
+                            За тэгвэл, мэдитат-аас гоо<br/>
+                            сайхан-эрүүл мэндийн<br/>
+                            аялалын тасалбар<br/>
+                            хожмоор байна уу?
+                        </strong>
+                        <a href="https://www.meditalk.live" class="btn">Go With You!</a>
+                    </li>
+                </ol>
+            </div>
+            <div class="videoBox">
+                <video src="../video/onny_talk.mp4" autoplay muted loop class="PCVideo"></video>
+                <video src="../video/onny_bg.mp4" autoplay muted loop class="mobileVideo"></video>
+            </div>
+        </div>
+
+        <footer>
+            <div class="width1900">
+                <h2><img src="images/logo_w.png" alt="meditat logo"></h2>
+                <div>
+                    <ul>
+                        <li><a href="https://meditalk.live">meditalk blog</a></li>
+                        <li><a href="https://mony.studio">Mony Studi</a></li>
+                    </ul>
+                    <address>
+                        <p>KOMEDI AI 股份公司 , 首尔特别市铜雀区鹭梁津路10，Space Sallim共享办公空间</p>
+                        <p>E-mail : <a href="#">info@meditat.net</a></p>
+                    </address>
+                    <p>Copyright©2021 Korea Medical AI Inc. All Rights Reserved.</p>
+                    <ul class="snsArea">
+                        <li><a href="https://www.facebook.com/MeditatTalks/">Facebook</a></li>
+                        <li><a href="https://www.instagram.com/mony.glam/">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

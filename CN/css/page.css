@@ -424,7 +424,6 @@
     .aboutArea .historyArea > ol > li{position: relative; padding-left: 2.813rem; padding-bottom: 3.438rem;}
     .aboutArea .historyArea > ol > li:last-child{overflow: hidden;}
     .aboutArea .historyArea > ol > li mark{font-size: 2.875rem; margin-bottom: 2.500rem;}
-    .aboutArea .historyArea > ol > li > div{}
     .aboutArea .historyArea > ol > li::before{content: ''; position: absolute; top: 0.625rem; left: 0.625rem; width: 1.438rem; height: 1.438rem; background-color: #605abf; border-radius: 100%;}
     .aboutArea .historyArea > ol > li::after{content: ''; position: absolute; top: 0.625rem; left: 1.250rem; width: 0.063rem; height: 100%; background-color: #605abf;}
     .aboutArea .historyArea > ol > li:first-child > div:first-of-type{margin-top: 0.625rem;}
