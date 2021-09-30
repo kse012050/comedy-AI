@@ -121,7 +121,7 @@
     /* .width1200{max-width: 75.000rem; width: calc(100% - 3.750rem); margin: 0 auto;} */
     .width1200{max-width: 640px; width: calc(100% - 3.750rem); margin: 0 auto;}
     
-    .height100{min-height: 100vh;}
+    .height100{min-height: calc(100vh - 100px);}
     
     .mainPage > [class*="Area"]{height: 100%; position: relative;}
     
@@ -217,8 +217,8 @@
     footer > div > div ul:not([class]) li:not(:first-child){padding-left: 1.563rem; border-left: 0.063rem solid rgba(255, 255, 255, 0.4);}
     footer > div > div ul:not([class]) li a{font-size: 1.000rem; font-weight: 600; color: white;}
     footer > div > div address{font-style: normal; margin-bottom: 1.875rem; text-align: center;}
-    footer > div > div address *{font-size: 0.875rem; font-weight: 600; color: white;}
-    footer > div > div address > *:not(:last-child){margin-bottom: 0.938rem;}
+    footer > div > div address *{font-size: 0.875rem; font-weight: 600; line-height: 1.813rem; color: white;}
+    /* footer > div > div address > *:not(:last-child){margin-bottom: 0.938rem;} */
     footer > div > div > p{font-size: 0.875rem; font-weight: 600; color: rgba(255, 255, 255, 0.2); text-align: center; margin-bottom: 3.438rem;}
     footer > div > div ul.snsArea{ display: flex; justify-content: center;}
     footer > div > div ul.snsArea li{border: 0.063rem solid rgba(255, 255, 255, 0.5); border-radius: 6.250rem;}
