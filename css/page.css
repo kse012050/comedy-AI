@@ -491,3 +491,4 @@
     .pressArea > div .pagerBox ol{display: flex; margin: 0 1.875rem;}
     .pressArea > div .pagerBox ol li a{display: block; width: 1.875rem; line-height: 1.875rem; border-radius: 100%; text-align: center;}
     .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
+}
