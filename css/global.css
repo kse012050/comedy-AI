@@ -1,6 +1,5 @@
 @media screen and (min-width:1280px){
 
-
     .width1900{max-width: 1900px; width: calc(100% - 60px); margin: 0 auto;}
     .width1800{max-width: 1800px; width: 100%; margin: 0 auto;}
     .width1200{max-width: 1200px; width: calc(100% - 60px); margin: 0 auto;}
@@ -85,11 +84,9 @@
     header > div nav > div ul li a{font-size: 70px; font-weight: 700; color: white; text-transform: uppercase;}
     
     
-    /* .imainPage header{top: -100%;} */
     
     /* 서브 페이지 */
-    .subPage{background-color: black; /* color: white; */}
-    /* .subPage main{padding-top: 130px;} */
+    .subPage{background-color: black; }
     
     /* footer */
     footer{padding: 80px 0; background-color: #282828;}
@@ -118,7 +115,6 @@
 
     .width1900{max-width: 1900px; width: calc(100% - 3.750rem); margin: 0 auto;}
     .width1800{max-width: 1800px; width: 100%; margin: 0 auto;}
-    /* .width1200{max-width: 75.000rem; width: calc(100% - 3.750rem); margin: 0 auto;} */
     .width1200{max-width: 640px; width: calc(100% - 3.750rem); margin: 0 auto;}
     
     .height100{min-height: calc(100vh - 100px);}
@@ -158,7 +154,6 @@
         0%{opacity: 0;}
         100%{opacity: 1;}
     }
-    /* [data-animate="blur"] .char{filter: blur(6.250rem); opacity: 0; animation:blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));} */
     [data-animate="blur"] .char{filter: blur(6.250rem); opacity: 0; animation:blurAni 1s forwards; animation-delay: calc(0.3s * var(--char-index));}
     .textBox > div:first-of-type [data-animate="blur"] .char{animation-delay: calc((0.3s * var(--char-index)) + 1s);}
     @keyframes blurAni {
@@ -201,15 +196,12 @@
     header > div nav > div ul li a{font-size: 3.125rem; font-weight: 700; color: white; text-transform: uppercase;}
     
     
-    /* .imainPage header{top: -100%;} */
     
     /* 서브 페이지 */
-    .subPage{background-color: black; /* color: white; */}
-    /* .subPage main{padding-top: 8.125rem;} */
+    .subPage{background-color: black; }
     
     /* footer */
     footer{padding: 5.000rem 0; background-color: #282828;}
-    /* footer > div{display: flex; position: relative;} */
     footer > div h2{max-width: 8.875rem; margin: 0 auto 3.125rem;}
     footer > div h2 img{width: 100%;}
     footer > div > div ul:not([class]){display: flex; justify-content: center; margin-bottom: 1.875rem;}

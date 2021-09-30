@@ -31,12 +31,6 @@
     .whoIsArea section > div:first-child{max-width: 980px; margin: 0 auto; position: relative; z-index: 1;}
     .whoIsArea section .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; overflow: hidden;}
     .whoIsArea section .videoBox video{width: 100vw; max-width: 1500px;}
-    /* .whoIsArea section.mony .videoBox{background-color: #615bbf; background: url('../images/test.png') no-repeat center / cover;} */
-    /* .whoIsArea section.mony .videoBox > div{position: relative;}
-    .whoIsArea section.mony .videoBox > div::after, .whoIsArea section.mony .videoBox > div::before{content: ''; position: absolute; width: 3px; height: 100%; top: 0; background-color: #615bbf;}
-    .whoIsArea section.mony .videoBox > div::before{left: 0;}
-    .whoIsArea section.mony .videoBox > div::after{right: 0;} */
-    /* .whoIsArea section.onny .videoBox{background-color: #50b2b7;} */
     .whoIsArea .positionContents{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
     .whoIsArea .positionContents > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: center; position: relative;}
     .whoIsArea .positionContents > div button{pointer-events: all; font-size: 23px; font-weight: 700; letter-spacing: 10px; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
@@ -153,7 +147,6 @@
     .aboutArea .WKDAArea ul li:nth-child(2){width: 220px; margin-right: 80px;}
     .aboutArea .WKDAArea ul li:nth-child(3){width: 230px; margin-right: 70px;}
     .aboutArea .WKDAArea ul li:nth-child(4){width: 225px;}
-    /* .aboutArea .WKDAArea ul li:not(:last-child){margin-right: 100px;} */
     .aboutArea .WKDAArea ul li mark{font-size: 40px; line-height: 47px; margin-bottom: 30px;}
     .aboutArea .WKDAArea ul li p{font-size: 22px; line-height: 32px;}
 
@@ -281,12 +274,6 @@
     .whoIsArea section .btn{position: absolute; top: -5.000rem; left: 50%; transform: translateX(-50%); white-space: nowrap;}
     .whoIsArea section .videoBox{position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: flex-end; overflow: hidden;}
     .whoIsArea section .videoBox video{width: 140vh; max-width: 1500px;}
-    /* .whoIsArea section.mony .videoBox{background-color: #615bbf; background: url('../images/test.png') no-repeat center / cover;} */
-    /* .whoIsArea section.mony .videoBox > div{position: relative;}
-    .whoIsArea section.mony .videoBox > div::after, .whoIsArea section.mony .videoBox > div::before{content: ''; position: absolute; width: 0.188rem; height: 100%; top: 0; background-color: #615bbf;}
-    .whoIsArea section.mony .videoBox > div::before{left: 0;}
-    .whoIsArea section.mony .videoBox > div::after{right: 0;} */
-    /* .whoIsArea section.onny .videoBox{background-color: #50b2b7;} */
     .whoIsArea .positionContents{position: absolute; left: 0; top: 0; width: 100%; height: 100%; pointer-events: none; z-index: 10;}
     .whoIsArea .positionContents > div{height: 100%; margin: 0 auto; display: flex; justify-content: flex-end; align-items: flex-end; position: relative; padding-bottom: 35vh; box-sizing: border-box;}
     .whoIsArea .positionContents > div button{pointer-events: all; font-size: 1.438rem; font-weight: 700; letter-spacing: 0.625rem; display: flex; align-items: baseline; transition: 0.5s letter-spacing;}
@@ -347,15 +334,14 @@
     .contactUsArea{ box-sizing: border-box; position: relative; overflow: hidden;}
     .contactUsArea > div{box-sizing: border-box;}
     .contactUsArea > div > div{height: 31.250rem;}
-    .contactUsArea > .contentArea{height: /* calc(100vh - 6.250rem); */calc(100vh - 200px); display: flex; align-items: flex-end; }
+    .contactUsArea > .contentArea{height: calc(100vh - 200px); display: flex; align-items: flex-end; }
     .contactUsArea > .contentArea > div{width: 100%; position: relative; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; margin-bottom: 8.7vh;}
     .contactUsArea > .contentArea > div h2 mark{display: block; font-size: 1.875rem; font-weight: 800; margin-top: 1.875rem;}
-    /* .contactUsArea > .contentArea > div button{position: absolute; right: 0; bottom: 2.188rem;} */
     .contactUsArea > .contentArea > div p{font-size: 1.875rem; font-weight: 600; line-height: 4.313rem;}
     .contactUsArea > .contentArea > div p.heartEmoticon::after{content: '';display: inline-block; width: 2.500rem; height: 2.500rem; background: url('../images/heartEmoticon.png') no-repeat center / cover; vertical-align: middle;}
     
     .contactUsArea .contactUsBox{position: absolute; right: -100%; top: 0; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; /* padding-left: 3.125rem; */ box-sizing: border-box; background-color: #605abf; z-index: 5;}
-    .contactUsArea .contactUsBox > div{/* padding-top: 8.125rem;  */width: 34.375rem; display: flex; align-items: center; position: relative; }
+    .contactUsArea .contactUsBox > div{width: 34.375rem; display: flex; align-items: center; position: relative; }
     .contactUsArea .contactUsBox > div .textBox{width: 100%; position: relative; z-index: 1; }
     .contactUsArea .contactUsBox > div .textBox ol li{display: none; text-align: left; position: relative;}
     .contactUsArea .contactUsBox > div .textBox ol li.active{display: block; animation: contactUsQuery 1s forwards;}
@@ -393,16 +379,13 @@
     .aboutArea .meditatArea{background-color: #605abf; padding: 25.000rem 0 6.250rem; margin-bottom: 11.875rem; position: relative;}
     .aboutArea .meditatArea h3{position: absolute; top: -8.125rem; right: 0; width: calc(100% - 1.875rem); height: 28.125rem; text-align: center; background: url('../images/about_meditatBG.png') no-repeat center / cover;}
     .aboutArea .meditatArea h3 img{width: 100%; max-width: 38.125rem;}
-    /* .aboutArea .meditatArea div{display: flex;} */
     .aboutArea .meditatArea div strong{display: block; margin-bottom: 3.125rem;}
-    /* .aboutArea .meditatArea div p{padding: 0 2.813rem;} */
     
     .aboutArea .thinkArea{display: flex; flex-wrap: wrap; margin-bottom: 13.125rem;}
     .aboutArea .thinkArea p{flex: 1; font-size: 5.625rem; font-weight: 700; line-height: 6.875rem; margin-bottom: 9.375rem; text-align: center;}
     .aboutArea .thinkArea mark{width: 100%; font-size: 3.750rem; text-align: center;}
     
     .aboutArea .WKDAArea{margin-bottom: 21.250rem; position: relative; max-width: none; width: auto; overflow: auto;}
-    /* .aboutArea .WKDAArea img{position: absolute; left: 50%; top: 0; transform: translateX(-50%);} */
     .aboutArea .WKDAArea > img{width: 82.188rem;}
     .aboutArea .WKDAArea ul{width: 75.000rem; margin-left: 3.750rem;}
     .aboutArea .WKDAArea ul::after{content: ''; display: block; clear: both;}
@@ -411,7 +394,6 @@
     .aboutArea .WKDAArea ul li:nth-child(2){width: 13.750rem; margin-right: 5.000rem;}
     .aboutArea .WKDAArea ul li:nth-child(3){width: 14.375rem; margin-right: 4.375rem;}
     .aboutArea .WKDAArea ul li:nth-child(4){width: 14.063rem;}
-    /* .aboutArea .WKDAArea ul li:not(:last-child){margin-right: 6.250rem;} */
     .aboutArea .WKDAArea ul li mark{font-size: 2.500rem; line-height: 2.938rem; margin-bottom: 1.875rem;}
     .aboutArea .WKDAArea ul li p{font-size: 1.375rem; line-height: 2.000rem;}
     
@@ -439,7 +421,6 @@
     .aboutArea .membersArea ul li mark{font-size: 1.625rem; letter-spacing: -0.063rem;}
     
     .aboutArea .historyArea h3{font-size: 2.500rem; margin-bottom: 5.313rem;}
-    /* .aboutArea .historyArea > ol > li{display: flex;} */
     .aboutArea .historyArea > ol > li{position: relative; padding-left: 2.813rem; padding-bottom: 3.438rem;}
     .aboutArea .historyArea > ol > li:last-child{overflow: hidden;}
     .aboutArea .historyArea > ol > li mark{font-size: 2.875rem; margin-bottom: 2.500rem;}
@@ -510,5 +491,3 @@
     .pressArea > div .pagerBox ol{display: flex; margin: 0 1.875rem;}
     .pressArea > div .pagerBox ol li a{display: block; width: 1.875rem; line-height: 1.875rem; border-radius: 100%; text-align: center;}
     .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
-
-}
