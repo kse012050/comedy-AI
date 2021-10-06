@@ -446,7 +446,7 @@
     .serviceArea .digitalArea{margin-bottom: 9.375rem;}
     .serviceArea .digitalArea > div:nth-child(1){position: relative; z-index: 10; margin-bottom: 5.000rem;}
     .serviceArea .digitalArea > div:nth-child(1) h3{font-size: 3.750rem; font-weight: 700; margin-bottom: 1.875rem;}
-    .serviceArea .digitalArea > div:nth-child(1) p{font-size: 2.500rem; font-weight: 600; margin-bottom: 3.750rem;}
+    .serviceArea .digitalArea > div:nth-child(1) p{font-size: 2.500rem; font-weight: 600; line-height: 4.313rem; margin-bottom: 3.750rem;}
     .serviceArea .digitalArea .serviceList{margin-bottom: 4.375rem;}
     .serviceArea .digitalArea .imgList::after{content: ''; display: block; clear: both;}
     .serviceArea .digitalArea .imgList li{float: left; max-width: calc((100% - 1.250rem)/ 3); height: 13.063rem; overflow: hidden;}
