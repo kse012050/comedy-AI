@@ -181,7 +181,7 @@
     .aboutArea .historyArea > ol > li > div::before{content: ''; position: absolute; top: 0; left: -11.5px; width: 23px; height: 23px; background-color: #605abf; border-radius: 100%;}
     .aboutArea .historyArea > ol > li > div::after{content: ''; position: absolute; top: 0; left: 0; width: 1px; height: 100%; background-color: #605abf;}
     .aboutArea .historyArea > ol > li > div ol li{font-size: 22px; display: flex; margin-bottom: 40px;}
-    .aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px;}
+    .aboutArea .historyArea > ol > li > div ol li strong{margin-right: 40px; width: 80px;}
 
 
     /* our service */
