@@ -480,14 +480,15 @@
     .pressArea > div ul li div time{font-size: 1.250rem; font-weight: 700; display: block; margin-bottom: 1.875rem;}
     .pressArea > div ul li div p{font-size: 1.375rem; line-height: 2.500rem; margin-bottom: 3.438rem;}
     
-    .pressArea > div .pagerBox{position: absolute; left: 0; bottom: 0; display: flex; align-items: center; display: none;}
-    .pressArea > div .pagerBox a{font-size: 0.938rem; font-weight: 700; color: white;}
+    .pressArea > div .pagerBox{/* position: absolute;  */left: 0; bottom: 0; display: flex; align-items: center; justify-content: center; margin-top: 6.250rem; /* display: none; */}
+    .pressArea > div .pagerBox a{font-size: 1.375rem; font-weight: 700; color: white;}
     .pressArea > div .pagerBox > a{position: relative; }
     .pressArea > div .pagerBox > a::after{content: ''; position: absolute; left: 0; bottom: -0.125rem; width: 100%; height: 0.063rem; background-color: white;}
     .pressArea > div .pagerBox > a span{position: absolute; top: 0;}
     .pressArea > div .pagerBox > a:nth-of-type(1) span{left: -1.875rem;}
     .pressArea > div .pagerBox > a:nth-of-type(2) span{right: -1.875rem;}
     .pressArea > div .pagerBox ol{display: flex; margin: 0 1.875rem;}
-    .pressArea > div .pagerBox ol li a{display: block; width: 1.875rem; line-height: 1.875rem; border-radius: 100%; text-align: center;}
+    .pressArea > div .pagerBox ol li a{display: block; width: 2.1rem; line-height: 2.1rem; border-radius: 100%; text-align: center;}
+    .pressArea > div .pagerBox ol li:not(:last-child){margin-right: 0.9375rem;}
     .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
 }
