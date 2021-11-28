@@ -507,9 +507,7 @@
     /* press detail */
     .subPage .pressDetail{padding:12.500rem 0 8.750rem;}
     .pressDetail{background-color: black;  display: flex; align-items: center;}
-    .pressDetail > div{}
     .pressDetail > div h2{line-height: 4.375rem; max-width: 18.750rem; margin-bottom: 5.000rem;}
-    .pressDetail > div > div{}
     .pressDetail > div > div strong{display: block; font-size: 2.500rem; font-weight: 700; margin-bottom: 3.750rem;}
     .pressDetail > div > div strong time{display: block; font-size: 1.375rem; margin-top: 2.500rem; color: #756fdd;}
     .pressDetail > div > div img{width: 100%; margin-bottom: 3.438rem;}
