@@ -243,6 +243,18 @@
     .pressArea > div .pagerBox ol{display: flex; margin: 0 30px;}
     .pressArea > div .pagerBox ol li a{display: block; width: 30px; line-height: 30px; border-radius: 100%; text-align: center;}
     .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
+
+    /* press detail */
+    .subPage .pressDetail{padding-bottom: 100px;}
+    .pressDetail{background-color: black;  display: flex; align-items: center;}
+    .pressDetail > div{display: flex;}
+    .pressDetail > div h2{line-height: 80px; max-width: 300px; margin-right: 30px; flex-shrink: 0; margin-right: 12%;}
+    .pressDetail > div > div{max-width: 970px; width: calc(88% - 300px); flex-shrink: 0;}
+    .pressDetail > div > div strong{display: block; font-size: 40px; font-weight: 700; margin-bottom: 50px;}
+    .pressDetail > div > div strong time{display: block; font-size: 22px; margin-top: 40px; color: #756fdd;}
+    .pressDetail > div > div img{width: 100%; margin-bottom: 40px;}
+    .pressDetail > div > div p{font-size: 18px; line-height: 30px; color: white; margin-bottom: 100px;}
+    .pressDetail > div > div a{font-size: 20px; font-weight: 600; color: white; line-height: 54px; padding: 0 60px; border: 1px solid white; border-radius: 100px; display: inline-flex; align-items: center; z-index: 2; position: relative; overflow: hidden;}
 }
 
 
@@ -491,4 +503,16 @@
     .pressArea > div .pagerBox ol li a{display: block; width: 2.1rem; line-height: 2.1rem; border-radius: 100%; text-align: center;}
     .pressArea > div .pagerBox ol li:not(:last-child){margin-right: 0.9375rem;}
     .pressArea > div .pagerBox ol li.active a,.pressArea > div .pagerBox ol li:hover a{background-color: #605abf;}
+
+    /* press detail */
+    .subPage .pressDetail{padding:12.500rem 0 8.750rem;}
+    .pressDetail{background-color: black;  display: flex; align-items: center;}
+    .pressDetail > div{}
+    .pressDetail > div h2{line-height: 4.375rem; max-width: 18.750rem; margin-bottom: 5.000rem;}
+    .pressDetail > div > div{}
+    .pressDetail > div > div strong{display: block; font-size: 2.500rem; font-weight: 700; margin-bottom: 3.750rem;}
+    .pressDetail > div > div strong time{display: block; font-size: 1.375rem; margin-top: 2.500rem; color: #756fdd;}
+    .pressDetail > div > div img{width: 100%; margin-bottom: 3.438rem;}
+    .pressDetail > div > div p{font-size: 1.375rem; line-height: 2.500rem; color: white; margin-bottom: 5.000rem;}
+    .pressDetail > div > div a{font-size: 1.375rem; font-weight: 600; color: white; line-height: 3.750rem; padding: 0 4.375rem; border: 0.063rem solid white; border-radius: 6.250rem; display: inline-flex; align-items: center; z-index: 2; position: relative; overflow: hidden;}
 }
